@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "eb287fed021c9fd1",
+            "id": "b47bd8122c04be5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes/x - Multi-container pods.md",
+                "file": "Final Notes/6 - Kubernetes/y - test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "x - Multi-container pods"
-            }
-          },
-          {
-            "id": "eacc3361763dce13",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Final Notes/6 - Kubernetes/e - Deployments.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "e - Deployments"
+              "title": "y - test"
             }
           }
         ]
@@ -94,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
-    "collapsed": true
+    "width": 330.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -205,53 +190,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "eb287fed021c9fd1",
+  "active": "b47bd8122c04be5c",
   "lastOpenFiles": [
-    "Final Notes/6 - Kubernetes/z.md",
-    "Final Notes/6 - Kubernetes/y.md",
-    "Final Notes/6 - Kubernetes/x - Multi-container pods.md",
     "Final Notes/6 - Kubernetes/w - Taints & Tolerations vs Node Affinity.md",
-    "Final Notes/6 - Kubernetes/v - Node affinity.md",
-    "Final Notes/6 - Kubernetes/e - Deployments.md",
+    "Final Notes/6 - Kubernetes/x - Multi-container pods.md",
+    "ROADMAP.png",
     "Pasted image 20260816210107.png",
     "Pasted image 20260816203343.png",
     "Pasted image 20260816203234.png",
     "Pasted image 20260816203226.png",
-    "Final Notes/6 - Kubernetes/u - Node Selector Logging.md",
-    "Final Notes/6 - Kubernetes/c - Pods with YAML.md",
     "Pasted image 20260816195602.png",
     "Pasted image 20260816195419.png",
     "Pasted image 20260816195300.png",
     "Pasted image 20260816195147.png",
-    "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
     "Pasted image 20260816194454.png",
-    "Pasted image 20260816192327.png",
-    "Final Notes/6 - Kubernetes/r - Service accounts.md",
-    "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
-    "Final Notes/6 - Kubernetes/o -  Ecrypting secrete data at rest.md",
-    "Final Notes/6 - Kubernetes/q - Resource Requirements.md",
-    "Final Notes/6 - Kubernetes/p - security.md",
-    "Final Notes/6 - Kubernetes/n - Secrets.md",
-    "Final Notes/6 - Kubernetes/p - pre-requisite - security in docker.md",
-    "Final Notes/6 - Kubernetes/l - environment variables.md",
-    "Final Notes/6 - Kubernetes/q - Security Contexts.md",
-    "Midpoint Notes/2 - Git/U - Understanding GIT.md",
-    "Midpoint Notes/2 - Git/F - Git Branches.md",
-    "Untitled.base",
-    "Untitled 1.base",
-    "Final Notes/6 - Kubernetes/Untitled 5.md",
-    "Midpoint Notes/2 - Git/1 - All commands.md",
-    "Final Notes/6 - Kubernetes/k - commands and arguments in kubernetes.md",
-    "Final Notes/6 - Kubernetes/j - JSON-Path-Course-Resource_compressed.pdf",
-    "Final Notes/6 - Kubernetes/i - Kubectl Explain Command.md",
-    "Final Notes/6 - Kubernetes/j - JSON and YAML.md",
-    "JSON-Path-Course-Resource_compressed.pdf",
-    "Final Notes/6 - Kubernetes/h - Services - ClusterIP.md",
-    "Final Notes/6 - Kubernetes/imgs",
-    "Final Notes",
-    "Final Notes/5 - AWS/AWS RDS/RDS.pdf",
-    "Final Notes/6 - Kubernetes",
-    "Final Notes/5 - AWS/AWS CloudWatch/AWS-CloudWatch.pdf",
-    "Final Notes/5 - AWS/AWS S3/AWS-S3.pdf"
+    "Midpoint Notes/3 - Python/Exercises/Exercises.md",
+    "Midpoint Notes/2 - Git/Imgs/Untitled.md",
+    "Midpoint Notes/4 - Docker/zc - Introduction to YAML.md",
+    "Midpoint Notes/4 - Docker/zb - Kubernetes Introduction.md",
+    "Midpoint Notes/4 - Docker/z - container orchestration.md",
+    "Midpoint Notes/4 - Docker/za - docker swarm.md",
+    "Midpoint Notes/4 - Docker/y - docker on Mac and Windows.md",
+    "Midpoint Notes/4 - Docker/x - docker registry.md",
+    "Midpoint Notes/4 - Docker/w - docker networking.md",
+    "Midpoint Notes/4 - Docker/v - docker storage.md",
+    "Midpoint Notes/4 - Docker/u - cgroups.md",
+    "Midpoint Notes/4 - Docker/t - namespaces.md",
+    "Midpoint Notes/4 - Docker/s - docker engine.md",
+    "Midpoint Notes/4 - Docker/r - docker compose.md",
+    "Midpoint Notes/4 - Docker/q - environment variables.md",
+    "Midpoint Notes/4 - Docker/p - commands vs. entrypoint.md",
+    "Midpoint Notes/4 - Docker/n - modern builds with buildkit.md",
+    "Midpoint Notes/4 - Docker/o - docker init.md",
+    "Midpoint Notes/4 - Docker/m - problems with traditional docker builds.md",
+    "Midpoint Notes/4 - Docker/l - docker images - creating one.md",
+    "Midpoint Notes/4 - Docker/k - inspect and logs.md",
+    "Midpoint Notes/4 - Docker/j - Volumes and bind mounts.md",
+    "Midpoint Notes/4 - Docker/imgs",
+    "Midpoint Notes/4 - Docker/i - Port Mapping.md",
+    "Midpoint Notes/4 - Docker/h - Interactive mode.md",
+    "Midpoint Notes/3 - Python/Imgs",
+    "Midpoint Notes/3 - Python/Exercises",
+    "Midpoint Notes/2 - Git/Imgs",
+    "Midpoint Notes/1 - Linux/Imgs",
+    "Midpoint Notes/1 - Linux/2 -NOTES.pdf",
+    "Midpoint Notes/1 - Linux/1 - COMMANDS.pdf",
+    "Midpoint Notes/4 - Docker",
+    "Midpoint Notes/3 - Python",
+    "Midpoint Notes/2 - Git"
   ]
 }
