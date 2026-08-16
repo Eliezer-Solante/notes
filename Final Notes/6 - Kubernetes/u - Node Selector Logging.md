@@ -7,12 +7,9 @@ labeling the node
 
 so, when creating the pod, it is then place under that particular labeled node, in this case `size: Large`
 ![[Pasted image 20260816195419.png]]
+
+Limitations
 ![[Pasted image 20260816195602.png]]
-
-
-
-
-
 
 
 
