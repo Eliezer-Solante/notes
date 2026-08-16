@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
+                "file": "Final Notes/6 - Kubernetes/r - Service accounts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "m - ConfigMaps"
+              "title": "r - Service accounts"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "r - Service accounts"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
-    "collapsed": true
+    "width": 330.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -205,8 +203,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "eacc3361763dce13",
+  "active": "b47bd8122c04be5c",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
+    "Final Notes/6 - Kubernetes/r - Service accounts.md",
+    "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
+    "Final Notes/6 - Kubernetes/o -  Ecrypting secrete data at rest.md",
     "Pasted image 20260816000826.png",
     "Pasted image 20260816000721.png",
     "Pasted image 20260816000708.png",
@@ -217,15 +219,19 @@
     "Pasted image 20260815235830.png",
     "Pasted image 20260815235819.png",
     "Pasted image 20260815235801.png",
-    "Pasted image 20260815235631.png",
     "Final Notes/6 - Kubernetes/q - Resource Requirements.md",
     "Final Notes/6 - Kubernetes/p - security.md",
-    "Final Notes/6 - Kubernetes/o -  Ecrypting secrete data at rest.md",
     "Final Notes/6 - Kubernetes/n - Secrets.md",
-    "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
-    "Final Notes/6 - Kubernetes/k - commands and arguments in kubernetes.md",
+    "Final Notes/6 - Kubernetes/p - pre-requisite - security in docker.md",
     "Final Notes/6 - Kubernetes/l - environment variables.md",
-    "Final Notes/6 - Kubernetes/r - Service accounts.md",
+    "Final Notes/6 - Kubernetes/q - Security Contexts.md",
+    "Midpoint Notes/2 - Git/U - Understanding GIT.md",
+    "Midpoint Notes/2 - Git/F - Git Branches.md",
+    "Untitled.base",
+    "Untitled 1.base",
+    "Final Notes/6 - Kubernetes/Untitled 5.md",
+    "Midpoint Notes/2 - Git/1 - All commands.md",
+    "Final Notes/6 - Kubernetes/k - commands and arguments in kubernetes.md",
     "Final Notes/6 - Kubernetes/j - JSON-Path-Course-Resource_compressed.pdf",
     "Final Notes/6 - Kubernetes/i - Kubectl Explain Command.md",
     "Final Notes/6 - Kubernetes/j - JSON and YAML.md",
@@ -243,15 +249,7 @@
     "Final Notes/6 - Kubernetes/a - Docker vs ContainerD.md",
     "Final Notes/5 - AWS/AWS RDS/RDS.pdf",
     "Final Notes/6 - Kubernetes",
-    "Final Notes/5 - AWS/AWS CloudWatch/Practical.md",
-    "Final Notes/5 - AWS/AWS CloudWatch/CLI COMMANDS.md",
     "Final Notes/5 - AWS/AWS CloudWatch/AWS-CloudWatch.pdf",
-    "CMCs/Culture Mindset 2.md",
-    "CMCs/Culture Mindset.md",
-    "Final Notes/5 - AWS/AWS S3/AWS-S3.pdf",
-    "Final Notes/5 - AWS/AWS EC2/ga - CLI commands.md",
-    "Final Notes/5 - AWS/AWS IAM/2 - JSON formats.md",
-    "Midpoint Notes/5 - AWS/Untitled",
-    "Final Notes/5 - AWS/AWS CloudWatch"
+    "Final Notes/5 - AWS/AWS S3/AWS-S3.pdf"
   ]
 }
