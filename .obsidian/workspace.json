@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
+                "file": "Final Notes/6 - Kubernetes/u - Node Selector Logging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "t - Taints and Tolerations"
+              "title": "u - Node Selector Logging"
             }
           },
           {
@@ -207,8 +207,16 @@
   },
   "active": "eacc3361763dce13",
   "lastOpenFiles": [
-    "Final Notes/6 - Kubernetes/c - Pods with YAML.md",
+    "Pasted image 20260816195602.png",
+    "Pasted image 20260816195419.png",
+    "Pasted image 20260816195300.png",
+    "Pasted image 20260816195147.png",
+    "Final Notes/6 - Kubernetes/w - Taints & Tolerations vs Node Affinity.md",
+    "Final Notes/6 - Kubernetes/v - Node affinity.md",
+    "Final Notes/6 - Kubernetes/u - Node Selector Logging.md",
     "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
+    "Pasted image 20260816194454.png",
+    "Final Notes/6 - Kubernetes/c - Pods with YAML.md",
     "Pasted image 20260816192327.png",
     "Pasted image 20260816191801.png",
     "Pasted image 20260816191708.png",
@@ -218,10 +226,6 @@
     "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes/o -  Ecrypting secrete data at rest.md",
     "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000826.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000721.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000708.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000634.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000522.png",
     "Final Notes/6 - Kubernetes/q - Resource Requirements.md",
     "Final Notes/6 - Kubernetes/p - security.md",
     "Final Notes/6 - Kubernetes/n - Secrets.md",
@@ -243,11 +247,8 @@
     "Final Notes/6 - Kubernetes/g - Services.md",
     "Final Notes/6 - Kubernetes/f - Namespaces.md",
     "Final Notes/6 - Kubernetes/b - Pods.md",
-    "Final Notes/6 - Kubernetes/e - Deployments.md",
-    "Final Notes/6 - Kubernetes/d - ReplicaSets.md",
     "Final Notes/6 - Kubernetes/imgs",
     "Final Notes",
-    "Midpoint Notes/4 - Docker/1 Distributed System - Discussion.md",
     "Final Notes/5 - AWS/AWS RDS/RDS.pdf",
     "Final Notes/6 - Kubernetes",
     "Final Notes/5 - AWS/AWS CloudWatch/AWS-CloudWatch.pdf",
