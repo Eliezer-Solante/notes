@@ -128,3 +128,5 @@ default        bee                     1/1     Running   0          6m3s   172.1
 kube-flannel   kube-flannel-ds-hshsb   1/1     Running   0          30m    192.168.34.166   node01   <none>           <none>
 kube-system    kube-proxy-26cbl        1/1     Running   0          30m    192.168.34.166   node01   <none>           <none>
 ```
+
+

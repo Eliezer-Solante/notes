@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes/d - ReplicaSets.md",
+                "file": "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "d - ReplicaSets"
+              "title": "t - Taints and Tolerations"
             }
           }
         ]
@@ -207,32 +207,32 @@
   },
   "active": "eb287fed021c9fd1",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
+    "Final Notes/6 - Kubernetes/u - Node Selector Logging.md",
+    "Final Notes/6 - Kubernetes/v - Node affinity.md",
+    "Final Notes/6 - Kubernetes/w - Taints & Tolerations vs Node Affinity.md",
+    "Final Notes/6 - Kubernetes/x - Multi-container pods.md",
+    "Final Notes/6 - Kubernetes/y - Multi-container Pods design patterns.md",
+    "Final Notes/6 - Kubernetes/d - ReplicaSets.md",
     "Final Notes/6 - Kubernetes/imgs/2 - CronJobs.md",
     "Final Notes/6 - Kubernetes/1 - Rollbacks.md",
-    "Final Notes/6 - Kubernetes/y - Multi-container Pods design patterns.md",
     "Pasted image 20260816233324.png",
     "Pasted image 20260816233305.png",
     "Pasted image 20260816233156.png",
     "Pasted image 20260816233142.png",
     "Pasted image 20260816232928.png",
     "Pasted image 20260816232915.png",
-    "Final Notes/6 - Kubernetes/x - Multi-container pods.md",
     "Final Notes/6 - Kubernetes/q - Resource Requirements.md",
-    "Final Notes/6 - Kubernetes/d - ReplicaSets.md",
     "Final Notes/6 - Kubernetes/e - Deployments.md",
     "Final Notes/6 - Kubernetes/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes/b - Pods.md",
     "Final Notes/6 - Kubernetes/f - Namespaces.md",
     "Final Notes/6 - Kubernetes/z.md",
     "Final Notes/6 - Kubernetes/y.md",
-    "Final Notes/6 - Kubernetes/w - Taints & Tolerations vs Node Affinity.md",
-    "Final Notes/6 - Kubernetes/v - Node affinity.md",
     "Pasted image 20260816210107.png",
     "Pasted image 20260816203343.png",
     "Pasted image 20260816203234.png",
     "Pasted image 20260816203226.png",
-    "Final Notes/6 - Kubernetes/u - Node Selector Logging.md",
-    "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
     "Final Notes/6 - Kubernetes/r - Service accounts.md",
     "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes/o -  Ecrypting secrete data at rest.md",
