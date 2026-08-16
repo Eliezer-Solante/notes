@@ -11,14 +11,12 @@
             "id": "b47bd8122c04be5c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Final Notes/6 - Kubernetes/r - Service accounts.md",
-                "mode": "source",
-                "source": false
+                "file": "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815212630.png"
               },
-              "icon": "lucide-file",
-              "title": "r - Service accounts"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260815212630"
             }
           },
           {
@@ -200,25 +198,27 @@
       "custom-sort:Toggle custom sorting": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b47bd8122c04be5c",
+  "active": "cd4116a93bb7c0e7",
   "lastOpenFiles": [
-    "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815212713.png",
     "Final Notes/6 - Kubernetes/r - Service accounts.md",
+    "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
     "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes/o -  Ecrypting secrete data at rest.md",
-    "Pasted image 20260816000826.png",
-    "Pasted image 20260816000721.png",
-    "Pasted image 20260816000708.png",
-    "Pasted image 20260816000634.png",
-    "Pasted image 20260816000522.png",
-    "Pasted image 20260816000027.png",
-    "Pasted image 20260816000000.png",
-    "Pasted image 20260815235830.png",
-    "Pasted image 20260815235819.png",
-    "Pasted image 20260815235801.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000826.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000721.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000708.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000634.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000522.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000027.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000000.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815235830.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815235819.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815235801.png",
     "Final Notes/6 - Kubernetes/q - Resource Requirements.md",
     "Final Notes/6 - Kubernetes/p - security.md",
     "Final Notes/6 - Kubernetes/n - Secrets.md",
@@ -246,7 +246,6 @@
     "Final Notes/6 - Kubernetes/imgs",
     "Final Notes",
     "Midpoint Notes/4 - Docker/1 Distributed System - Discussion.md",
-    "Final Notes/6 - Kubernetes/a - Docker vs ContainerD.md",
     "Final Notes/5 - AWS/AWS RDS/RDS.pdf",
     "Final Notes/6 - Kubernetes",
     "Final Notes/5 - AWS/AWS CloudWatch/AWS-CloudWatch.pdf",
