@@ -8,29 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b47bd8122c04be5c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815212630.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260815212630"
-            }
-          },
-          {
             "id": "eacc3361763dce13",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes/r - Service accounts.md",
+                "file": "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "r - Service accounts"
+              "title": "t - Taints and Tolerations"
+            }
+          },
+          {
+            "id": "3b49cb6a1bf0dc60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Final Notes/6 - Kubernetes/c - Pods with YAML.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "c - Pods with YAML"
             }
           }
         ]
@@ -92,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5
+    "width": 330.5,
+    "collapsed": true
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -202,11 +205,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cd4116a93bb7c0e7",
+  "active": "eacc3361763dce13",
   "lastOpenFiles": [
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815212713.png",
-    "Final Notes/6 - Kubernetes/r - Service accounts.md",
+    "Final Notes/6 - Kubernetes/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes/t - Taints and Tolerations.md",
+    "Pasted image 20260816192327.png",
+    "Pasted image 20260816191801.png",
+    "Pasted image 20260816191708.png",
+    "Final Notes/6 - Kubernetes/r - Service accounts.md",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815212630.png",
+    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815212713.png",
     "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes/o -  Ecrypting secrete data at rest.md",
     "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000826.png",
@@ -214,11 +222,6 @@
     "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000708.png",
     "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000634.png",
     "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000522.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000027.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260816000000.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815235830.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815235819.png",
-    "Final Notes/6 - Kubernetes/imgs/Pasted image 20260815235801.png",
     "Final Notes/6 - Kubernetes/q - Resource Requirements.md",
     "Final Notes/6 - Kubernetes/p - security.md",
     "Final Notes/6 - Kubernetes/n - Secrets.md",
@@ -237,7 +240,6 @@
     "Final Notes/6 - Kubernetes/j - JSON and YAML.md",
     "JSON-Path-Course-Resource_compressed.pdf",
     "Final Notes/6 - Kubernetes/h - Services - ClusterIP.md",
-    "Final Notes/6 - Kubernetes/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes/g - Services.md",
     "Final Notes/6 - Kubernetes/f - Namespaces.md",
     "Final Notes/6 - Kubernetes/b - Pods.md",
