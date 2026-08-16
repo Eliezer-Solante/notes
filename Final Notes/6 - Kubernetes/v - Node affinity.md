@@ -131,14 +131,7 @@ nodeSelectorTerms:
 Reads as: `(disktype=ssd AND zone=us-east-1a) OR (disktype=nvme)`.
 
 ## nodeAffinity vs nodeSelector vs taints/tolerations
-
-||nodeSelector|nodeAffinity|Taints/Tolerations|
-|---|---|---|---|
-|Direction|Pod → node (attract)|Pod → node (attract)|Node → pod (repel)|
-|Logic|AND only|AND + OR, rich operators|N/A (match/no match)|
-|Soft option?|No|Yes (`preferred...`)|Yes (`PreferNoSchedule`)|
-|Evicts running pods?|No|No|Yes (`NoExecute`)|
-|Best for|Simple must-match cases|Complex/flexible placement rules|Reserving/protecting nodes|
+![[Pasted image 20260816210107.png]]
 
 ## Where it fits with everything else we've covered
 
