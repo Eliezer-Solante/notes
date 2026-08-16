@@ -1,0 +1,257 @@
+{
+  "main": {
+    "id": "5c1a63bba7901dbd",
+    "type": "split",
+    "children": [
+      {
+        "id": "7cadb115097b0ada",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b47bd8122c04be5c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "m - ConfigMaps"
+            }
+          },
+          {
+            "id": "eacc3361763dce13",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Final Notes/6 - Kubernetes/r - Service accounts.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "r - Service accounts"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b8a8a6ecde37caad",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb49316b01535873",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd4116a93bb7c0e7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "88b227ef5ccee53c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "266bad854526a408",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 330.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "58209c5ff137c9c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "f655e4421cdac35c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "83107b4a1ffadd3e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Midpoint Notes/4 - Docker.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 4 - Docker"
+            }
+          },
+          {
+            "id": "320b4b7c04bc24ac",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Midpoint Notes/4 - Docker.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 4 - Docker"
+            }
+          },
+          {
+            "id": "58a6609797c77877",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9ab0d02b286e04bc",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "a8218c30ebeb5189",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Midpoint Notes/4 - Docker.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 4 - Docker"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "custom-sort:Toggle custom sorting": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
+    }
+  },
+  "active": "eacc3361763dce13",
+  "lastOpenFiles": [
+    "Pasted image 20260816000826.png",
+    "Pasted image 20260816000721.png",
+    "Pasted image 20260816000708.png",
+    "Pasted image 20260816000634.png",
+    "Pasted image 20260816000522.png",
+    "Pasted image 20260816000027.png",
+    "Pasted image 20260816000000.png",
+    "Pasted image 20260815235830.png",
+    "Pasted image 20260815235819.png",
+    "Pasted image 20260815235801.png",
+    "Pasted image 20260815235631.png",
+    "Final Notes/6 - Kubernetes/q - Resource Requirements.md",
+    "Final Notes/6 - Kubernetes/p - security.md",
+    "Final Notes/6 - Kubernetes/o -  Ecrypting secrete data at rest.md",
+    "Final Notes/6 - Kubernetes/n - Secrets.md",
+    "Final Notes/6 - Kubernetes/m - ConfigMaps.md",
+    "Final Notes/6 - Kubernetes/k - commands and arguments in kubernetes.md",
+    "Final Notes/6 - Kubernetes/l - environment variables.md",
+    "Final Notes/6 - Kubernetes/r - Service accounts.md",
+    "Final Notes/6 - Kubernetes/j - JSON-Path-Course-Resource_compressed.pdf",
+    "Final Notes/6 - Kubernetes/i - Kubectl Explain Command.md",
+    "Final Notes/6 - Kubernetes/j - JSON and YAML.md",
+    "JSON-Path-Course-Resource_compressed.pdf",
+    "Final Notes/6 - Kubernetes/h - Services - ClusterIP.md",
+    "Final Notes/6 - Kubernetes/c - Pods with YAML.md",
+    "Final Notes/6 - Kubernetes/g - Services.md",
+    "Final Notes/6 - Kubernetes/f - Namespaces.md",
+    "Final Notes/6 - Kubernetes/b - Pods.md",
+    "Final Notes/6 - Kubernetes/e - Deployments.md",
+    "Final Notes/6 - Kubernetes/d - ReplicaSets.md",
+    "Final Notes/6 - Kubernetes/imgs",
+    "Final Notes",
+    "Midpoint Notes/4 - Docker/1 Distributed System - Discussion.md",
+    "Final Notes/6 - Kubernetes/a - Docker vs ContainerD.md",
+    "Final Notes/5 - AWS/AWS RDS/RDS.pdf",
+    "Final Notes/6 - Kubernetes",
+    "Final Notes/5 - AWS/AWS CloudWatch/Practical.md",
+    "Final Notes/5 - AWS/AWS CloudWatch/CLI COMMANDS.md",
+    "Final Notes/5 - AWS/AWS CloudWatch/AWS-CloudWatch.pdf",
+    "CMCs/Culture Mindset 2.md",
+    "CMCs/Culture Mindset.md",
+    "Final Notes/5 - AWS/AWS S3/AWS-S3.pdf",
+    "Final Notes/5 - AWS/AWS EC2/ga - CLI commands.md",
+    "Final Notes/5 - AWS/AWS IAM/2 - JSON formats.md",
+    "Midpoint Notes/5 - AWS/Untitled",
+    "Final Notes/5 - AWS/AWS CloudWatch"
+  ]
+}

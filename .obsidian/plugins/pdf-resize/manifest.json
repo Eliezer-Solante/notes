@@ -1,0 +1,10 @@
+{
+  "id": "pdf-resize",
+  "name": "PDF Resize",
+  "version": "0.1.1",
+  "minAppVersion": "1.8.0",
+  "description": "Resize embedded PDF files with wiki-link dimensions.",
+  "author": "Aleksei B",
+  "authorUrl": "https://github.com/Puhhh",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,5 @@
+.markdown-rendered .internal-embed.pdf-resize-embed,
+.markdown-source-view.mod-cm6 .internal-embed.pdf-resize-embed {
+  width: var(--pdf-resize-width);
+  height: var(--pdf-resize-height);
+}
