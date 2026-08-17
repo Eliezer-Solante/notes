@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2dfac3e01a35d0a9",
+            "id": "b47bd8122c04be5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/zd - Labels, Selectors & Annotations.md",
+                "file": "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zd - Labels, Selectors & Annotations"
+              "title": "ze - Rolling Updates & Rollbacks"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
-    "collapsed": true
+    "width": 330.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -191,10 +190,8 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2dfac3e01a35d0a9",
+  "active": "b47bd8122c04be5c",
   "lastOpenFiles": [
-    "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
-    "Final Notes/6 - Kubernetes -1/zd - Labels, Selectors & Annotations.md",
     "Pasted image 20260817163641.png",
     "Pasted image 20260817163613.png",
     "Pasted image 20260817163519.png",
@@ -203,40 +200,43 @@
     "Pasted image 20260817162934.png",
     "Pasted image 20260817162920.png",
     "Pasted image 20260817162908.png",
-    "Final Notes/6 - Kubernetes -1/2 - CronJobs.md",
-    "Final Notes/6 - Kubernetes -1/3 - Kubernetes Part 1 Office Hours.md",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817132043.png",
-    "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
+    "Final Notes/6 - Kubernetes/y - test.md",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816233156.png",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816210107.png",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817161457.png",
-    "Final Notes/6 - Kubernetes -1/zb - Logging.md",
     "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
+    "Final Notes/6 - Kubernetes -1/zd - Labels, Selectors & Annotations.md",
+    "Final Notes/6 - Kubernetes -1/q - Resource Requirements.md",
+    "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
+    "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
+    "Final Notes/6 - Kubernetes -1/zb - Logging.md",
     "Final Notes/6 - Kubernetes -1/za - Liveness Probe.md",
-    "Final Notes/6 - Kubernetes -1/t - Taints and Tolerations.md",
     "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
+    "Final Notes/6 - Kubernetes -1/w - Taints & Tolerations vs Node Affinity.md",
     "Final Notes/6 - Kubernetes -1/x - Multi-container pods.md",
     "Final Notes/6 - Kubernetes -1/v - Node affinity.md",
     "Final Notes/6 - Kubernetes -1/u - Node Selector Logging.md",
+    "Final Notes/6 - Kubernetes -1/t - Taints and Tolerations.md",
     "Final Notes/6 - Kubernetes -1/r - Service accounts.md",
-    "Final Notes/6 - Kubernetes -1/q - Resource Requirements.md",
+    "Final Notes/6 - Kubernetes -1/l - environment variables.md",
     "Final Notes/6 - Kubernetes -1/p - security.md",
-    "Final Notes/6 - Kubernetes -1/n - Secrets.md",
+    "Final Notes/6 - Kubernetes -1/o -  Ecrypting secrete data at rest.md",
     "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
-    "Final Notes/6 - Kubernetes -1/b - Pods.md",
-    "Final Notes/6 - Kubernetes -1/1 - Rollbacks.md",
-    "Final Notes/6 - Kubernetes -1/w - Taints & Tolerations vs Node Affinity.md",
-    "Final Notes/6 - Kubernetes -1/d - ReplicaSets.md",
-    "Final Notes/6 - Kubernetes -1/e - Deployments.md",
-    "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
-    "Final Notes/6 - Kubernetes -1/f - Namespaces.md",
-    "Untitled.base",
-    "Untitled 1.base",
+    "Final Notes/6 - Kubernetes -1/k - commands and arguments in kubernetes.md",
+    "Final Notes/6 - Kubernetes -1/n - Secrets.md",
     "Final Notes/6 - Kubernetes -1/j - JSON-Path-Course-Resource_compressed.pdf",
-    "JSON-Path-Course-Resource_compressed.pdf",
+    "Final Notes/6 - Kubernetes -1/h - Services - ClusterIP.md",
     "Final Notes/6 - Kubernetes -1/imgs",
-    "Final Notes",
-    "Final Notes/5 - AWS/AWS RDS/RDS.pdf",
+    "Final Notes/6 - Kubernetes -1/i - Kubectl Explain Command.md",
+    "Final Notes/6 - Kubernetes -1/e - Deployments.md",
+    "Final Notes/6 - Kubernetes -1/g - Services.md",
     "Final Notes/6 - Kubernetes -1",
-    "Final Notes/5 - AWS/AWS CloudWatch/AWS-CloudWatch.pdf",
-    "Final Notes/5 - AWS/AWS S3/AWS-S3.pdf"
+    "Midpoint Notes/4 - Docker/imgs",
+    "Midpoint Notes/3 - Python/Imgs",
+    "Midpoint Notes/3 - Python/Exercises",
+    "Midpoint Notes/2 - Git/Imgs",
+    "Midpoint Notes/1 - Linux/Imgs",
+    "Midpoint Notes/1 - Linux/2 -NOTES.pdf",
+    "Midpoint Notes/1 - Linux/1 - COMMANDS.pdf"
   ]
 }
