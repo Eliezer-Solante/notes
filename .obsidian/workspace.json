@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "eb287fed021c9fd1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Final Notes/6 - Kubernetes -1/v - Node affinity.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "v - Node affinity"
-            }
-          },
-          {
             "id": "eacc3361763dce13",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/t - Taints and Tolerations.md",
+                "file": "Final Notes/6 - Kubernetes -1/zc -.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "t - Taints and Tolerations"
+              "title": "zc -"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
-    "collapsed": true
+    "width": 330.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -208,6 +192,19 @@
   },
   "active": "eacc3361763dce13",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/zb -.md",
+    "Final Notes/6 - Kubernetes -1/zc -.md",
+    "Final Notes/6 - Kubernetes -1/za - Livelines Probe.md",
+    "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
+    "Pasted image 20260817150522.png",
+    "Pasted image 20260817150457.png",
+    "Pasted image 20260817150432.png",
+    "Pasted image 20260817145444.png",
+    "Final Notes/6 - Kubernetes -1/2 - Kubernetes Part 1 Office Hours.md",
+    "Pasted image 20260817145441.png",
+    "Final Notes/6 - Kubernetes -1/t - Taints and Tolerations.md",
+    "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
+    "Final Notes/6 - Kubernetes -1/x - Multi-container pods.md",
     "Final Notes/6 - Kubernetes -1/v - Node affinity.md",
     "Final Notes/6 - Kubernetes -1/u - Node Selector Logging.md",
     "Final Notes/6 - Kubernetes -1/r - Service accounts.md",
@@ -215,7 +212,6 @@
     "Final Notes/6 - Kubernetes -1/p - security.md",
     "Final Notes/6 - Kubernetes -1/n - Secrets.md",
     "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
-    "Final Notes/6 - Kubernetes -1/2 - Kubernetes Part 1 Office Hours.md",
     "Final Notes/6 - Kubernetes -1/b - Pods.md",
     "Final Notes/6 - Kubernetes -1/1 - Rollbacks.md",
     "Pasted image 20260817134204.png",
@@ -223,26 +219,15 @@
     "Pasted image 20260817133428.png",
     "Pasted image 20260817132124.png",
     "Pasted image 20260817132043.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816191708.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817131604.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817131554.png",
-    "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
-    "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
-    "Final Notes/6 - Kubernetes -1/t - Taints and Tolerations.md",
     "Final Notes/6 - Kubernetes -1/w - Taints & Tolerations vs Node Affinity.md",
-    "Final Notes/6 - Kubernetes -1/x - Multi-container pods.md",
     "Final Notes/6 - Kubernetes -1/d - ReplicaSets.md",
     "Final Notes/6 - Kubernetes -1/imgs/2 - CronJobs.md",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816233324.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816233305.png",
     "Final Notes/6 - Kubernetes -1/e - Deployments.md",
     "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes -1/f - Namespaces.md",
     "Final Notes/6 - Kubernetes/y.md",
     "Final Notes/6 - Kubernetes -1/o -  Ecrypting secrete data at rest.md",
     "Final Notes/6 - Kubernetes/p - pre-requisite - security in docker.md",
-    "Final Notes/6 - Kubernetes -1/l - environment variables.md",
-    "Final Notes/6 - Kubernetes/q - Security Contexts.md",
     "Untitled.base",
     "Untitled 1.base",
     "Final Notes/6 - Kubernetes -1/j - JSON-Path-Course-Resource_compressed.pdf",
