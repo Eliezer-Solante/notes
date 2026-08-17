@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/2 - Kubernetes Part 1 Office Hours.md",
+                "file": "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 - Kubernetes Part 1 Office Hours"
+              "title": "m - ConfigMaps"
             }
           },
           {
@@ -207,11 +207,16 @@
   },
   "active": "eb287fed021c9fd1",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/2 - Kubernetes Part 1 Office Hours.md",
+    "Final Notes/6 - Kubernetes -1/b - Pods.md",
+    "Final Notes/6 - Kubernetes -1/1 - Rollbacks.md",
+    "Pasted image 20260817134204.png",
+    "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
+    "Pasted image 20260817133654.png",
+    "Pasted image 20260817133428.png",
     "Pasted image 20260817132124.png",
     "Pasted image 20260817132043.png",
-    "Final Notes/6 - Kubernetes -1/1 - Rollbacks.md",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816191708.png",
-    "Final Notes/6 - Kubernetes -1/2 - Kubernetes Part 1 Office Hours.md",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817131604.png",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817131554.png",
     "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
@@ -225,18 +230,12 @@
     "Final Notes/6 - Kubernetes -1/imgs/2 - CronJobs.md",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816233324.png",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816233305.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816233156.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816233142.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816232928.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260816232915.png",
     "Final Notes/6 - Kubernetes -1/q - Resource Requirements.md",
     "Final Notes/6 - Kubernetes -1/e - Deployments.md",
     "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
-    "Final Notes/6 - Kubernetes -1/b - Pods.md",
     "Final Notes/6 - Kubernetes -1/f - Namespaces.md",
     "Final Notes/6 - Kubernetes/y.md",
     "Final Notes/6 - Kubernetes -1/r - Service accounts.md",
-    "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes -1/o -  Ecrypting secrete data at rest.md",
     "Final Notes/6 - Kubernetes -1/p - security.md",
     "Final Notes/6 - Kubernetes -1/n - Secrets.md",
