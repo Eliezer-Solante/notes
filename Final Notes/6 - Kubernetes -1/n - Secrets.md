@@ -1,7 +1,5 @@
 ![[Pasted image 20260814130951.png]]
-c3FsMDE=
-cm9vdA==
-cGFzc3dvcmQxMjM=
+
 Converting/encode string to a hash
 ![[Pasted image 20260814131152.png]]
 ![[Pasted image 20260814132330.png]]
