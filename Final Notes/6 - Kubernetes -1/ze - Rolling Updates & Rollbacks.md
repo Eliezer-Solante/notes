@@ -192,3 +192,4 @@ With `--to-revision=1`, it will be rolled back with the first image we used to 
 controlplane $ kubectl describe deployments. nginx | grep -i image:
 Image: nginx:1.16
 ```
+
