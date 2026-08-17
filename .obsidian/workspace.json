@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
+                "file": "Final Notes/6 - Kubernetes -1/zd - Labels, Selectors & Annotations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ze - Rolling Updates & Rollbacks"
+              "title": "zd - Labels, Selectors & Annotations"
             }
           }
         ]
@@ -193,6 +193,7 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
     "Final Notes/6 - Kubernetes -1/zd - Labels, Selectors & Annotations.md",
     "Pasted image 20260817163641.png",
     "Pasted image 20260817163613.png",
@@ -202,7 +203,6 @@
     "Pasted image 20260817162934.png",
     "Pasted image 20260817162920.png",
     "Pasted image 20260817162908.png",
-    "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
     "Final Notes/6 - Kubernetes -1/2 - CronJobs.md",
     "Final Notes/6 - Kubernetes -1/3 - Kubernetes Part 1 Office Hours.md",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817132043.png",
