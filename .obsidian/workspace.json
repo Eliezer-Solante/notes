@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
+                "file": "Final Notes/6 - Kubernetes -1/2 - CronJobs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zc - Monitoring"
+              "title": "2 - CronJobs"
             }
           }
         ],
@@ -208,20 +208,22 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/3 - Kubernetes Part 1 Office Hours.md",
+    "Final Notes/6 - Kubernetes -1/2 - CronJobs.md",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817132043.png",
+    "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817161457.png",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817161432.png",
     "Final Notes/6 - Kubernetes -1/zb - Logging.md",
-    "Pasted image 20260817160125.png",
-    "Pasted image 20260817160010.png",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817160125.png",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817160010.png",
     "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
     "Final Notes/6 - Kubernetes -1/za - Liveness Probe.md",
-    "Pasted image 20260817152742.png",
-    "Pasted image 20260817152710.png",
-    "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
-    "Pasted image 20260817150522.png",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817152742.png",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817152710.png",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817150522.png",
     "Pasted image 20260817150457.png",
-    "Pasted image 20260817150432.png",
-    "Pasted image 20260817145444.png",
-    "Final Notes/6 - Kubernetes -1/2 - Kubernetes Part 1 Office Hours.md",
-    "Pasted image 20260817145441.png",
+    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817150432.png",
     "Final Notes/6 - Kubernetes -1/t - Taints and Tolerations.md",
     "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
     "Final Notes/6 - Kubernetes -1/x - Multi-container pods.md",
@@ -234,10 +236,8 @@
     "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes -1/b - Pods.md",
     "Final Notes/6 - Kubernetes -1/1 - Rollbacks.md",
-    "Pasted image 20260817134204.png",
     "Final Notes/6 - Kubernetes -1/w - Taints & Tolerations vs Node Affinity.md",
     "Final Notes/6 - Kubernetes -1/d - ReplicaSets.md",
-    "Final Notes/6 - Kubernetes -1/imgs/2 - CronJobs.md",
     "Final Notes/6 - Kubernetes -1/e - Deployments.md",
     "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes -1/f - Namespaces.md",
