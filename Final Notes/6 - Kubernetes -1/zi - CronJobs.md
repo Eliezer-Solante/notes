@@ -1,6 +1,9 @@
+![[Pasted image 20260818162706.png]]
+![[Pasted image 20260818162717.png]]
+
+
 **Basic CronJob manifest**
 
-yaml
 
 ```yaml
 apiVersion: batch/v1

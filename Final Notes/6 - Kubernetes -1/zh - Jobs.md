@@ -1,5 +1,13 @@
 
+![[Pasted image 20260818161451.png]]
 
+![[Pasted image 20260818161649.png]]
+
+random-error image
+![[Pasted image 20260818161734.png]]
+
+parallelism:
+![[Pasted image 20260818161827.png]]
 # Creating a Job in Kubernetes
 
 A Kubernetes **Job** runs one or more pods until they complete successfully — good for batch tasks, one-off scripts, or migrations (as opposed to a Deployment, which keeps pods running indefinitely).
