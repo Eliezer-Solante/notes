@@ -127,3 +127,78 @@ kubectl exec -n nautilus time-check -- cat /opt/dba/time/time-check.log
 ```
 
 You should see timestamps appearing roughly every 5 seconds as the log accumulates.
+
+
+
+Here's the complete solution covering all four parts. Since you need both a Pod and a ConfigMap, that's two manifests (or one file with `---` separating them).
+
+**1. ConfigMap (`time-config.yaml`)**
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: time-config
+  namespace: nautilus
+data:
+  TIME_FREQ: "5"
+```
+
+**2. Pod (`time-check.yaml`)**
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: time-check
+  namespace: nautilus
+spec:
+  containers:
+    - name: time-check
+      image: busybox:latest
+      command: ["/bin/sh", "-c"]
+      args:
+        - "while true; do date; sleep $TIME_FREQ; done >> /opt/dba/time/time-check.log"
+      env:
+        - name: TIME_FREQ
+          valueFrom:
+            configMapKeyRef:
+              name: time-config
+              key: TIME_FREQ
+      volumeMounts:
+        - name: log-volume
+          mountPath: /opt/dba/time
+  volumes:
+    - name: log-volume
+      emptyDir: {}
+```
+
+**How each part maps:**
+
+|Requirement|Where it's handled|
+|---|---|
+|Namespace `nautilus`|`metadata.namespace` in both manifests|
+|Pod `time-check`, container `time-check`, image `busybox:latest`|Pod spec, `containers[0]`|
+|ConfigMap `time-config` with `TIME_FREQ=5`|ConfigMap manifest|
+|Command with the while loop|`command` + `args` using `sh -c`|
+|Output written to `/opt/dba/time/time-check.log`|`>>` redirect at the end of `args`, landing inside the mounted volume|
+|Env var `TIME_FREQ` from the ConfigMap key|`env[0].valueFrom.configMapKeyRef`|
+|Volume `log-volume` mounted at `/opt/dba/time`|`volumes` + `volumeMounts`|
+
+A note on the volume type: I used `emptyDir` since the task doesn't specify a particular storage backend (hostPath, PVC, etc.) — it just says "create a volume." `emptyDir` is the simplest choice that satisfies "create a volume and mount it," but if your actual environment expects a specific volume type (e.g., a PVC already provisioned), swap that section accordingly.
+
+**To deploy (from the jump host, since `kubectl` is already configured there):**
+
+```bash
+kubectl apply -f time-config.yaml
+kubectl apply -f time-check.yaml
+```
+
+**To verify it's working:**
+
+```bash
+kubectl get pods -n nautilus
+kubectl exec -n nautilus time-check -- cat /opt/dba/time/time-check.log
+```
+
+You should see timestamps appearing roughly every 5 seconds as the log accumulates.
