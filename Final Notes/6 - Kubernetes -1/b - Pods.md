@@ -11,3 +11,8 @@ user `--dry-run -o yaml` to see how you imperative command will look like in a y
 ```bash
 kubectl run nginx --image=nginx --dry-run=client -o yaml > pod.yaml
 ```
+
+to delete pod immediately
+```bash
+--force --grace-period=0
+```
