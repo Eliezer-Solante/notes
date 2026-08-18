@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
+                "file": "CMCs/imgs/Culture Mindset 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "m - ConfigMaps"
+              "title": "Culture Mindset 3"
             }
           }
         ]
@@ -193,6 +193,10 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Pasted image 20260818092847.png",
+    "CMCs/Culture Mindset 2.md",
+    "CMCs/imgs/Culture Mindset 3.md",
+    "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes -1/b - Pods.md",
     "Final Notes/6 - Kubernetes -1/5.md",
@@ -224,11 +228,7 @@
     "Final Notes/6 - Kubernetes -1/q - Resource Requirements.md",
     "Final Notes/6 - Kubernetes -1/p - security.md",
     "Final Notes/6 - Kubernetes -1/n - Secrets.md",
-    "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes -1/1 - Rollbacks.md",
-    "Final Notes/6 - Kubernetes -1/w - Taints & Tolerations vs Node Affinity.md",
-    "Final Notes/6 - Kubernetes -1/d - ReplicaSets.md",
-    "Final Notes/6 - Kubernetes -1/e - Deployments.md",
     "Untitled.base",
     "Untitled 1.base",
     "Final Notes/6 - Kubernetes -1/j - JSON-Path-Course-Resource_compressed.pdf",
