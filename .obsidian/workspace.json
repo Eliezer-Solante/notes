@@ -35,8 +35,7 @@
               "title": "zh - Jobs"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,12 +205,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc081d122e11c200",
+  "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/zh - Jobs.md",
     "Final Notes/6 - Kubernetes -1/zi - CronJobs.md",
     "Pasted image 20260818162717.png",
     "Pasted image 20260818162706.png",
-    "Final Notes/6 - Kubernetes -1/zh - Jobs.md",
     "Pasted image 20260818161827.png",
     "Pasted image 20260818161734.png",
     "Pasted image 20260818161649.png",
