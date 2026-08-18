@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
+                "file": "Final Notes/6 - Kubernetes -1/zg - Canary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "y - Multi-container Pods design patterns"
-            }
-          },
-          {
-            "id": "2f721cef5d672a06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Final Notes/6 - Kubernetes -1/5 - KKE Engineer Problems.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "5 - KKE Engineer Problems"
+              "title": "zg - Canary"
             }
           }
         ]
@@ -207,15 +193,21 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/zf - BlueGreen.md",
+    "Final Notes/6 - Kubernetes -1/zg - Canary.md",
+    "Final Notes/6 - Kubernetes -1/g - Services.md",
+    "Final Notes/6 - Kubernetes -1/h - Services - ClusterIP.md",
+    "Final Notes/6 - Kubernetes -1/q - Resource Requirements.md",
+    "Final Notes/6 - Kubernetes -1/r - Service accounts.md",
+    "Final Notes/6 - Kubernetes -1/p - security.md",
+    "Final Notes/6 - Kubernetes -1/2 - CronJobs.md",
     "Final Notes/6 - Kubernetes -1/b - Pods.md",
+    "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
     "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes -1/5 - KKE Engineer Problems.md",
     "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
     "Final Notes/6 - Kubernetes -1/l - environment variables.md",
-    "Final Notes/6 - Kubernetes -1/g - Services.md",
     "Final Notes/6 - Kubernetes -1/3 - Kubernetes Part 1 Office Hours.md",
-    "Final Notes/6 - Kubernetes -1/zg - Canary.md",
-    "Final Notes/6 - Kubernetes -1/zf - BlueGreen.md",
     "Pasted image 20260818114531.png",
     "Pasted image 20260818114516.png",
     "Pasted image 20260818114447.png",
@@ -229,7 +221,6 @@
     "CMCs/imgs/Culture Mindset 3.md",
     "CMCs/Culture Mindset 2.md",
     "Final Notes/6 - Kubernetes -1/4 - Jobs.md",
-    "Final Notes/6 - Kubernetes -1/2 - CronJobs.md",
     "Final Notes/6 - Kubernetes -1/zd - Labels, Selectors & Annotations.md",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817172423.png",
     "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
@@ -237,12 +228,7 @@
     "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
     "Final Notes/6 - Kubernetes -1/za - Liveness Probe.md",
     "Final Notes/6 - Kubernetes -1/t - Taints and Tolerations.md",
-    "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
     "Final Notes/6 - Kubernetes -1/x - Multi-container pods.md",
-    "Final Notes/6 - Kubernetes -1/v - Node affinity.md",
-    "Final Notes/6 - Kubernetes -1/u - Node Selector Logging.md",
-    "Final Notes/6 - Kubernetes -1/r - Service accounts.md",
-    "Final Notes/6 - Kubernetes -1/q - Resource Requirements.md",
     "Untitled.base",
     "Untitled 1.base",
     "Final Notes/6 - Kubernetes -1/j - JSON-Path-Course-Resource_compressed.pdf",
