@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/zf - BlueGreen.md",
+                "file": "Final Notes/6 - Kubernetes -1/zg - Canary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zf - BlueGreen"
+              "title": "zg - Canary"
             }
           }
         ]
@@ -193,9 +193,14 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/zf - BlueGreen.md",
+    "Pasted image 20260818114531.png",
+    "Pasted image 20260818114516.png",
+    "Pasted image 20260818114447.png",
+    "Pasted image 20260818114210.png",
+    "Pasted image 20260818114141.png",
     "Pasted image 20260818111336.png",
     "Final Notes/6 - Kubernetes -1/zg - Canary.md",
-    "Final Notes/6 - Kubernetes -1/zf - BlueGreen.md",
     "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817162908.png",
     "CMCs/imgs/Pasted image 20260818092847.png",
@@ -211,12 +216,6 @@
     "Final Notes/6 - Kubernetes -1/2 - CronJobs.md",
     "Final Notes/6 - Kubernetes -1/zd - Labels, Selectors & Annotations.md",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817172423.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817172318.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817172156.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817171705.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817171533.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817171356.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817171319.png",
     "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
     "Final Notes/6 - Kubernetes -1/zb - Logging.md",
     "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
