@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/zg - Canary.md",
+                "file": "Final Notes/6 - Kubernetes -1/zh - Jobs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zg - Canary"
+              "title": "zh - Jobs"
             }
           }
         ]
@@ -193,16 +193,17 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/zi - CronJobs.md",
+    "Final Notes/6 - Kubernetes -1/zh - Jobs.md",
+    "Final Notes/6 - Kubernetes -1/zg - Canary.md",
     "Pasted image 20260818150722.png",
     "Pasted image 20260818150630.png",
     "Final Notes/6 - Kubernetes -1/zf - BlueGreen.md",
-    "Final Notes/6 - Kubernetes -1/zg - Canary.md",
     "Final Notes/6 - Kubernetes -1/g - Services.md",
     "Final Notes/6 - Kubernetes -1/h - Services - ClusterIP.md",
     "Final Notes/6 - Kubernetes -1/q - Resource Requirements.md",
     "Final Notes/6 - Kubernetes -1/r - Service accounts.md",
     "Final Notes/6 - Kubernetes -1/p - security.md",
-    "Final Notes/6 - Kubernetes -1/2 - CronJobs.md",
     "Final Notes/6 - Kubernetes -1/b - Pods.md",
     "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
     "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
@@ -219,10 +220,8 @@
     "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
     "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817162908.png",
     "CMCs/imgs/Pasted image 20260818092847.png",
-    "Final Notes/6 - Kubernetes -1/imgs/Pasted image 20260817162920.png",
     "CMCs/imgs/Culture Mindset 3.md",
     "CMCs/Culture Mindset 2.md",
-    "Final Notes/6 - Kubernetes -1/4 - Jobs.md",
     "Final Notes/6 - Kubernetes -1/zd - Labels, Selectors & Annotations.md",
     "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
     "Final Notes/6 - Kubernetes -1/zb - Logging.md",
