@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
+                "file": "Final Notes/6 - Kubernetes -1/zb - Logging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "z - Readiness Probes"
+              "title": "zb - Logging"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/zb - Logging.md",
+                "file": "Final Notes/6 - Kubernetes -1/1A.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zb - Logging"
+              "title": "1A"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,11 +205,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc081d122e11c200",
+  "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
+    "Final Notes/6 - Kubernetes -1/1A.md",
+    "Pasted image 20260819120047.png",
+    "Final Notes/6 - Kubernetes -1/zi - CronJobs.md",
+    "Final Notes/6 - Kubernetes -1/zb - Logging.md",
     "Final Notes/6 - Kubernetes -1/za - Liveness Probe.md",
     "Final Notes/6 - Kubernetes -1/e - Deployments.md",
-    "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
     "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
     "Final Notes/6 - Kubernetes -1/w - Taints & Tolerations vs Node Affinity.md",
     "Final Notes/6 - Kubernetes -1/v - Node affinity.md",
@@ -221,7 +224,6 @@
     "Final Notes/6 - Kubernetes -1/5 - KKE Engineer Problems.md",
     "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes -1/zh - Jobs.md",
-    "Final Notes/6 - Kubernetes -1/zi - CronJobs.md",
     "Pasted image 20260818162717.png",
     "Pasted image 20260818162706.png",
     "Pasted image 20260818161827.png",
@@ -240,10 +242,6 @@
     "Final Notes/6 - Kubernetes -1/l - environment variables.md",
     "Final Notes/6 - Kubernetes -1/3 - Kubernetes Part 1 Office Hours.md",
     "Pasted image 20260818114531.png",
-    "Pasted image 20260818114516.png",
-    "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
-    "CMCs/imgs/Culture Mindset 3.md",
-    "CMCs/Culture Mindset 2.md",
     "Untitled.base",
     "Untitled 1.base",
     "Final Notes/6 - Kubernetes -1/j - JSON-Path-Course-Resource_compressed.pdf",
