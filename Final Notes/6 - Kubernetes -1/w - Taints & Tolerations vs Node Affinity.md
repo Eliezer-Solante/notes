@@ -80,3 +80,18 @@ A wristband (toleration) without deciding to walk over (affinity) means the gues
 - **Taints/tolerations alone** — when you just need to _keep the riff-raff out_ and don't care exactly which of your "allowed" pods ends up there (e.g. tainting nodes as `NoExecute` during maintenance so most workloads evacuate, without needing to specify where they should go instead).
 - **Node affinity alone** — when you want to _prefer_ certain nodes without needing hard exclusivity (e.g. `preferredDuringScheduling` to softly favor a particular zone for latency reasons, but you're fine if other unrelated pods share that zone too).
 - **Both together** — true dedicated/isolated node pools (GPU nodes, high-memory nodes, compliance-restricted nodes).
+
+```
+  - effect: NoSchedule
+    key: dedicated
+    operator: Equal
+    value: ml
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+```
