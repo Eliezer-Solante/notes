@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/d - ReplicaSets.md",
+                "file": "Final Notes/6 - Kubernetes -1/n - Secrets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "d - ReplicaSets"
+              "title": "n - Secrets"
             }
           },
           {
@@ -208,12 +208,13 @@
   },
   "active": "fc081d122e11c200",
   "lastOpenFiles": [
-    "Final Notes/6 - Kubernetes -1/b - Pods.md",
-    "Final Notes/6 - Kubernetes -1/e - Deployments.md",
-    "Final Notes/6 - Kubernetes -1/5 - KKE Engineer Problems.md",
-    "Final Notes/6 - Kubernetes -1/d - ReplicaSets.md",
-    "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
+    "Final Notes/6 - Kubernetes -1/n - Secrets.md",
     "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
+    "Final Notes/6 - Kubernetes -1/d - ReplicaSets.md",
+    "Final Notes/6 - Kubernetes -1/e - Deployments.md",
+    "Final Notes/6 - Kubernetes -1/b - Pods.md",
+    "Final Notes/6 - Kubernetes -1/5 - KKE Engineer Problems.md",
+    "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
     "Final Notes/6 - Kubernetes -1/zh - Jobs.md",
     "Final Notes/6 - Kubernetes -1/zi - CronJobs.md",
     "Pasted image 20260818162717.png",
@@ -243,7 +244,6 @@
     "Final Notes/6 - Kubernetes -1/zc - Monitoring.md",
     "Final Notes/6 - Kubernetes -1/zb - Logging.md",
     "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
-    "Final Notes/6 - Kubernetes -1/za - Liveness Probe.md",
     "Untitled.base",
     "Untitled 1.base",
     "Final Notes/6 - Kubernetes -1/j - JSON-Path-Course-Resource_compressed.pdf",

@@ -103,34 +103,37 @@ When you run `kubectl set image` or edit the image tag, the Deployment doesn't m
 In everyday work: you write Deployment YAML, `kubectl apply` it, and let it handle the ReplicaSet and Pod layers underneath automatically.
 
 ```yaml
-apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"apps/v1","kind":"ReplicaSet","metadata":{"annotations":{},"labels":{"app":"catalog"},"name":"catalog-replicas","namespace":"catalog-ops"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"catalog"}},"template":{"metadata":{"labels":{"app":"catalog"}},"spec":{"containers":[{"image":"nginx:1.25-alpine","name":"catalog"}]}}}}
-  creationTimestamp: "2026-08-19T02:03:09Z"
-  generation: 1
-  labels:
-    app: catalog
-  name: catalog-replicas
-  namespace: catalog-ops
-  resourceVersion: "1232"
-  uid: 257c6ce5-802c-41ea-a6ac-5ef5d41b156d
 spec:
-  replicas: 3
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: catalog
+      app: session-auth
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
   template:
     metadata:
       labels:
-        app: catalog
+        app: session-auth
     spec:
       containers:
-      - image: nginx:1.25-alpine
+      - command:
+        - sh
+        - -c
+        - sleep 3600
+        env:
+        - name: SESSION_KEY
+          valueFrom:
+            secretKeyRef:
+              key: SESSION_KEY
+              name: session-secret
+        image: busybox:1.36
         imagePullPolicy: IfNotPresent
-        name: catalog
+        name: session-auth
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
@@ -139,11 +142,4 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-status:
-  availableReplicas: 3
-  fullyLabeledReplicas: 3
-  observedGeneration: 1
-  readyReplicas: 3
-  replicas: 3
-  terminatingReplicas: 0
 ```
