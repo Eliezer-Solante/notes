@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/v - Node affinity.md",
+                "file": "Final Notes/6 - Kubernetes -1/zt - KubeConfig.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "v - Node affinity"
+              "title": "zt - KubeConfig"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/6 - Kubernetes -1/1A.md",
+                "file": "Final Notes/6 - Kubernetes -1/zp - Persistent Volumes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1A"
+              "title": "zp - Persistent Volumes"
             }
           }
         ]
@@ -94,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
-    "collapsed": true
+    "width": 283.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -207,42 +206,42 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
-    "Final Notes/6 - Kubernetes -1/t - Taints and Tolerations.md",
-    "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
+    "Final Notes/6 - Kubernetes -1/zr - Kubernetes Security.md",
+    "Final Notes/6 - Kubernetes -1/zq - Persistent Volume Claims.md",
+    "Final Notes/6 - Kubernetes -1/zs - Authentication.md",
+    "Final Notes/6 - Kubernetes -1/zze - Operator Framework.md",
+    "Final Notes/6 - Kubernetes -1/zzd - Custom Controllers.md",
+    "Final Notes/6 - Kubernetes -1/zzc - Custom Resource Definition.md",
+    "Final Notes/6 - Kubernetes -1/zzb - API deprecations.md",
+    "Final Notes/6 - Kubernetes -1/zza - API versions.md",
+    "Final Notes/6 - Kubernetes -1/zz - Validating and Mutating Admission.md",
+    "Final Notes/6 - Kubernetes -1/zy - Admission Controllers.md",
+    "Final Notes/6 - Kubernetes -1/zx - Cluster Roles.md",
+    "Final Notes/6 - Kubernetes -1/zw - Role Based Access Controls.md",
+    "Final Notes/6 - Kubernetes -1/zv - Authorization.md",
+    "Final Notes/6 - Kubernetes -1/zu - API Groups.md",
+    "Final Notes/6 - Kubernetes -1/zt - KubeConfig.md",
+    "Final Notes/6 - Kubernetes -1/u - Node Selector Logging.md",
+    "Final Notes/6 - Kubernetes -1/zp - Persistent Volumes.md",
+    "Final Notes/6 - Kubernetes -1/zo - Volumes in Kubernetes.md",
+    "Final Notes/6 - Kubernetes -1/zn - Volume Driver plugins in docker.md",
+    "Final Notes/6 - Kubernetes -1/zm - Storage in Docker.md",
+    "Pasted image 20260820160339.png",
+    "Pasted image 20260820160217.png",
+    "Pasted image 20260820160159.png",
+    "Pasted image 20260820160057.png",
+    "Pasted image 20260820160004.png",
+    "Pasted image 20260820155821.png",
+    "Pasted image 20260820155812.png",
+    "Pasted image 20260820155755.png",
+    "Pasted image 20260820155626.png",
+    "Pasted image 20260820155610.png",
+    "Final Notes/6 - Kubernetes -1/zl - Ingress Networking.md",
+    "Final Notes/6 - Kubernetes -1/zj - Network Policies.md",
+    "Final Notes/6 - Kubernetes -1/zk - Developing Network Policies.md",
     "Final Notes/6 - Kubernetes -1/1A.md",
-    "Final Notes/6 - Kubernetes -1/m - ConfigMaps.md",
-    "Final Notes/6 - Kubernetes -1/zb - Logging.md",
-    "Final Notes/6 - Kubernetes -1/z - Readiness Probes.md",
-    "Pasted image 20260819120047.png",
     "Final Notes/6 - Kubernetes -1/zi - CronJobs.md",
-    "Final Notes/6 - Kubernetes -1/za - Liveness Probe.md",
-    "Final Notes/6 - Kubernetes -1/e - Deployments.md",
-    "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
-    "Final Notes/6 - Kubernetes -1/w - Taints & Tolerations vs Node Affinity.md",
     "Final Notes/6 - Kubernetes -1/v - Node affinity.md",
-    "Final Notes/6 - Kubernetes -1/n - Secrets.md",
-    "Final Notes/6 - Kubernetes -1/d - ReplicaSets.md",
-    "Final Notes/6 - Kubernetes -1/b - Pods.md",
-    "Final Notes/6 - Kubernetes -1/5 - KKE Engineer Problems.md",
-    "Final Notes/6 - Kubernetes -1/zh - Jobs.md",
-    "Pasted image 20260818162717.png",
-    "Pasted image 20260818162706.png",
-    "Pasted image 20260818161827.png",
-    "Pasted image 20260818161734.png",
-    "Pasted image 20260818161649.png",
-    "Pasted image 20260818161451.png",
-    "Final Notes/6 - Kubernetes -1/zg - Canary.md",
-    "Pasted image 20260818150722.png",
-    "Pasted image 20260818150630.png",
-    "Final Notes/6 - Kubernetes -1/zf - BlueGreen.md",
-    "Final Notes/6 - Kubernetes -1/g - Services.md",
-    "Final Notes/6 - Kubernetes -1/h - Services - ClusterIP.md",
-    "Final Notes/6 - Kubernetes -1/q - Resource Requirements.md",
-    "Final Notes/6 - Kubernetes -1/r - Service accounts.md",
-    "Final Notes/6 - Kubernetes -1/p - security.md",
-    "Final Notes/6 - Kubernetes -1/l - environment variables.md",
-    "Final Notes/6 - Kubernetes -1/3 - Kubernetes Part 1 Office Hours.md",
-    "Pasted image 20260818114531.png",
     "Untitled.base",
     "Untitled 1.base",
     "Final Notes/6 - Kubernetes -1/j - JSON-Path-Course-Resource_compressed.pdf",
