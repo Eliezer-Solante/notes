@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
+                "file": "Final Notes/7 - Kubernetes - 2/y - Admission Controllers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "x - Cluster Roles"
+              "title": "y - Admission Controllers"
             }
           }
         ]
@@ -193,20 +193,20 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
-    "Pasted image 20260821153727.png",
-    "Pasted image 20260821153655.png",
-    "Pasted image 20260821153613.png",
-    "Pasted image 20260821153536.png",
-    "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
+    "Pasted image 20260821201748.png",
+    "Pasted image 20260821201715.png",
+    "Pasted image 20260821201625.png",
+    "Pasted image 20260821201538.png",
+    "Pasted image 20260821201507.png",
+    "Pasted image 20260821201306.png",
+    "Pasted image 20260821201251.png",
+    "Pasted image 20260821201203.png",
+    "Pasted image 20260821201113.png",
+    "Pasted image 20260821201035.png",
+    "Pasted image 20260821201008.png",
     "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
+    "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
-    "Pasted image 20260821143015.png",
-    "Pasted image 20260821143008.png",
-    "Pasted image 20260821142957.png",
-    "Pasted image 20260821141506.png",
-    "Pasted image 20260821141459.png",
-    "Pasted image 20260821141300.png",
-    "Pasted image 20260821141241.png",
     "Final Notes/7 - Kubernetes - 2/u - API Groups.md",
     "Final Notes/7 - Kubernetes - 2/t - KubeConfig.md",
     "Final Notes/7 - Kubernetes - 2/s - Authentication.md",
