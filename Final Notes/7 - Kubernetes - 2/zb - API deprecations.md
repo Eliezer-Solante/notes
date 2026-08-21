@@ -19,7 +19,9 @@
  ![[Pasted image 20260822003406.png]]
 
  ![[Pasted image 20260822003540.png]]
+`kubectl convert -f ingress-old.yaml --output-version networking.k8s.io/v1 > ingress-new.yaml`
 
+`kubectl create -f ingress-new.yaml `
  ![[Pasted image 20260822003620.png]]
 
 `https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-convert-plugin`

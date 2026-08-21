@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/zb - API deprecations.md",
+                "file": "Final Notes/7 - Kubernetes - 2/zc - Custom Resource Definition.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zb - API deprecations"
+              "title": "zc - Custom Resource Definition"
             }
           }
         ]
@@ -193,8 +193,11 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
-    "Final Notes/7 - Kubernetes - 2/za - API versions.md",
+    "Pasted image 20260822010544.png",
+    "Pasted image 20260822010508.png",
+    "Pasted image 20260822010452.png",
     "Final Notes/7 - Kubernetes - 2/zb - API deprecations.md",
+    "Final Notes/7 - Kubernetes - 2/za - API versions.md",
     "Final Notes/7 - Kubernetes - 2/y - Admission Controllers.md",
     "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
     "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
@@ -212,8 +215,6 @@
     "Pasted image 20260822003317.png",
     "Pasted image 20260822003250.png",
     "Pasted image 20260822003121.png",
-    "Pasted image 20260822002805.png",
-    "Pasted image 20260822002643.png",
     "Final Notes/7 - Kubernetes - 2/c - Jobs.md",
     "Final Notes/7 - Kubernetes - 2/d - CronJobs.md",
     "Final Notes/7 - Kubernetes - 2/h - Storage in Docker.md",
