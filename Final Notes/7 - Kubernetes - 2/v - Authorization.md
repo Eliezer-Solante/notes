@@ -9,8 +9,15 @@
 **![[Pasted image 20260821131817.png]]**
 
 ![[Pasted image 20260821131915.png]]
+![[Pasted image 20260821142957.png]]
+
+To inspect what authorization modes configures on the cluster:
+`kubectl describe pod kube-apiserver-controlplane -n kube-system`
 
 
+![[Pasted image 20260821143008.png]]
+
+![[Pasted image 20260821143015.png]]
 # Kubernetes Authorization
 
 Authentication proves **who you are**; authorization decides **what you're allowed to do**.

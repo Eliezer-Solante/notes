@@ -7,6 +7,10 @@
 ![[Pasted image 20260821141506.png]]
 
 ![[Pasted image 20260821141459.png]]
+
+To check the roles that exist in all namespaces:
+`kubectl get roles -A`
+
 ---
 
 # Role-Based Access Control (RBAC) — Full Walkthrough
@@ -149,12 +153,12 @@ kubectl auth can-i delete pods/green --as dev-user    # no
 
 ## Quick Reference
 
-|Task|Command|
-|---|---|
-|Create role|`kubectl create role <name> --verb=<v1,v2> --resource=<r1,r2>`|
-|Create binding|`kubectl create rolebinding <name> --role=<role> --user=<user>`|
-|List roles|`kubectl get roles`|
-|List bindings|`kubectl get rolebindings`|
-|Inspect role|`kubectl describe role <name>`|
-|Inspect binding|`kubectl describe rolebinding <name>`|
-|Test permission|`kubectl auth can-i <verb> <resource> --as <user> --namespace <ns>`|
+| Task            | Command                                                             |
+| --------------- | ------------------------------------------------------------------- |
+| Create role     | `kubectl create role <name> --verb=<v1,v2> --resource=<r1,r2>`      |
+| Create binding  | `kubectl create rolebinding <name> --role=<role> --user=<user>`     |
+| List roles      | `kubectl get roles`                                                 |
+| List bindings   | `kubectl get rolebindings`                                          |
+| Inspect role    | `kubectl describe role <name>`                                      |
+| Inspect binding | `kubectl describe rolebinding <name>`                               |
+| Test permission | `kubectl auth can-i <verb> <resource> --as <user> --namespace <ns>` |
