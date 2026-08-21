@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/u - API Groups.md",
+                "file": "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "u - API Groups"
+              "title": "w - Role Based Access Controls"
             }
           }
         ]
@@ -193,20 +193,20 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
-    "Final Notes/7 - Kubernetes - 2/t - KubeConfig.md",
-    "Final Notes/7 - Kubernetes - 2/u - API Groups.md",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
+    "Pasted image 20260821131915.png",
+    "Pasted image 20260821131817.png",
+    "Pasted image 20260821131808.png",
+    "Pasted image 20260821131801.png",
+    "Pasted image 20260821131756.png",
+    "Pasted image 20260821131749.png",
+    "Final Notes/7 - Kubernetes - 2/u - API Groups.md",
+    "Pasted image 20260821130753.png",
+    "Pasted image 20260821130732.png",
+    "Pasted image 20260821130529.png",
+    "Pasted image 20260821130415.png",
+    "Final Notes/7 - Kubernetes - 2/t - KubeConfig.md",
     "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
-    "Final Notes/imgs/Pasted image 20260821110930.png",
-    "Final Notes/imgs/Pasted image 20260821114327.png",
-    "Final Notes/imgs/Pasted image 20260821114312.png",
-    "Final Notes/imgs/Pasted image 20260821114253.png",
-    "Final Notes/imgs/Pasted image 20260821114129.png",
-    "Final Notes/imgs/Pasted image 20260821114044.png",
-    "Final Notes/imgs/Pasted image 20260821114017.png",
-    "Final Notes/imgs/Pasted image 20260821113907.png",
-    "Final Notes/imgs/Pasted image 20260821113832.png",
-    "Final Notes/imgs/Pasted image 20260821113749.png",
     "Final Notes/7 - Kubernetes - 2/s - Authentication.md",
     "Final Notes/6 - Kubernetes -1/r - Service accounts.md",
     "Final Notes/7 - Kubernetes - 2/r - Kubernetes Security Primitives.md",
