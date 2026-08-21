@@ -21,3 +21,7 @@
  ![[Pasted image 20260822003540.png]]
 
  ![[Pasted image 20260822003620.png]]
+
+`https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-convert-plugin`
+
+ `kube-apiserver.yaml` file is usually located in here: `/etc/kubernetes/manifests/kube-apiserver.yaml`
