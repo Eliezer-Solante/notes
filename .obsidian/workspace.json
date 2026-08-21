@@ -11,12 +11,14 @@
             "id": "2dfac3e01a35d0a9",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Final Notes/imgs/Pasted image 20260821130040.png"
+                "file": "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260821130040"
+              "icon": "lucide-file",
+              "title": "w - Role Based Access Controls"
             }
           }
         ]
@@ -78,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5
+    "width": 283.5,
+    "collapsed": true
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -190,6 +193,7 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/imgs/Pasted image 20260821130040.png",
     "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
     "Final Notes/imgs/Pasted image 20260821131915.png",
