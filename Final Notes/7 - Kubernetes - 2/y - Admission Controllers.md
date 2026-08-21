@@ -150,7 +150,7 @@ kubectl exec kube-apiserver-controlplane -n kube-system -- kube-apiserver -h | g
 ## Enabling / Disabling Admission Controllers
 
 **Option A — systemd service** (`kube-apiserver.service`):
-
+located at `/etc/kubernetes/manifests/kube-apiserver.yaml`
 ```bash
 ExecStart=/usr/local/bin/kube-apiserver \
   --advertise-address=${INTERNAL_IP} \
@@ -276,3 +276,69 @@ kubectl exec kube-apiserver-controlplane -n kube-system -- kube-apiserver -h | g
 ```
 
 Thanks for flagging that — good to keep the terminology current since exam material (e.g. CKA) sometimes still references the older names even though they no longer exist as separate flags.
+
+
+
+TASK SAMPLE
+
+# Task: Enable `ImagePolicyWebhook` Admission Plugin
+
+**Goal:** Reconfigure the API server to enable the `ImagePolicyWebhook` admission plugin and make sure it can access its config files.
+
+## Checklist
+
+- [x] `ImagePolicyWebhook` admission plugin enabled on kube-apiserver?
+- [x] `--admission-control-config-file` flag set on kube-apiserver?
+- [x] `imgvalidation` volume mounted in kube-apiserver?
+
+## Steps
+
+**1. Back up the manifest first, then edit it:**
+
+```bash
+cp /etc/kubernetes/manifests/kube-apiserver.yaml /opt/kube-apiserver.yaml.bak
+vi /etc/kubernetes/manifests/kube-apiserver.yaml
+```
+
+**2. Enable the admission plugin** — add `ImagePolicyWebhook` alongside existing plugins:
+
+```yaml
+    - --enable-admission-plugins=NodeRestriction,ImagePolicyWebhook
+```
+
+**3. Point to the admission control config file:**
+
+```yaml
+    - --admission-control-config-file=/etc/kubernetes/imgvalidation/admission-configuration.yaml
+```
+
+**4. Mount the `imgvalidation` directory so the config file is actually reachable inside the container:**
+
+Under `volumes`:
+
+```yaml
+    - name: imgvalidation
+      hostPath:
+        path: /etc/kubernetes/imgvalidation
+        type: Directory
+```
+
+Under `volumeMounts`:
+
+```yaml
+    - name: imgvalidation
+      mountPath: /etc/kubernetes/imgvalidation
+      readOnly: true
+```
+
+**5. Save and verify the API server restarted cleanly** (kubelet auto-restarts static pods on manifest change):
+
+```bash
+kubectl get pods -n kube-system
+```
+
+## Notes to self
+
+- No need to manually restart anything — editing a static pod manifest in `/etc/kubernetes/manifests/` triggers the kubelet to recreate the pod automatically.
+- If the apiserver pod doesn't come back (crash loop / missing), check `crictl logs` on the node or `kubectl describe pod kube-apiserver-<node> -n kube-system` — likely causes: bad YAML indentation, config file path typo, or the `admission-configuration.yaml` referencing a webhook that isn't reachable.
+- Keep the `.bak` file until confirmed working — fastest rollback is just copying it back over the manifest.

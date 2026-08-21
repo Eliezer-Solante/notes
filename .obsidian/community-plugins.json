@@ -5,5 +5,6 @@
   "global-search-and-replace",
   "pdf-resize",
   "pdf-plus",
-  "obsidian-git"
+  "obsidian-git",
+  "better-export-pdf"
 ]
