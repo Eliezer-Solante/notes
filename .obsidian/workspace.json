@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/zg - Helm Concept.md",
+                "file": "Final Notes/6 - Kubernetes -1/g - Services.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zg - Helm Concept"
+              "title": "g - Services"
             }
           }
         ]
@@ -193,6 +193,7 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/7 - Kubernetes - 2/zg - Helm Concept.md",
     "Pasted image 20260822020615.png",
     "Pasted image 20260822020406.png",
     "Pasted image 20260822020305.png",
@@ -204,8 +205,6 @@
     "Pasted image 20260822015839.png",
     "Final Notes/7 - Kubernetes - 2/zf - Helm.md",
     "Pasted image 20260822014834.png",
-    "Pasted image 20260822014646.png",
-    "Final Notes/7 - Kubernetes - 2/zg - Helm Concept.md",
     "Final Notes/7 - Kubernetes - 2/ze - Operator Framework.md",
     "Final Notes/7 - Kubernetes - 2/y - Admission Controllers.md",
     "Final Notes/7 - Kubernetes - 2/za - API versions.md",
