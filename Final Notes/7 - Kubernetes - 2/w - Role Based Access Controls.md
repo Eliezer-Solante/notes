@@ -162,3 +162,4 @@ kubectl auth can-i delete pods/green --as dev-user    # no
 | Inspect role    | `kubectl describe role <name>`                                      |
 | Inspect binding | `kubectl describe rolebinding <name>`                               |
 | Test permission | `kubectl auth can-i <verb> <resource> --as <user> --namespace <ns>` |
+

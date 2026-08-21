@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
+                "file": "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "w - Role Based Access Controls"
+              "title": "x - Cluster Roles"
             }
           }
         ]
@@ -193,9 +193,9 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
-    "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
-    "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
     "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
+    "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
+    "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
     "Pasted image 20260821143015.png",
     "Pasted image 20260821143008.png",
     "Pasted image 20260821142957.png",
