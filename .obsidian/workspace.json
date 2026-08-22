@@ -11,14 +11,12 @@
             "id": "2dfac3e01a35d0a9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/zr - Different Types of Patches.md",
-                "mode": "source",
-                "source": false
+                "file": "Final Notes/imgs/Pasted image 20260822185225.png"
               },
-              "icon": "lucide-file",
-              "title": "zr - Different Types of Patches"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260822185225"
             }
           },
           {
@@ -94,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5,
-    "collapsed": true
+    "width": 283.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -205,32 +202,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2dfac3e01a35d0a9",
+  "active": "cd4116a93bb7c0e7",
   "lastOpenFiles": [
-    "Pasted image 20260822215722.png",
-    "Pasted image 20260822215636.png",
+    "Final Notes/7 - Kubernetes - 2/zr - Different Types of Patches.md",
+    "Final Notes/imgs/Pasted image 20260822215722.png",
+    "Final Notes/imgs/Pasted image 20260822215636.png",
     "Final Notes/7 - Kubernetes - 2/zq - Patches Intro.md",
-    "Pasted image 20260822215506.png",
-    "Pasted image 20260822215347.png",
-    "Pasted image 20260822215304.png",
-    "Pasted image 20260822214914.png",
+    "Final Notes/imgs/Pasted image 20260822215506.png",
+    "Final Notes/imgs/Pasted image 20260822215347.png",
+    "Final Notes/imgs/Pasted image 20260822215304.png",
+    "Final Notes/imgs/Pasted image 20260822214914.png",
     "Final Notes/7 - Kubernetes - 2/zv - Components.md",
     "Final Notes/7 - Kubernetes - 2/zw.md",
     "Final Notes/7 - Kubernetes - 2/zu - Overlays.md",
     "Final Notes/7 - Kubernetes - 2/zt - Patches List.md",
     "Final Notes/7 - Kubernetes - 2/zs - Patches Dictionary.md",
-    "Final Notes/7 - Kubernetes - 2/zr - Different Types of Patches.md",
     "Final Notes/7 - Kubernetes - 2/zz.md",
     "Final Notes/7 - Kubernetes - 2/zy.md",
     "Final Notes/7 - Kubernetes - 2/zx.md",
     "Final Notes/7 - Kubernetes - 2/zp - Image Transformers.md",
     "Final Notes/7 - Kubernetes - 2/zo - Common Transformers.md",
     "Final Notes/7 - Kubernetes - 2/zh - Kuztomize Problem Statement and Ideology.md",
-    "Pasted image 20260822204504.png",
-    "Pasted image 20260822204444.png",
-    "Pasted image 20260822204411.png",
-    "Pasted image 20260822204216.png",
-    "Pasted image 20260822204147.png",
+    "Final Notes/imgs/Pasted image 20260822204504.png",
+    "Final Notes/imgs/Pasted image 20260822204444.png",
+    "Final Notes/imgs/Pasted image 20260822204411.png",
+    "Final Notes/imgs/Pasted image 20260822204216.png",
     "Final Notes/7 - Kubernetes - 2/zn - Managing Directories.md",
     "Final Notes/7 - Kubernetes - 2/zm - Kustomize ApiVersion and Kind.md",
     "Final Notes/7 - Kubernetes - 2/zl - Kustomize Output.md",
