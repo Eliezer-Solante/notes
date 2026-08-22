@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/zh - Kuztomize Problem Statement and Ideology.md",
+                "file": "Final Notes/7 - Kubernetes - 2/zo - Common Transformers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zh - Kuztomize Problem Statement and Ideology"
+              "title": "zo - Common Transformers"
             }
           }
         ]
@@ -208,29 +208,29 @@
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
     "Final Notes/7 - Kubernetes - 2/zo - Common Transformers.md",
+    "Final Notes/7 - Kubernetes - 2/zp - Image Transformers.md",
+    "Final Notes/7 - Kubernetes - 2/zh - Kuztomize Problem Statement and Ideology.md",
+    "Pasted image 20260822204504.png",
+    "Pasted image 20260822204444.png",
+    "Pasted image 20260822204411.png",
+    "Pasted image 20260822204216.png",
+    "Pasted image 20260822204147.png",
+    "Pasted image 20260822204134.png",
+    "Pasted image 20260822204113.png",
+    "Pasted image 20260822204053.png",
+    "Pasted image 20260822204015.png",
     "Final Notes/7 - Kubernetes - 2/zn - Managing Directories.md",
     "Pasted image 20260822200843.png",
-    "Pasted image 20260822200811.png",
-    "Pasted image 20260822200614.png",
-    "Pasted image 20260822200534.png",
     "Final Notes/7 - Kubernetes - 2/zm - Kustomize ApiVersion and Kind.md",
-    "Pasted image 20260822191955.png",
     "Final Notes/7 - Kubernetes - 2/zl - Kustomize Output.md",
-    "Pasted image 20260822191902.png",
-    "Pasted image 20260822191837.png",
     "Final Notes/7 - Kubernetes - 2/zk - The kustomization.yaml file.md",
-    "Pasted image 20260822191356.png",
-    "Pasted image 20260822191329.png",
-    "Pasted image 20260822191149.png",
     "Final Notes/7 - Kubernetes - 2/zj - Installation and Setup.md",
     "Final Notes/7 - Kubernetes - 2/zr -.md",
     "Final Notes/7 - Kubernetes - 2/zq -.md",
-    "Final Notes/7 - Kubernetes - 2/zp - Image Transformers.md",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
     "Final Notes/7 - Kubernetes - 2/c - Jobs.md",
     "Final Notes/7 - Kubernetes - 2/Untitled",
     "Final Notes/7 - Kubernetes - 2/zi - Kustomize vs Helm.md",
-    "Final Notes/7 - Kubernetes - 2/zh - Kuztomize Problem Statement and Ideology.md",
     "Final Notes/7 - Kubernetes - 2/zf - Helm.md",
     "Final Notes/7 - Kubernetes - 2/zg - Helm Concept.md",
     "Final Notes/7 - Kubernetes - 2/ze - Operator Framework.md",
