@@ -11,12 +11,14 @@
             "id": "2dfac3e01a35d0a9",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Final Notes/imgs/Pasted image 20260822185225.png"
+                "file": "Final Notes/7 - Kubernetes - 2/zs - Patches Dictionary.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260822185225"
+              "icon": "lucide-file",
+              "title": "zs - Patches Dictionary"
             }
           },
           {
@@ -92,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5
+    "width": 283.5,
+    "collapsed": true
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -202,42 +205,42 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cd4116a93bb7c0e7",
+  "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
     "Final Notes/7 - Kubernetes - 2/zr - Different Types of Patches.md",
-    "Final Notes/imgs/Pasted image 20260822215722.png",
-    "Final Notes/imgs/Pasted image 20260822215636.png",
     "Final Notes/7 - Kubernetes - 2/zq - Patches Intro.md",
-    "Final Notes/imgs/Pasted image 20260822215506.png",
-    "Final Notes/imgs/Pasted image 20260822215347.png",
-    "Final Notes/imgs/Pasted image 20260822215304.png",
-    "Final Notes/imgs/Pasted image 20260822214914.png",
+    "Final Notes/7 - Kubernetes - 2/zt - Patches List.md",
     "Final Notes/7 - Kubernetes - 2/zv - Components.md",
+    "Final Notes/7 - Kubernetes - 2/zi - Kustomize vs Helm.md",
+    "Final Notes/7 - Kubernetes - 2/zh - Kuztomize Problem Statement and Ideology.md",
+    "Final Notes/7 - Kubernetes - 2/zg - Helm Concept.md",
+    "Final Notes/7 - Kubernetes - 2/zj - Installation and Setup.md",
+    "Final Notes/imgs/Pasted image 20260822185237.png",
+    "Final Notes/imgs/Pasted image 20260822185225.png",
+    "Final Notes/imgs/Pasted image 20260822020615.png",
+    "Final Notes/imgs/Pasted image 20260822185250.png",
+    "Final Notes/imgs/Pasted image 20260822185310.png",
+    "Final Notes/imgs/Pasted image 20260822185350.png",
+    "Final Notes/imgs/Pasted image 20260822185931.png",
+    "Final Notes/imgs/Pasted image 20260822190053.png",
+    "Final Notes/imgs/Pasted image 20260822190155.png",
+    "Final Notes/imgs/Pasted image 20260822190333.png",
     "Final Notes/7 - Kubernetes - 2/zw.md",
     "Final Notes/7 - Kubernetes - 2/zu - Overlays.md",
-    "Final Notes/7 - Kubernetes - 2/zt - Patches List.md",
     "Final Notes/7 - Kubernetes - 2/zs - Patches Dictionary.md",
     "Final Notes/7 - Kubernetes - 2/zz.md",
     "Final Notes/7 - Kubernetes - 2/zy.md",
     "Final Notes/7 - Kubernetes - 2/zx.md",
     "Final Notes/7 - Kubernetes - 2/zp - Image Transformers.md",
     "Final Notes/7 - Kubernetes - 2/zo - Common Transformers.md",
-    "Final Notes/7 - Kubernetes - 2/zh - Kuztomize Problem Statement and Ideology.md",
-    "Final Notes/imgs/Pasted image 20260822204504.png",
-    "Final Notes/imgs/Pasted image 20260822204444.png",
-    "Final Notes/imgs/Pasted image 20260822204411.png",
-    "Final Notes/imgs/Pasted image 20260822204216.png",
     "Final Notes/7 - Kubernetes - 2/zn - Managing Directories.md",
     "Final Notes/7 - Kubernetes - 2/zm - Kustomize ApiVersion and Kind.md",
     "Final Notes/7 - Kubernetes - 2/zl - Kustomize Output.md",
     "Final Notes/7 - Kubernetes - 2/zk - The kustomization.yaml file.md",
-    "Final Notes/7 - Kubernetes - 2/zj - Installation and Setup.md",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
     "Final Notes/7 - Kubernetes - 2/c - Jobs.md",
     "Final Notes/7 - Kubernetes - 2/Untitled",
-    "Final Notes/7 - Kubernetes - 2/zi - Kustomize vs Helm.md",
     "Final Notes/7 - Kubernetes - 2/zf - Helm.md",
-    "Final Notes/7 - Kubernetes - 2/zg - Helm Concept.md",
     "Final Notes/7 - Kubernetes - 2/ze - Operator Framework.md",
     "Final Notes/7 - Kubernetes - 2/zd - Custom Controllers.md",
     "Final Notes/7 - Kubernetes - 2",
