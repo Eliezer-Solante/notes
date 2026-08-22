@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/zq - Patches Intro.md",
+                "file": "Final Notes/7 - Kubernetes - 2/zr - Different Types of Patches.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "zq - Patches Intro"
+              "title": "zr - Different Types of Patches"
             }
           },
           {
@@ -207,6 +207,13 @@
   },
   "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Pasted image 20260822215722.png",
+    "Pasted image 20260822215636.png",
+    "Final Notes/7 - Kubernetes - 2/zq - Patches Intro.md",
+    "Pasted image 20260822215506.png",
+    "Pasted image 20260822215347.png",
+    "Pasted image 20260822215304.png",
+    "Pasted image 20260822214914.png",
     "Final Notes/7 - Kubernetes - 2/zv - Components.md",
     "Final Notes/7 - Kubernetes - 2/zw.md",
     "Final Notes/7 - Kubernetes - 2/zu - Overlays.md",
@@ -216,7 +223,6 @@
     "Final Notes/7 - Kubernetes - 2/zz.md",
     "Final Notes/7 - Kubernetes - 2/zy.md",
     "Final Notes/7 - Kubernetes - 2/zx.md",
-    "Final Notes/7 - Kubernetes - 2/zq - Patches Intro.md",
     "Final Notes/7 - Kubernetes - 2/zp - Image Transformers.md",
     "Final Notes/7 - Kubernetes - 2/zo - Common Transformers.md",
     "Final Notes/7 - Kubernetes - 2/zh - Kuztomize Problem Statement and Ideology.md",
@@ -225,12 +231,7 @@
     "Pasted image 20260822204411.png",
     "Pasted image 20260822204216.png",
     "Pasted image 20260822204147.png",
-    "Pasted image 20260822204134.png",
-    "Pasted image 20260822204113.png",
-    "Pasted image 20260822204053.png",
-    "Pasted image 20260822204015.png",
     "Final Notes/7 - Kubernetes - 2/zn - Managing Directories.md",
-    "Pasted image 20260822200843.png",
     "Final Notes/7 - Kubernetes - 2/zm - Kustomize ApiVersion and Kind.md",
     "Final Notes/7 - Kubernetes - 2/zl - Kustomize Output.md",
     "Final Notes/7 - Kubernetes - 2/zk - The kustomization.yaml file.md",
@@ -243,7 +244,6 @@
     "Final Notes/7 - Kubernetes - 2/zg - Helm Concept.md",
     "Final Notes/7 - Kubernetes - 2/ze - Operator Framework.md",
     "Final Notes/7 - Kubernetes - 2/zd - Custom Controllers.md",
-    "Final Notes/7 - Kubernetes - 2/zb - API deprecations.md",
     "Final Notes/7 - Kubernetes - 2",
     "Final Notes/6 - Kubernetes -1/Untitled",
     "Untitled.base",
