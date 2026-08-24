@@ -1,6 +1,6 @@
 # Kubernetes Object Templates Reference
 
-For each object: a **Simple** minimal working template, and a **Full** template showing (nearly) all commonly-used fields, with inline comments. `apiVersion` values reflect current stable Kubernetes (1.29+).
+For each object: a **Simple** minimal working template (no comments), and a **Full** template showing (nearly) all commonly-used fields — commented with what each section/field is _for_, and enum-style fields also show their allowed values.
 
 ---
 
@@ -26,27 +26,27 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: my-pod
-  namespace: default
-  labels:
+  namespace: default               # which namespace this object lives in
+  labels:                          # identifying key/values used by selectors (Services, Deployments, etc.)
     app: my-app
     tier: frontend
-  annotations:
+  annotations:                     # non-identifying metadata, for tools/humans, not used for selection
     description: "example pod"
 spec:
-  restartPolicy: Always            # Always | OnFailure | Never
-  terminationGracePeriodSeconds: 30
-  serviceAccountName: my-sa
-  nodeSelector:
+  restartPolicy: Always            # what to do when a container exits — Always | OnFailure | Never
+  terminationGracePeriodSeconds: 30  # how long to wait for graceful shutdown before force-killing
+  serviceAccountName: my-sa        # identity the pod uses to talk to the API server
+  nodeSelector:                    # simple key/value constraint on which node this can be scheduled to
     disktype: ssd
-  affinity:
-    nodeAffinity:
+  affinity:                        # richer scheduling rules than nodeSelector
+    nodeAffinity:                  # attract/require pod onto nodes matching label rules
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
           - matchExpressions:
               - key: kubernetes.io/os
                 operator: In
                 values: ["linux"]
-    podAntiAffinity:
+    podAntiAffinity:                # keep this pod away from other pods matching a selector (e.g. spread replicas)
       preferredDuringSchedulingIgnoredDuringExecution:
         - weight: 100
           podAffinityTerm:
@@ -54,68 +54,68 @@ spec:
               matchLabels:
                 app: my-app
             topologyKey: kubernetes.io/hostname
-  tolerations:
+  tolerations:                     # lets this pod be scheduled onto nodes with matching taints
     - key: "key1"
       operator: "Equal"
       value: "value1"
       effect: "NoSchedule"
-  topologySpreadConstraints:
+  topologySpreadConstraints:       # spreads pods evenly across zones/nodes/etc for HA
     - maxSkew: 1
       topologyKey: topology.kubernetes.io/zone
-      whenUnsatisfiable: DoNotSchedule
+      whenUnsatisfiable: DoNotSchedule   # DoNotSchedule | ScheduleAnyway
       labelSelector:
         matchLabels:
           app: my-app
-  initContainers:
+  initContainers:                  # run to completion, in order, before the main containers start (setup tasks)
     - name: init-setup
       image: busybox:latest
       command: ["sh", "-c", "echo init"]
-  containers:
+  containers:                      # the actual application container(s) that run for the pod's lifetime
     - name: app
       image: nginx:1.27
-      imagePullPolicy: IfNotPresent   # Always | IfNotPresent | Never
-      command: ["/bin/sh"]
-      args: ["-c", "nginx -g 'daemon off;'"]
-      workingDir: /app
-      ports:
+      imagePullPolicy: IfNotPresent   # when to pull the image — Always | IfNotPresent | Never
+      command: ["/bin/sh"]          # overrides the image's ENTRYPOINT
+      args: ["-c", "nginx -g 'daemon off;'"]   # overrides the image's CMD (or args to command)
+      workingDir: /app             # working directory inside the container
+      ports:                       # informational: which ports the container listens on
         - name: http
           containerPort: 80
-          protocol: TCP
-      env:
+          protocol: TCP            # TCP | UDP | SCTP
+      env:                         # environment variables set inside the container
         - name: ENV_VAR
-          value: "value1"
+          value: "value1"          # a literal value
         - name: FROM_SECRET
           valueFrom:
-            secretKeyRef:
+            secretKeyRef:          # pulls a single value out of a Secret
               name: my-secret
               key: password
         - name: FROM_CONFIGMAP
           valueFrom:
-            configMapKeyRef:
+            configMapKeyRef:       # pulls a single value out of a ConfigMap
               name: my-config
               key: setting
         - name: POD_NAME
           valueFrom:
-            fieldRef:
+            fieldRef:               # injects pod's own metadata (Downward API)
               fieldPath: metadata.name
-      envFrom:
+      envFrom:                     # bulk-import every key from a ConfigMap/Secret as env vars
         - configMapRef:
             name: my-config
         - secretRef:
             name: my-secret
-      resources:
-        requests:
+      resources:                   # CPU/memory the scheduler reserves and the kubelet enforces
+        requests:                  # guaranteed minimum, used for scheduling decisions
           cpu: "250m"
           memory: "128Mi"
-        limits:
+        limits:                    # hard ceiling, container is throttled/killed if exceeded
           cpu: "500m"
           memory: "256Mi"
-      volumeMounts:
+      volumeMounts:                # where volumes defined below get mounted inside this container
         - name: config-vol
           mountPath: /etc/config
         - name: data-vol
           mountPath: /data
-      livenessProbe:
+      livenessProbe:               # restarts the container if this check fails (is it alive?)
         httpGet:
           path: /healthz
           port: 80
@@ -123,47 +123,47 @@ spec:
         periodSeconds: 10
         timeoutSeconds: 1
         failureThreshold: 3
-      readinessProbe:
+      readinessProbe:              # removes pod from Service endpoints if this fails (is it ready for traffic?)
         tcpSocket:
           port: 80
         initialDelaySeconds: 5
         periodSeconds: 10
-      startupProbe:
+      startupProbe:                # gates liveness/readiness until slow-starting app is up
         exec:
           command: ["cat", "/tmp/started"]
         failureThreshold: 30
         periodSeconds: 5
-      lifecycle:
-        postStart:
+      lifecycle:                   # hooks run on container lifecycle events
+        postStart:                 # runs right after the container starts
           exec:
             command: ["sh", "-c", "echo started"]
-        preStop:
+        preStop:                   # runs right before the container is terminated (e.g. drain connections)
           exec:
             command: ["sh", "-c", "sleep 5"]
-      securityContext:
+      securityContext:             # per-container security/privilege settings
         runAsUser: 1000
         runAsNonRoot: true
         allowPrivilegeEscalation: false
         readOnlyRootFilesystem: true
         capabilities:
-          drop: ["ALL"]
-  volumes:
+          drop: ["ALL"]            # drop all Linux capabilities (least privilege)
+  volumes:                         # storage sources available to be mounted by containers above
     - name: config-vol
-      configMap:
+      configMap:                   # exposes a ConfigMap's data as files
         name: my-config
     - name: secret-vol
-      secret:
+      secret:                      # exposes a Secret's data as files
         secretName: my-secret
     - name: data-vol
-      persistentVolumeClaim:
+      persistentVolumeClaim:       # attaches a persistent disk backed by a PVC
         claimName: my-pvc
     - name: empty-vol
-      emptyDir: {}
+      emptyDir: {}                 # scratch space, created empty, deleted when pod is removed
     - name: host-vol
-      hostPath:
+      hostPath:                    # mounts a path from the underlying node's filesystem
         path: /data
         type: DirectoryOrCreate
-  imagePullSecrets:
+  imagePullSecrets:                # credentials for pulling images from private registries
     - name: regcred
 ```
 
@@ -204,20 +204,20 @@ metadata:
   labels:
     app: my-app
 spec:
-  replicas: 3
-  revisionHistoryLimit: 10
-  progressDeadlineSeconds: 600
-  minReadySeconds: 5
-  paused: false
-  strategy:
-    type: RollingUpdate           # RollingUpdate | Recreate
+  replicas: 3                      # desired number of identical pod copies
+  revisionHistoryLimit: 10         # how many old ReplicaSets to keep around for rollback
+  progressDeadlineSeconds: 600     # marks the rollout as failed if no progress within this time
+  minReadySeconds: 5               # pod must stay Ready this long before it's considered available
+  paused: false                    # true = stop reconciling changes (useful mid-edit before rollout)
+  strategy:                        # how old pods get replaced with new ones on update
+    type: RollingUpdate           # RollingUpdate (gradual) | Recreate (kill all, then start all)
     rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-  selector:
+      maxSurge: 25%                # how many extra pods can exist above `replicas` during rollout
+      maxUnavailable: 25%          # how many pods can be unavailable during rollout
+  selector:                        # which pods this Deployment manages (must match template labels)
     matchLabels:
       app: my-app
-  template:
+  template:                        # the pod spec that gets stamped out `replicas` times
     metadata:
       labels:
         app: my-app
@@ -243,11 +243,11 @@ kind: ReplicaSet
 metadata:
   name: my-replicaset
 spec:
-  replicas: 3
-  selector:
+  replicas: 3                      # desired number of pod copies to keep running at all times
+  selector:                        # which pods this ReplicaSet is responsible for counting/replacing
     matchLabels:
       app: my-app
-  template:
+  template:                        # pod spec used to create new replicas when short of `replicas`
     metadata:
       labels:
         app: my-app
@@ -293,13 +293,13 @@ metadata:
   name: my-statefulset
   namespace: default
 spec:
-  serviceName: my-headless-svc     # must match a headless Service
+  serviceName: my-headless-svc     # headless Service that gives each pod a stable DNS name
   replicas: 3
-  podManagementPolicy: OrderedReady  # OrderedReady | Parallel
-  updateStrategy:
-    type: RollingUpdate            # RollingUpdate | OnDelete
+  podManagementPolicy: OrderedReady  # pod startup/scaling order — OrderedReady (one at a time) | Parallel
+  updateStrategy:                  # how pods get updated when the template changes
+    type: RollingUpdate            # RollingUpdate | OnDelete (only replace pod when manually deleted)
     rollingUpdate:
-      partition: 0
+      partition: 0                 # pods with ordinal >= this number get updated; below it, untouched
   revisionHistoryLimit: 10
   minReadySeconds: 0
   selector:
@@ -318,7 +318,7 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /var/lib/postgresql/data
-  volumeClaimTemplates:
+  volumeClaimTemplates:            # a unique PVC is auto-created per pod (data-0, data-1, ...), stable per pod identity
     - metadata:
         name: data
       spec:
@@ -363,13 +363,13 @@ metadata:
   name: my-daemonset
   namespace: kube-system
 spec:
-  selector:
+  selector:                        # runs exactly one matching pod per eligible node
     matchLabels:
       app: my-agent
   updateStrategy:
     type: RollingUpdate            # RollingUpdate | OnDelete
     rollingUpdate:
-      maxUnavailable: 1
+      maxUnavailable: 1            # how many node-pods can be down at once during rollout
   minReadySeconds: 0
   revisionHistoryLimit: 10
   template:
@@ -377,7 +377,7 @@ spec:
       labels:
         app: my-agent
     spec:
-      tolerations:
+      tolerations:                 # needed to also schedule onto tainted nodes, e.g. control-plane
         - key: node-role.kubernetes.io/control-plane
           effect: NoSchedule
       containers:
@@ -390,7 +390,7 @@ spec:
               mountPath: /var/log
       volumes:
         - name: varlog
-          hostPath:
+          hostPath:                # gives the agent access to the node's own log files
             path: /var/log
 ```
 
@@ -424,19 +424,19 @@ metadata:
   name: my-job
   namespace: default
 spec:
-  completions: 5
-  parallelism: 2
-  backoffLimit: 4
-  activeDeadlineSeconds: 600
-  ttlSecondsAfterFinished: 3600
-  completionMode: NonIndexed        # NonIndexed | Indexed
-  suspend: false
+  completions: 5                   # total number of successful pod completions needed
+  parallelism: 2                   # how many pods can run at once working toward `completions`
+  backoffLimit: 4                  # number of retries before marking the Job failed
+  activeDeadlineSeconds: 600       # kills the whole Job if it runs longer than this
+  ttlSecondsAfterFinished: 3600    # auto-delete the Job (and its pods) this long after it finishes
+  completionMode: NonIndexed        # NonIndexed (any pod success counts) | Indexed (each pod gets a unique index)
+  suspend: false                   # true = pause without deleting; pods aren't created until unsuspended
   template:
     metadata:
       labels:
         job-name: my-job
     spec:
-      restartPolicy: Never          # Never | OnFailure
+      restartPolicy: Never          # what happens to a failed container — Never | OnFailure
       containers:
         - name: worker
           image: busybox:latest
@@ -478,14 +478,14 @@ metadata:
   name: my-cronjob
   namespace: default
 spec:
-  schedule: "0 2 * * *"             # cron syntax
-  timeZone: "UTC"
-  concurrencyPolicy: Forbid         # Allow | Forbid | Replace
-  startingDeadlineSeconds: 100
-  successfulJobsHistoryLimit: 3
-  failedJobsHistoryLimit: 1
-  suspend: false
-  jobTemplate:
+  schedule: "0 2 * * *"             # standard cron syntax for when to run
+  timeZone: "UTC"                   # timezone the schedule is evaluated in
+  concurrencyPolicy: Forbid         # what to do if the previous run hasn't finished — Allow | Forbid | Replace
+  startingDeadlineSeconds: 100      # how late a missed run is still allowed to start
+  successfulJobsHistoryLimit: 3     # how many completed Jobs to keep for inspection
+  failedJobsHistoryLimit: 1         # how many failed Jobs to keep for inspection
+  suspend: false                    # true = stop scheduling new runs without deleting the CronJob
+  jobTemplate:                      # the Job spec that gets created on each scheduled trigger
     spec:
       backoffLimit: 3
       template:
@@ -519,7 +519,7 @@ spec:
 ### Full (all types shown separately)
 
 ```yaml
-# ClusterIP (default)
+# ClusterIP (default) — internal-only virtual IP for load-balancing across matching pods
 apiVersion: v1
 kind: Service
 metadata:
@@ -529,22 +529,22 @@ metadata:
     app: my-app
   annotations: {}
 spec:
-  type: ClusterIP                   # ClusterIP | NodePort | LoadBalancer | ExternalName
-  selector:
+  type: ClusterIP                   # how the Service is exposed — ClusterIP | NodePort | LoadBalancer | ExternalName
+  selector:                         # which pods receive traffic (matched by labels)
     app: my-app
   ports:
     - name: http
-      protocol: TCP
-      port: 80
-      targetPort: 8080
+      protocol: TCP                 # TCP | UDP | SCTP
+      port: 80                      # port the Service itself listens on
+      targetPort: 8080              # port on the pod/container traffic is forwarded to
     - name: https
       protocol: TCP
       port: 443
       targetPort: 8443
-  sessionAffinity: None             # None | ClientIP
-  clusterIP: None                   # set "None" for headless service
+  sessionAffinity: None             # stick a client to the same pod — None | ClientIP
+  clusterIP: None                   # set literal "None" to make this a headless Service (no load-balancing, direct pod DNS)
 ---
-# NodePort
+# NodePort — additionally exposes the Service on a static port on every node's IP
 apiVersion: v1
 kind: Service
 metadata:
@@ -556,9 +556,9 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30080              # 30000-32767
+      nodePort: 30080              # externally reachable port on every node — must be 30000-32767
 ---
-# LoadBalancer
+# LoadBalancer — provisions an external cloud load balancer pointing at the Service
 apiVersion: v1
 kind: Service
 metadata:
@@ -570,17 +570,17 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-  loadBalancerSourceRanges:
+  loadBalancerSourceRanges:        # restrict which client IPs are allowed to reach the LB
     - 0.0.0.0/0
 ---
-# ExternalName
+# ExternalName — DNS-level alias to an external hostname, no proxying/selecting involved
 apiVersion: v1
 kind: Service
 metadata:
   name: my-external-service
 spec:
   type: ExternalName
-  externalName: api.example.com
+  externalName: api.example.com    # the external DNS name this Service resolves to
 ```
 
 ---
@@ -616,21 +616,21 @@ kind: Ingress
 metadata:
   name: my-ingress
   namespace: default
-  annotations:
+  annotations:                      # controller-specific behavior (varies by ingress controller, e.g. nginx)
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
-  ingressClassName: nginx
-  tls:
+  ingressClassName: nginx           # which Ingress controller should handle this resource
+  tls:                              # HTTPS termination config
     - hosts:
         - example.com
-      secretName: example-tls
-  rules:
+      secretName: example-tls       # TLS cert/key Secret to use for these hosts
+  rules:                            # HTTP routing rules, evaluated per host
     - host: example.com
       http:
         paths:
           - path: /api
-            pathType: Prefix       # Prefix | Exact | ImplementationSpecific
+            pathType: Prefix       # how `path` is matched — Prefix | Exact | ImplementationSpecific
             backend:
               service:
                 name: api-service
@@ -643,7 +643,7 @@ spec:
                 name: web-service
                 port:
                   number: 80
-  defaultBackend:
+  defaultBackend:                   # where to send requests that match no rule above
     service:
       name: default-service
       port:
@@ -673,14 +673,14 @@ kind: ConfigMap
 metadata:
   name: my-config
   namespace: default
-immutable: false
-data:
+immutable: false                    # true = reject any future updates (perf + safety for static config)
+data:                                # plain-text key/value config, injectable as env vars or files
   key1: value1
   key2: value2
-  app.properties: |
+  app.properties: |                 # a whole config file's contents can live under one key
     setting1=true
     setting2=false
-binaryData:
+binaryData:                         # for non-UTF8 content, base64-encoded
   binary-key: base64EncodedContentHere==
 ```
 
@@ -703,7 +703,7 @@ stringData:
 ### Full (all common types)
 
 ```yaml
-# Opaque (generic)
+# Opaque — generic, arbitrary key/value secret data (default type)
 apiVersion: v1
 kind: Secret
 metadata:
@@ -711,13 +711,13 @@ metadata:
   namespace: default
 type: Opaque                       # Opaque | kubernetes.io/dockerconfigjson | kubernetes.io/tls | kubernetes.io/basic-auth | kubernetes.io/ssh-auth | kubernetes.io/service-account-token
 immutable: false
-stringData:               # plaintext, auto-encoded by kube-apiserver
+stringData:               # write plaintext here — the API server base64-encodes it for you on save
   username: admin
   password: s3cr3t
-data:                      # already base64-encoded values
+data:                      # values here must already be base64-encoded by you
   key: dmFsdWU=
 ---
-# docker registry credentials
+# docker registry credentials — used via imagePullSecrets to pull private images
 apiVersion: v1
 kind: Secret
 metadata:
@@ -726,7 +726,7 @@ type: kubernetes.io/dockerconfigjson
 data:
   .dockerconfigjson: eyJhdXRocyI6IHt9fQ==
 ---
-# TLS certificate
+# TLS certificate — used by Ingress or other TLS-terminating resources
 apiVersion: v1
 kind: Secret
 metadata:
@@ -736,7 +736,7 @@ data:
   tls.crt: <base64 cert>
   tls.key: <base64 key>
 ---
-# basic-auth
+# basic-auth — username/password credential pair
 apiVersion: v1
 kind: Secret
 metadata:
@@ -746,7 +746,7 @@ stringData:
   username: admin
   password: t0p-Secret
 ---
-# ssh-auth
+# ssh-auth — private key for SSH-based access (e.g. git clone over SSH)
 apiVersion: v1
 kind: Secret
 metadata:
@@ -787,23 +787,23 @@ metadata:
     type: local
 spec:
   capacity:
-    storage: 10Gi
-  volumeMode: Filesystem            # Filesystem | Block
-  accessModes:
+    storage: 10Gi                   # total size of this volume
+  volumeMode: Filesystem            # how it's presented to the pod — Filesystem | Block
+  accessModes:                      # how many nodes/pods can mount it, and how
     - ReadWriteOnce                 # ReadWriteOnce | ReadOnlyMany | ReadWriteMany | ReadWriteOncePod
-  persistentVolumeReclaimPolicy: Retain  # Retain | Delete | Recycle
-  storageClassName: manual
-  mountOptions:
+  persistentVolumeReclaimPolicy: Retain  # what happens to the underlying storage when its PVC is deleted — Retain | Delete | Recycle
+  storageClassName: manual          # must match the PVC's storageClassName to bind
+  mountOptions:                     # extra mount flags passed to the underlying filesystem
     - hard
     - nfsvers=4.1
-  nodeAffinity:
+  nodeAffinity:                     # restricts which nodes can access this volume (for local/topology-bound storage)
     required:
       nodeSelectorTerms:
         - matchExpressions:
             - key: kubernetes.io/hostname
               operator: In
               values: ["node1"]
-  # Choose ONE volume source:
+  # Choose ONE volume source (where the data actually lives):
   hostPath:
     path: /data
     type: DirectoryOrCreate
@@ -847,13 +847,13 @@ spec:
   accessModes:                     # ReadWriteOnce | ReadOnlyMany | ReadWriteMany | ReadWriteOncePod
     - ReadWriteOnce
   volumeMode: Filesystem            # Filesystem | Block
-  storageClassName: standard
+  storageClassName: standard        # which StorageClass provisions/matches the backing volume
   resources:
     requests:
-      storage: 5Gi
+      storage: 5Gi                  # minimum size requested
     limits:
-      storage: 20Gi
-  selector:
+      storage: 20Gi                 # optional cap (rarely used on PVCs)
+  selector:                         # manually bind to a PV matching these labels (bypasses dynamic provisioning)
     matchLabels:
       type: local
   dataSource:                      # clone from snapshot or another PVC
@@ -871,13 +871,13 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: fast-ssd
-provisioner: ebs.csi.aws.com        # e.g. kubernetes.io/aws-ebs, pd.csi.storage.gke.io
-parameters:
+provisioner: ebs.csi.aws.com        # driver that dynamically creates volumes for this class — e.g. kubernetes.io/aws-ebs, pd.csi.storage.gke.io
+parameters:                         # driver-specific tuning
   type: gp3
   fsType: ext4
-reclaimPolicy: Delete               # Retain | Delete
-volumeBindingMode: WaitForFirstConsumer  # Immediate | WaitForFirstConsumer
-allowVolumeExpansion: true
+reclaimPolicy: Delete               # what happens to the disk when its PVC is deleted — Retain | Delete
+volumeBindingMode: WaitForFirstConsumer  # when to actually provision — Immediate | WaitForFirstConsumer (waits until a pod needs it, avoids AZ mismatch)
+allowVolumeExpansion: true          # lets PVCs using this class be resized later
 mountOptions:
   - debug
 ```
@@ -891,7 +891,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: my-namespace
-  labels:
+  labels:                          # used for namespace-level selectors (e.g. NetworkPolicy namespaceSelector)
     env: production
   annotations:
     description: "production workloads"
@@ -907,10 +907,10 @@ kind: ServiceAccount
 metadata:
   name: my-sa
   namespace: default
-automountServiceAccountToken: true
-imagePullSecrets:
+automountServiceAccountToken: true  # whether pods using this SA auto-get an API token mounted
+imagePullSecrets:                   # registry credentials auto-attached to pods using this SA
   - name: regcred
-secrets:
+secrets:                            # legacy: pre-created token Secrets associated with this SA
   - name: my-sa-token
 ```
 
@@ -923,11 +923,11 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: pod-reader
-  namespace: default
+  namespace: default                # Role permissions only apply within this namespace
 rules:
-  - apiGroups: [""]                # "" = core API group
+  - apiGroups: [""]                # "" = core API group (pods, services, configmaps, etc.)
     resources: ["pods", "pods/log"]
-    verbs: ["get", "list", "watch"]
+    verbs: ["get", "list", "watch"]  # allowed API actions
   - apiGroups: ["apps"]
     resources: ["deployments"]
     verbs: ["get", "list"]
@@ -937,7 +937,7 @@ kind: RoleBinding
 metadata:
   name: read-pods
   namespace: default
-subjects:
+subjects:                          # who is granted the permissions
   - kind: ServiceAccount
     name: my-sa
     namespace: default
@@ -947,7 +947,7 @@ subjects:
   - kind: Group
     name: developers
     apiGroup: rbac.authorization.k8s.io
-roleRef:
+roleRef:                           # the Role being granted to the subjects above
   kind: Role
   name: pod-reader
   apiGroup: rbac.authorization.k8s.io
@@ -961,12 +961,12 @@ roleRef:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: node-reader
+  name: node-reader                 # unlike Role, applies cluster-wide (or reusable across namespaces via RoleBinding)
 rules:
   - apiGroups: [""]
-    resources: ["nodes"]
+    resources: ["nodes"]            # nodes are cluster-scoped, so this needs a ClusterRole not a Role
     verbs: ["get", "list", "watch"]
-  - nonResourceURLs: ["/healthz"]
+  - nonResourceURLs: ["/healthz"]   # can also grant access to non-resource API endpoints
     verbs: ["get"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -1009,28 +1009,28 @@ metadata:
   name: my-network-policy
   namespace: default
 spec:
-  podSelector:
+  podSelector:                     # which pods this policy applies to (empty {} = all pods in namespace)
     matchLabels:
       app: my-app
-  policyTypes:                     # subset of: Ingress, Egress
+  policyTypes:                     # which traffic direction(s) this policy governs — subset of: Ingress, Egress
     - Ingress
     - Egress
-  ingress:
+  ingress:                          # allowed inbound traffic (if omitted entirely, all ingress is blocked)
     - from:
-        - podSelector:
+        - podSelector:              # allow from pods with this label, in the same namespace
             matchLabels:
               role: frontend
-        - namespaceSelector:
+        - namespaceSelector:        # allow from any pod in namespaces with this label
             matchLabels:
               env: production
-        - ipBlock:
+        - ipBlock:                  # allow from this CIDR range
             cidr: 10.0.0.0/24
             except:
               - 10.0.0.1/32
       ports:
         - protocol: TCP
           port: 80
-  egress:
+  egress:                           # allowed outbound traffic (if omitted entirely, all egress is blocked)
     - to:
         - podSelector:
             matchLabels:
@@ -1076,33 +1076,33 @@ metadata:
   name: my-hpa
   namespace: default
 spec:
-  scaleTargetRef:
+  scaleTargetRef:                  # the workload this HPA scales
     apiVersion: apps/v1
     kind: Deployment
     name: my-deployment
-  minReplicas: 2
-  maxReplicas: 10
-  metrics:
-    - type: Resource               # Resource | Pods | Object | External | ContainerResource
+  minReplicas: 2                   # floor on replica count
+  maxReplicas: 10                  # ceiling on replica count
+  metrics:                         # signals used to decide when to scale, can combine several
+    - type: Resource               # built-in cpu/memory usage — Resource | Pods | Object | External | ContainerResource
       resource:
         name: cpu
         target:
-          type: Utilization         # Utilization | AverageValue | Value
+          type: Utilization         # target expressed as % of requested resource — Utilization | AverageValue | Value
           averageUtilization: 70
     - type: Resource
       resource:
         name: memory
         target:
-          type: AverageValue        # Utilization | AverageValue | Value
+          type: AverageValue        # target expressed as an absolute average value per pod
           averageValue: 500Mi
-    - type: Pods
+    - type: Pods                    # custom metric averaged across all target pods
       pods:
         metric:
           name: packets-per-second
         target:
-          type: AverageValue        # Pods metrics only support AverageValue
+          type: AverageValue
           averageValue: 1k
-    - type: External
+    - type: External                # metric from outside the cluster (e.g. a queue depth)
       external:
         metric:
           name: queue_messages_ready
@@ -1110,20 +1110,20 @@ spec:
             matchLabels:
               queue: worker-tasks
         target:
-          type: AverageValue        # AverageValue | Value
+          type: AverageValue
           averageValue: 30
-  behavior:
+  behavior:                        # fine-tune scale-up/down speed to avoid thrashing
     scaleDown:
-      stabilizationWindowSeconds: 300
+      stabilizationWindowSeconds: 300  # wait this long of sustained low usage before scaling down
       policies:
         - type: Percent
-          value: 50
+          value: 50                 # scale down by at most 50% of current replicas per period
           periodSeconds: 60
     scaleUp:
       stabilizationWindowSeconds: 0
       policies:
         - type: Percent
-          value: 100
+          value: 100                # can double replica count per period
           periodSeconds: 15
 ```
 
@@ -1137,19 +1137,19 @@ kind: VerticalPodAutoscaler
 metadata:
   name: my-vpa
 spec:
-  targetRef:
+  targetRef:                       # the workload whose container resource requests/limits get adjusted
     apiVersion: apps/v1
     kind: Deployment
     name: my-deployment
   updatePolicy:
-    updateMode: "Auto"             # Off | Initial | Recreate | Auto
+    updateMode: "Auto"             # how recommendations get applied — Off (recommend only) | Initial | Recreate | Auto
   resourcePolicy:
     containerPolicies:
       - containerName: app
-        minAllowed:
+        minAllowed:                # floor on what VPA can set
           cpu: 100m
           memory: 128Mi
-        maxAllowed:
+        maxAllowed:                # ceiling on what VPA can set
           cpu: 1
           memory: 1Gi
 ```
@@ -1164,9 +1164,9 @@ kind: PodDisruptionBudget
 metadata:
   name: my-pdb
 spec:
-  minAvailable: 2                  # or use maxUnavailable instead
+  minAvailable: 2                  # minimum pods that must stay up during voluntary disruptions (or use maxUnavailable instead)
   # maxUnavailable: 1
-  selector:
+  selector:                        # which pods this budget protects
     matchLabels:
       app: my-app
 ```
@@ -1180,9 +1180,9 @@ apiVersion: v1
 kind: ResourceQuota
 metadata:
   name: my-quota
-  namespace: default
+  namespace: default               # quotas apply per-namespace
 spec:
-  hard:
+  hard:                            # hard caps on total resource usage/object counts in the namespace
     requests.cpu: "10"
     requests.memory: 20Gi
     limits.cpu: "20"
@@ -1191,7 +1191,7 @@ spec:
     persistentvolumeclaims: "10"
     services.loadbalancers: "2"
     count/deployments.apps: "20"
-  scopeSelector:
+  scopeSelector:                   # restrict the quota to only objects matching this scope
     matchExpressions:
       - operator: In
         scopeName: PriorityClass
@@ -1210,24 +1210,24 @@ metadata:
   namespace: default
 spec:
   limits:
-    - type: Container
-      default:
+    - type: Container               # applies to individual containers
+      default:                      # limit auto-applied if a container doesn't specify one
         cpu: "500m"
         memory: "256Mi"
-      defaultRequest:
+      defaultRequest:                # request auto-applied if a container doesn't specify one
         cpu: "100m"
         memory: "128Mi"
-      max:
+      max:                           # highest a container may request/limit
         cpu: "2"
         memory: "1Gi"
-      min:
+      min:                           # lowest a container may request/limit
         cpu: "50m"
         memory: "64Mi"
-    - type: Pod
+    - type: Pod                      # aggregate caps across all containers in a pod
       max:
         cpu: "4"
         memory: "2Gi"
-    - type: PersistentVolumeClaim
+    - type: PersistentVolumeClaim    # caps on PVC sizes in this namespace
       max:
         storage: 50Gi
       min:
@@ -1242,7 +1242,7 @@ spec:
 apiVersion: v1
 kind: Endpoints
 metadata:
-  name: my-service          # must match Service name
+  name: my-service          # must match Service name — manually wires a Service to external/static IPs
 subsets:
   - addresses:
       - ip: 192.168.1.1
@@ -1250,11 +1250,11 @@ subsets:
       - port: 9376
 ---
 apiVersion: discovery.k8s.io/v1
-kind: EndpointSlice
+kind: EndpointSlice          # modern, scalable replacement for Endpoints
 metadata:
   name: my-service-ab12
   labels:
-    kubernetes.io/service-name: my-service
+    kubernetes.io/service-name: my-service   # links this slice back to its Service
 addressType: IPv4
 ports:
   - name: http
@@ -1273,9 +1273,9 @@ apiVersion: scheduling.k8s.io/v1
 kind: PriorityClass
 metadata:
   name: high-priority
-value: 1000000
-globalDefault: false
-preemptionPolicy: PreemptLowerPriority  # PreemptLowerPriority | Never
+value: 1000000                     # higher number = higher scheduling priority
+globalDefault: false               # true = applied to any pod that doesn't specify a priorityClassName
+preemptionPolicy: PreemptLowerPriority  # can this priority preempt lower-priority pods to get scheduled? — PreemptLowerPriority | Never
 description: "Used for critical production workloads"
 ```
 
@@ -1287,21 +1287,21 @@ description: "Used for critical production workloads"
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: widgets.example.com
+  name: widgets.example.com         # must be <plural>.<group>
 spec:
-  group: example.com
+  group: example.com                # API group the new resource lives under
   names:
     kind: Widget
     listKind: WidgetList
     plural: widgets
     singular: widget
-    shortNames: ["wg"]
+    shortNames: ["wg"]              # kubectl get wg
   scope: Namespaced               # Namespaced | Cluster
   versions:
     - name: v1
       served: true                 # true | false — whether this version is enabled via the API
       storage: true                # true | false — exactly one version must be the storage version
-      schema:
+      schema:                      # OpenAPI validation schema for instances of this resource
         openAPIV3Schema:
           type: object
           properties:
@@ -1313,8 +1313,8 @@ spec:
                 replicas:
                   type: integer
       subresources:
-        status: {}
-      additionalPrinterColumns:
+        status: {}                 # enables a separate /status subresource (common controller pattern)
+      additionalPrinterColumns:    # extra columns shown by `kubectl get`
         - name: Size
           type: string
           jsonPath: .spec.size
@@ -1329,11 +1329,11 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: restricted-ns
-  labels:
-    pod-security.kubernetes.io/enforce: restricted   # privileged | baseline | restricted
+  labels:                                              # built-in admission control enforcing Pod Security Standards
+    pod-security.kubernetes.io/enforce: restricted      # blocks non-conforming pods — privileged | baseline | restricted
     pod-security.kubernetes.io/enforce-version: latest
-    pod-security.kubernetes.io/warn: restricted
-    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/warn: restricted         # warns (doesn't block) on non-conformance
+    pod-security.kubernetes.io/audit: restricted         # logs to audit trail on non-conformance
 ```
 
 ---
@@ -1347,21 +1347,21 @@ metadata:
   name: my-validating-webhook
 webhooks:
   - name: validate.example.com
-    clientConfig:
+    clientConfig:                   # how the API server reaches your webhook service
       service:
         name: webhook-service
         namespace: default
         path: "/validate"
-      caBundle: <base64 CA cert>
-    rules:
+      caBundle: <base64 CA cert>    # CA cert used to trust the webhook's TLS endpoint
+    rules:                          # which API requests trigger this webhook
       - apiGroups: [""]
         apiVersions: ["v1"]
         operations: ["CREATE", "UPDATE"]   # CREATE | UPDATE | DELETE | CONNECT | *
         resources: ["pods"]
         scope: "Namespaced"         # Namespaced | Cluster | *
     admissionReviewVersions: ["v1"]
-    sideEffects: None               # None | NoneOnDryRun | Some | Unknown
-    failurePolicy: Fail            # Fail | Ignore
+    sideEffects: None               # does the webhook have side effects outside the admission request? — None | NoneOnDryRun | Some | Unknown
+    failurePolicy: Fail            # what happens if the webhook is unreachable — Fail (block request) | Ignore (allow request)
     timeoutSeconds: 5
 ```
 
