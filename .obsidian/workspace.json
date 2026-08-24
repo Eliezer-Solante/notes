@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/n - (Skipped)Why Stateful Sets.md",
+                "file": "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "n - (Skipped)Why Stateful Sets"
+              "title": "v - Authorization"
             }
           },
           {
@@ -207,11 +207,18 @@
   },
   "active": "d809ca80a2521345",
   "lastOpenFiles": [
+    "Final Notes/7 - Kubernetes - 2/s - Authentication.md",
+    "Final Notes/7 - Kubernetes - 2/r - Kubernetes Security Primitives.md",
+    "Final Notes/7 - Kubernetes - 2/y - Admission Controllers.md",
+    "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
+    "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
+    "Final Notes/7 - Kubernetes - 2/u - API Groups.md",
+    "Final Notes/7 - Kubernetes - 2/t - KubeConfig.md",
+    "Final Notes/7 - Kubernetes - 2/n - (Skipped)Why Stateful Sets.md",
+    "Final Notes/7 - Kubernetes - 2/l - Persistent Volume Claims.md",
     "Final Notes/7 - Kubernetes - 2/p - (Skipped)Headless Services.md",
     "Pasted image 20260824143433.png",
     "Final Notes/7 - Kubernetes - 2/o - (Skipped)Stateful Sets Introduction.md",
-    "Final Notes/7 - Kubernetes - 2/n - (Skipped)Why Stateful Sets.md",
-    "Final Notes/7 - Kubernetes - 2/l - Persistent Volume Claims.md",
     "Final Notes/7 - Kubernetes - 2/k - Persistent Volumes.md",
     "Pasted image 20260824142222.png",
     "Pasted image 20260824142218.png",
@@ -230,19 +237,12 @@
     "Final Notes/7 - Kubernetes - 2/f - Developing Network Policies.md",
     "Final Notes/7 - Kubernetes - 2/c - Jobs.md",
     "Final Notes/7 - Kubernetes - 2/d - CronJobs.md",
-    "Final Notes/7 - Kubernetes - 2/t - KubeConfig.md",
-    "Final Notes/7 - Kubernetes - 2/s - Authentication.md",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
     "Final Notes/7 - Kubernetes - 2/m - Storage Classes.md",
     "Final Notes/7 - Kubernetes - 2/b - Canary.md",
     "Final Notes/7 - Kubernetes - 2/1 - additional commands.md",
     "Final Notes/7 - Kubernetes - 2/a - BlueGreen.md",
     "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
-    "Final Notes/6 - Kubernetes -1/e - Deployments.md",
-    "Final Notes/6 - Kubernetes -1/g - Services.md",
-    "Final Notes/6 - Kubernetes -1/y - Multi-container Pods design patterns.md",
-    "Final Notes/6 - Kubernetes -1/b - Pods.md",
-    "Final Notes/7 - Kubernetes - 2/zo - Common Transformers.md",
     "Final Notes/7 - Kubernetes - 2/Untitled",
     "Final Notes/7 - Kubernetes - 2",
     "Final Notes/6 - Kubernetes -1/Untitled",
