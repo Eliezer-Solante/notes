@@ -61,3 +61,7 @@ kubectl exec -it <pod-name> -n <namespace-name> -- /bin/sh
 Use code with caution.
 
 ---
+
+
+Get Service Endpoints:
+`kubectl get endpoints nginx-service`
