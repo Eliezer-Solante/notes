@@ -39,9 +39,9 @@ spec:
   selector:
     app: my-app
   ports:
-    - port: 80          # ClusterIP port (internal)
-      targetPort: 8080   # container port the pod is listening on
-      nodePort: 30080    # external port opened on every node (30000-32767 range)
+    - port: 80          
+      targetPort: 8080   
+      nodePort: 30080    
 ```
 
 Once applied, **every node in the cluster** opens port `30080`, regardless of whether that node is actually running one of the matching pods. Traffic hitting any node on that port gets routed (via `kube-proxy`) to one of the healthy pods matching the `selector` — even if that pod lives on a different node entirely.

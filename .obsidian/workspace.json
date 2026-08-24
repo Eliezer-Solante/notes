@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/y - Admission Controllers.md",
+                "file": "Final Notes/6 - Kubernetes -1/g - Services.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "y - Admission Controllers"
+              "title": "g - Services"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/7 - Kubernetes - 2/g - Ingress Networking.md",
+                "file": "Final Notes/6 - Kubernetes -1/e - Deployments.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "g - Ingress Networking"
+              "title": "e - Deployments"
             }
           }
         ]
@@ -207,8 +207,15 @@
   },
   "active": "d809ca80a2521345",
   "lastOpenFiles": [
-    "Final Notes/7 - Kubernetes - 2/za - API versions.md",
+    "Final Notes/6 - Kubernetes -1/e - Deployments.md",
+    "Final Notes/7 - Kubernetes - 2/1 - additional commands.md",
+    "Final Notes/6 - Kubernetes -1/g - Services.md",
+    "Final Notes/7 - Kubernetes - 2/g - Ingress Networking.md",
+    "Final Notes/6 - Kubernetes -1/n - Secrets.md",
+    "Final Notes/6 - Kubernetes -1/f - Namespaces.md",
+    "Final Notes/6 - Kubernetes -1/l - environment variables.md",
     "Final Notes/7 - Kubernetes - 2/y - Admission Controllers.md",
+    "Final Notes/7 - Kubernetes - 2/za - API versions.md",
     "Final Notes/7 - Kubernetes - 2/s - Authentication.md",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
     "Final Notes/7 - Kubernetes - 2/r - Kubernetes Security Primitives.md",
@@ -229,7 +236,6 @@
     "Final Notes/7 - Kubernetes - 2/h - Storage in Docker.md",
     "Final Notes/7 - Kubernetes - 2/j - Volumes in Kubernetes.md",
     "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
-    "Final Notes/7 - Kubernetes - 2/g - Ingress Networking.md",
     "Pasted image 20260824141550.png",
     "Pasted image 20260824141450.png",
     "Pasted image 20260824141444.png",
@@ -237,12 +243,6 @@
     "Pasted image 20260824141236.png",
     "Pasted image 20260824141146.png",
     "Final Notes/7 - Kubernetes - 2/f - Developing Network Policies.md",
-    "Final Notes/7 - Kubernetes - 2/c - Jobs.md",
-    "Final Notes/7 - Kubernetes - 2/d - CronJobs.md",
-    "Final Notes/7 - Kubernetes - 2/m - Storage Classes.md",
-    "Final Notes/7 - Kubernetes - 2/b - Canary.md",
-    "Final Notes/7 - Kubernetes - 2/1 - additional commands.md",
-    "Final Notes/7 - Kubernetes - 2/a - BlueGreen.md",
     "Final Notes/7 - Kubernetes - 2/Untitled",
     "Final Notes/7 - Kubernetes - 2",
     "Final Notes/6 - Kubernetes -1/Untitled",
