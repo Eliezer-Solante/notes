@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMCs/Culture Mindset 3.md",
+                "file": "Final Notes/7 - Kubernetes - 2/1 - ssh creds.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Culture Mindset 3"
+              "title": "1 - ssh creds"
             }
           },
           {
@@ -221,9 +221,11 @@
   },
   "active": "d809ca80a2521345",
   "lastOpenFiles": [
+    "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
+    "Final Notes/7 - Kubernetes - 2/1 - ssh creds.md",
+    "CMCs/Culture Mindset 3.md",
     "Pasted image 20260825090920.png",
     "CMCs/Culture Mindset 2.md",
-    "CMCs/Culture Mindset 3.md",
     "CMCs/Culture Mindset.md",
     "Final Notes/6 - Kubernetes -1/g - Services.md",
     "CMCs/Untitled",
@@ -231,7 +233,6 @@
     "Final Notes/imgs/Pasted image 20260823132523.png",
     "Final Notes/imgs/Pasted image 20260824143433.png",
     "ROADMAP.png",
-    "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
     "Final Notes/6 - Kubernetes -1/zb - Logging.md",
     "Final Notes/6 - Kubernetes -1/h - Services - ClusterIP.md",
     "Final Notes/6 - Kubernetes -1/c - Pods with YAML.md",
@@ -257,7 +258,6 @@
     "Final Notes/imgs/Pasted image 20260824141550.png",
     "Final Notes/imgs/Pasted image 20260824141450.png",
     "Final Notes/imgs/Pasted image 20260824141444.png",
-    "Final Notes/imgs/Pasted image 20260824141418.png",
     "Final Notes/7 - Kubernetes - 2/Untitled",
     "Final Notes/7 - Kubernetes - 2",
     "Final Notes/6 - Kubernetes -1/Untitled",
