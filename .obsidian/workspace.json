@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -220,13 +220,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4da4720b58f86d15",
+  "active": "2dfac3e01a35d0a9",
   "lastOpenFiles": [
+    "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
     "conflict-files-obsidian-git.md",
     "Final Notes/7 - Kubernetes - 2/1 - Practical Answers.md",
     "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
     "Final Notes/6 - Kubernetes -1/e - Deployments.md",
-    "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
     "Final Notes/7 - Kubernetes - 2/1 - ssh creds.md",
     "Final Notes/7 - Kubernetes - 2/g - Ingress Networking.md",
     "CMCs/Culture Mindset 3.md",
