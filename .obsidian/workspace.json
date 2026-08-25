@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -220,10 +220,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2dfac3e01a35d0a9",
+  "active": "4da4720b58f86d15",
   "lastOpenFiles": [
-    "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
+    "conflict-files-obsidian-git.md",
     "Final Notes/7 - Kubernetes - 2/1 - Practical Answers.md",
+    "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
     "Final Notes/6 - Kubernetes -1/e - Deployments.md",
     "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
     "Final Notes/7 - Kubernetes - 2/1 - ssh creds.md",
@@ -252,7 +253,6 @@
     "Final Notes/6 - Kubernetes -1/f - Namespaces.md",
     "Final Notes/6 - Kubernetes -1/l - environment variables.md",
     "Final Notes/7 - Kubernetes - 2/za - API versions.md",
-    "Final Notes/7 - Kubernetes - 2/s - Authentication.md",
     "Final Notes/imgs/Pasted image 20260824142222.png",
     "Final Notes/imgs/Pasted image 20260824142218.png",
     "Final Notes/imgs/Pasted image 20260824142212.png",
