@@ -55,14 +55,38 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Pasted image 20260823132523.png"
+                "file": "Final Notes/imgs/Pasted image 20260823132523.png"
               },
               "icon": "lucide-image",
               "title": "Pasted image 20260823132523"
             }
+          },
+          {
+            "id": "f408d24ef7e486b7",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Final Notes/imgs/Pasted image 20260824143433.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260824143433"
+            }
+          },
+          {
+            "id": "4195efb00f710e13",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "ROADMAP.png"
+              },
+              "icon": "lucide-image",
+              "title": "ROADMAP"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -231,8 +255,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6f7503a95feb05e3",
+  "active": "4195efb00f710e13",
   "lastOpenFiles": [
+    "Final Notes/imgs/Pasted image 20260823132523.png",
+    "Final Notes/imgs/Pasted image 20260824143433.png",
     "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
     "Final Notes/6 - Kubernetes -1/zb - Logging.md",
     "Final Notes/6 - Kubernetes -1/h - Services - ClusterIP.md",
@@ -258,17 +284,15 @@
     "Final Notes/7 - Kubernetes - 2/r - Kubernetes Security Primitives.md",
     "Final Notes/7 - Kubernetes - 2/x - Cluster Roles.md",
     "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
-    "Final Notes/7 - Kubernetes - 2/u - API Groups.md",
-    "Pasted image 20260824143433.png",
-    "Pasted image 20260824142222.png",
-    "Pasted image 20260824142218.png",
-    "Pasted image 20260824142212.png",
-    "Pasted image 20260824141550.png",
-    "Pasted image 20260824141450.png",
-    "Pasted image 20260824141444.png",
-    "Pasted image 20260824141418.png",
-    "Pasted image 20260824141236.png",
-    "Pasted image 20260824141146.png",
+    "Final Notes/imgs/Pasted image 20260824142222.png",
+    "Final Notes/imgs/Pasted image 20260824142218.png",
+    "Final Notes/imgs/Pasted image 20260824142212.png",
+    "Final Notes/imgs/Pasted image 20260824141550.png",
+    "Final Notes/imgs/Pasted image 20260824141450.png",
+    "Final Notes/imgs/Pasted image 20260824141444.png",
+    "Final Notes/imgs/Pasted image 20260824141418.png",
+    "Final Notes/imgs/Pasted image 20260824141236.png",
+    "Final Notes/imgs/Pasted image 20260824141146.png",
     "Final Notes/7 - Kubernetes - 2/Untitled",
     "Final Notes/7 - Kubernetes - 2",
     "Final Notes/6 - Kubernetes -1/Untitled",
