@@ -49,8 +49,7 @@
               "title": "e - Network Policies"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -220,10 +219,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d9cb648f715be20",
+  "active": "4cb72bb2dfa7d91e",
   "lastOpenFiles": [
-    "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
     "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
+    "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
     "Final Notes/8 - AWS EKS/3 - AWS EKS Summary.md",
     "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
     "Pasted image 20260826143617.png",

@@ -115,6 +115,18 @@ Every node and pod gets its IP address from the subnets in your VPC — and beca
 
 **Analogy** Think of the ENI as a parking garage entrance, and each IP address as a parking space. Without prefix delegation, every car (pod) that shows up needs the attendant to call the city and get one individual permit issued — and once the entrance is full, you have to build a whole new entrance just for a few more cars. With prefix delegation, the attendant goes to the city once and grabs a whole block of 16 pre-approved permits up front, so new cars just get handed a permit from the stack — no more calling the city for every single car.
 
+SAMPLE SITUATION IN ENABLING PREFIX-DELEGATION
+1. Open the `aws-k8s-cni.yaml` file in a text editor of your choice.
+2. Locate the environment variable section for `ENABLE_PREFIX_DELEGATION`.
+3. Add the following environment variable to enable prefix assignment:
+
+```yaml
+env:
+- name: ENABLE_PREFIX_DELEGATION
+  value: "true"
+```
+
+Ensure the environment variable is added correctly within the container spec section.
 ### IPv6
 
 **Problem Statement** Even with prefix delegation, IPv4 address space inside a VPC is finite, and running out of IPs was historically the #1 scalability problem EKS customers hit — teams would add more subnets over and over and still eventually run out.
@@ -143,11 +155,41 @@ Every node and pod gets its IP address from the subnets in your VPC — and beca
 
 > Different CNI providers (e.g. Calico) implement network policy differently — behavior may differ if you're not using the default VPC CNI.
 
+SAMPLE SITUATIONS IN APPLYING
 
 To see if the Network Policy is enabled run the command:
 ```bash
 k get daemonset -n kube-system aws-ned -o yaml | less
 ```
+
+Edit `amazon-vpc-cni` ConfigMap in the same file as above
+```YAML
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: amazon-vpc-cni
+  namespace: kube-system
+  labels:
+    app.kubernetes.io/name: aws-node
+    app.kubernetes.io/instance: aws-vpc-cni
+    k8s-app: aws-node
+    app.kubernetes.io/version: "v1.20.1"
+data:
+  enable-windows-ipam: "false"
+  enable-network-policy-controller: "true" # Change value from false to true 
+```
+
+Edit `aws-node` DaemonSet arg as following:
+
+```YAML
+args:
+            - --enable-ipv6=false
+            - --enable-network-policy=true # Change from false to true
+            - --enable-cloudwatch-logs=false
+            - --enable-policy-event-logs=false
+```
+
+
 
 ---
 
