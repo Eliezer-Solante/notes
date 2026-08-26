@@ -77,6 +77,7 @@ AWS IAM identities and Kubernetes RBAC are two separate systems — something ha
 
 ## 2. EKS Networking
 
+![[Pasted image 20260826143809.png]]
 ### How networking works
 
 Every node and pod gets its IP address from the subnets in your VPC — and because subnets are bound to a single Availability Zone, so is every node and pod inside them. Nodes reach the network through **Elastic Network Interfaces (ENIs)**, which behave just like a physical network card plugged into a server.

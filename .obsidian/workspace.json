@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8d9cb648f715be20",
+            "id": "4cb72bb2dfa7d91e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "4cb72bb2dfa7d91e",
+            "id": "8d9cb648f715be20",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/8 - AWS EKS/Prompt.md",
+                "file": "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prompt"
+              "title": "4 - EKSDEMO commands"
             }
           }
         ]
@@ -205,13 +205,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d9cb648f715be20",
+  "active": "4cb72bb2dfa7d91e",
   "lastOpenFiles": [
+    "Final Notes/8 - AWS EKS/Prompt.md",
+    "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
+    "Final Notes/8 - AWS EKS/3 - AWS EKS Summary.md",
+    "Pasted image 20260826143809.png",
     "Pasted image 20260826143617.png",
     "Pasted image 20260826143551.png",
     "Pasted image 20260826143521.png",
-    "Final Notes/8 - AWS EKS/Prompt.md",
-    "Final Notes/8 - AWS EKS/3 - AWS EKS Summary.md",
     "Final Notes/8 - AWS EKS/a - What is EKS.md",
     "Final Notes/8 - AWS EKS/b - Common Use Cases.md",
     "Final Notes/8 - AWS EKS/1- AWS-EKS.pdf",
@@ -227,8 +229,6 @@
     "Pasted image 20260826092956.png",
     "Pasted image 20260826092612.png",
     "Pasted image 20260826092526.png",
-    "Pasted image 20260826092509.png",
-    "Pasted image 20260826092441.png",
     "Final Notes/8 - AWS EKS/x -.md",
     "Final Notes/8 - AWS EKS/v -.md",
     "Final Notes/8 - AWS EKS/z -.md",
