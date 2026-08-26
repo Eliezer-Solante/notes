@@ -1,3 +1,169 @@
 {
-  "items": []
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1787723823874,
+      "items": [
+        {
+          "type": "group",
+          "ctime": 1787723823874,
+          "items": [
+            {
+              "type": "group",
+              "ctime": 1787723823874,
+              "items": [
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/y -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/x -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/w -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/v -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/u -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/t -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/s -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/r -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/q -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/p -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/o -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/n -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823875,
+                  "path": "Final Notes/8 - AWS EKS/m -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/l -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/k -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/j -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/i -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/h -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/g -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/f -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/e -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/d -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/c -.md",
+                  "subpath": "#^-"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1787723823874,
+                  "path": "Final Notes/8 - AWS EKS/z -.md",
+                  "subpath": "#^-"
+                }
+              ],
+              "title": "\\\\8 - AWS EKS"
+            }
+          ],
+          "title": "\\\\Final Notes"
+        }
+      ],
+      "title": "sortspec"
+    }
+  ]
 }

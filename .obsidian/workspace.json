@@ -13,11 +13,27 @@
             "state": {
               "type": "pdf",
               "state": {
+                "file": "Final Notes/8 - AWS EKS/2 - Understanding_EKS_Notes.pdf",
+                "page": 12,
+                "left": -20,
+                "top": 376,
+                "zoom": 0.7647058823529412
+              },
+              "icon": "lucide-file-text",
+              "title": "2 - Understanding_EKS_Notes"
+            }
+          },
+          {
+            "id": "8d9cb648f715be20",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
                 "file": "Final Notes/8 - AWS EKS/1- AWS-EKS.pdf",
-                "page": 1,
-                "left": -42,
-                "top": 542,
-                "zoom": 0.35520833333333335
+                "page": 95,
+                "left": -23,
+                "top": 293,
+                "zoom": 0.65
               },
               "icon": "lucide-file-text",
               "title": "1- AWS-EKS"
@@ -195,14 +211,19 @@
   },
   "active": "4478c08d9f1c7787",
   "lastOpenFiles": [
-    "Final Notes/8 - AWS EKS/s -.md",
     "Final Notes/8 - AWS EKS/1- AWS-EKS.pdf",
+    "Final Notes/8 - AWS EKS/2 - Understanding_EKS_Notes.pdf",
+    "Final Notes/8 - AWS EKS/c -.md",
+    "Final Notes/8 - AWS EKS/t -.md",
+    "Final Notes/8 - AWS EKS/y -.md",
+    "Final Notes/8 - AWS EKS/d -.md",
+    "Final Notes/8 - AWS EKS/a - What is EKS.md",
+    "Final Notes/8 - AWS EKS/s -.md",
     "Final Notes/8 - AWS EKS/b - Common Use Cases.md",
     "Pasted image 20260826093456.png",
     "Pasted image 20260826093414.png",
     "Pasted image 20260826093007.png",
     "Pasted image 20260826092956.png",
-    "Final Notes/8 - AWS EKS/a - What is EKS.md",
     "Pasted image 20260826092612.png",
     "Pasted image 20260826092526.png",
     "Pasted image 20260826092509.png",
@@ -211,10 +232,8 @@
     "Final Notes/8 - AWS EKS/x -.md",
     "Final Notes/8 - AWS EKS/v -.md",
     "Final Notes/8 - AWS EKS/z -.md",
-    "Final Notes/8 - AWS EKS/y -.md",
     "Final Notes/8 - AWS EKS/w -.md",
     "Final Notes/8 - AWS EKS/u -.md",
-    "Final Notes/8 - AWS EKS/t -.md",
     "Final Notes/8 - AWS EKS/r -.md",
     "Final Notes/8 - AWS EKS/q -.md",
     "Final Notes/8 - AWS EKS/p -.md",
@@ -228,8 +247,6 @@
     "Final Notes/8 - AWS EKS/h -.md",
     "Final Notes/8 - AWS EKS/g -.md",
     "Final Notes/8 - AWS EKS/f -.md",
-    "Final Notes/8 - AWS EKS/e -.md",
-    "Final Notes/8 - AWS EKS/d -.md",
     "CMCs/imgs/Pasted image 20260825090920.png",
     "Final Notes/8 - AWS EKS",
     "CMCs/Untitled",
