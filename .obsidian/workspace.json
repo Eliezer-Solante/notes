@@ -34,6 +34,22 @@
               "icon": "lucide-file",
               "title": "4 - EKSDEMO commands"
             }
+          },
+          {
+            "id": "798efa1fb3f09bc9",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Final Notes/8 - AWS EKS/1- AWS-EKS.pdf",
+                "page": 163,
+                "left": -23,
+                "top": 346,
+                "zoom": 0.65
+              },
+              "icon": "lucide-file-text",
+              "title": "1- AWS-EKS"
+            }
           }
         ]
       }
@@ -207,16 +223,17 @@
   },
   "active": "4cb72bb2dfa7d91e",
   "lastOpenFiles": [
-    "Final Notes/8 - AWS EKS/Prompt.md",
+    "Final Notes/8 - AWS EKS/1- AWS-EKS.pdf",
     "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
     "Final Notes/8 - AWS EKS/3 - AWS EKS Summary.md",
+    "Pasted image 20260826154236.png",
+    "Final Notes/8 - AWS EKS/Prompt.md",
     "Pasted image 20260826143809.png",
     "Pasted image 20260826143617.png",
     "Pasted image 20260826143551.png",
     "Pasted image 20260826143521.png",
     "Final Notes/8 - AWS EKS/a - What is EKS.md",
     "Final Notes/8 - AWS EKS/b - Common Use Cases.md",
-    "Final Notes/8 - AWS EKS/1- AWS-EKS.pdf",
     "Final Notes/8 - AWS EKS/2 - Understanding_EKS_Notes.pdf",
     "Final Notes/8 - AWS EKS/c -.md",
     "Final Notes/8 - AWS EKS/t -.md",
@@ -228,7 +245,6 @@
     "Pasted image 20260826093007.png",
     "Pasted image 20260826092956.png",
     "Pasted image 20260826092612.png",
-    "Pasted image 20260826092526.png",
     "Final Notes/8 - AWS EKS/x -.md",
     "Final Notes/8 - AWS EKS/v -.md",
     "Final Notes/8 - AWS EKS/z -.md",
@@ -244,7 +260,6 @@
     "Final Notes/8 - AWS EKS/k -.md",
     "Final Notes/8 - AWS EKS/j -.md",
     "Final Notes/8 - AWS EKS/i -.md",
-    "Final Notes/8 - AWS EKS/h -.md",
     "Final Notes/8 - AWS EKS",
     "CMCs/Untitled",
     "Final Notes/7 - Kubernetes - 2/Untitled",
