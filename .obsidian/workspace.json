@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
+                "file": "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 - EKSDEMO commands"
+              "title": "AWS EKS DEPLYMENT"
             }
           },
           {
@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -220,17 +220,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "798efa1fb3f09bc9",
+  "active": "8d9cb648f715be20",
   "lastOpenFiles": [
-    "Pasted image 20260826143617.png",
+    "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
+    "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Final Notes/8 - AWS EKS/3 - AWS EKS Summary.md",
+    "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
+    "Pasted image 20260826143617.png",
     "Final Notes/8 - AWS EKS/2 - Understanding_EKS_Notes.pdf",
     "Pasted image 20260826143809.png",
     "Pasted image 20260826143551.png",
     "Pasted image 20260826143521.png",
     "Pasted image 20260826154236.png",
     "Final Notes/8 - AWS EKS/1- AWS-EKS.pdf",
-    "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
     "Pasted image 20260826160004.png",
     "Final Notes/8 - AWS EKS/Prompt.md",
     "Final Notes/8 - AWS EKS/a - What is EKS.md",
@@ -258,7 +260,6 @@
     "Final Notes/8 - AWS EKS/l -.md",
     "Final Notes/8 - AWS EKS/k -.md",
     "Final Notes/8 - AWS EKS/j -.md",
-    "Final Notes/8 - AWS EKS/i -.md",
     "Final Notes/8 - AWS EKS",
     "CMCs/Untitled",
     "Final Notes/7 - Kubernetes - 2/Untitled",
