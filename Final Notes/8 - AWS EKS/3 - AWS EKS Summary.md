@@ -118,8 +118,7 @@ Every node and pod gets its IP address from the subnets in your VPC — and beca
 SAMPLE SITUATION IN ENABLING PREFIX-DELEGATION
 1. Open the `aws-k8s-cni.yaml` file in a text editor of your choice.
 2. Locate the environment variable section for `ENABLE_PREFIX_DELEGATION`.
-3. Add the following environment variable to enable prefix assignment:
-
+3. Add the following environment variable to enable prefix assignment: (DaemonSet)
 ```yaml
 env:
 - name: ENABLE_PREFIX_DELEGATION
@@ -180,7 +179,6 @@ data:
 ```
 
 Edit `aws-node` DaemonSet arg as following:
-
 ```YAML
 args:
             - --enable-ipv6=false
@@ -200,10 +198,12 @@ args:
 **Solution / What it fixes** AWS provides durable storage backends (EBS, EFS, and others) wired into the cluster through a **CSI driver** (Container Storage Interface) — a controller Deployment that manages volume lifecycle against the AWS API, plus a DaemonSet on every node that performs the actual mount.
 
 **Analogy** `emptyDir` is like writing notes on a whiteboard in a conference room that gets erased the moment the meeting ends. EBS/EFS is like saving that same content to a shared drive — the meeting (pod) can end, but the notes (data) are still there afterward.
-
+![[Pasted image 20260826180746.png]]
 ### EKS EBS (Elastic Block Store)
 
 Block storage — like plugging in a new hard drive.
+![[Pasted image 20260826175658.png]]
+![[Pasted image 20260826180305.png]]
 
 **Problem Statement** EBS volumes are **zone-bound**. If your autoscaler creates a replacement node in a different AZ than the volume lives in, the pod sits unschedulable while the autoscaler cycles through AZs trying to find the right one — potentially minutes of downtime for something like a database.
 
@@ -214,7 +214,8 @@ Block storage — like plugging in a new hard drive.
 - 1 pod ↔ 1 volume (single-writer). Very low latency (same-AZ).
 - Multiple volume types (GP2/GP3/IO) with different throughput/cost trade-offs; supports snapshots.
 - Great fit for databases and other single-writer workloads.
-
+![[Pasted image 20260826181641.png]]
+![[Pasted image 20260826181446.png]]
 ### EKS EFS (Elastic File System)
 
 File storage (NFS) — "just give me files," no formatting or disk management needed.
