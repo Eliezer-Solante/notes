@@ -143,6 +143,12 @@ Every node and pod gets its IP address from the subnets in your VPC — and beca
 
 > Different CNI providers (e.g. Calico) implement network policy differently — behavior may differ if you're not using the default VPC CNI.
 
+
+To see if the Network Policy is enabled run the command:
+```bash
+k get daemonset -n kube-system aws-ned -o yaml | less
+```
+
 ---
 
 ## 3. EKS Storage

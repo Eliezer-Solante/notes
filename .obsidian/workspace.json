@@ -39,15 +39,18 @@
             "id": "798efa1fb3f09bc9",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Pasted image 20260826143617.png"
+                "file": "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260826143617"
+              "icon": "lucide-file",
+              "title": "e - Network Policies"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -217,12 +220,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4cb72bb2dfa7d91e",
+  "active": "798efa1fb3f09bc9",
   "lastOpenFiles": [
-    "Final Notes/8 - AWS EKS/2 - Understanding_EKS_Notes.pdf",
-    "Final Notes/8 - AWS EKS/3 - AWS EKS Summary.md",
-    "Pasted image 20260826143809.png",
     "Pasted image 20260826143617.png",
+    "Final Notes/8 - AWS EKS/3 - AWS EKS Summary.md",
+    "Final Notes/8 - AWS EKS/2 - Understanding_EKS_Notes.pdf",
+    "Pasted image 20260826143809.png",
     "Pasted image 20260826143551.png",
     "Pasted image 20260826143521.png",
     "Pasted image 20260826154236.png",
