@@ -125,6 +125,14 @@ Every node and pod gets its IP address from the subnets in your VPC — and beca
 
 > ⚠️ **Watch out for:** many pods on one node all sharing that single outbound IPv4 NAT path — this can become a bottleneck if your surrounding infrastructure is still largely IPv4.
 
+**Role of the 169.254 address**
+![[Pasted image 20260826160004.png]]
+**Problem Statement** Pods only get an IPv6 address — there's no dual-stack at the pod level. But not everything a pod needs to reach is IPv6-ready yet (some external endpoints or AWS resources may still be IPv4-only). Without some translation mechanism, an IPv6-only pod would have no way to reach an IPv4-only destination.
+
+**Solution / What it fixes** The node sets up a local `169.254.x.x` address (a link-local, non-routable address — the same range used for things like the EC2 metadata endpoint). When a pod's traffic is headed to an IPv4 destination, it routes through this local address, which performs **source NAT** — translating the outbound request from IPv6 to IPv4, sending it out, and translating the response back to IPv6 on the way in. The pod never needs its own IPv4 address; the node handles the translation transparently.
+
+**Analogy** The pod only speaks the newer language (IPv6), and some recipients only understand the older one (IPv4). The `169.254` address is a local, in-house interpreter sitting right next to the pod — every time the pod talks to an IPv4-only recipient, the interpreter translates it on the spot, sends it out, and translates the reply back. The pod never has to learn the old language itself.
+
 ### Network Policies
 
 **Problem Statement** By default, any pod in a cluster can talk to any other pod. Without some way to restrict that, a compromised or misconfigured pod could reach far more of your infrastructure than it should — and locking traffic down usually means filing a ticket with a separate network/firewall team every time an app's dependencies change.
