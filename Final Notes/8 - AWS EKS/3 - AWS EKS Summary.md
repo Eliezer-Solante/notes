@@ -216,6 +216,145 @@ Block storage — like plugging in a new hard drive.
 - Great fit for databases and other single-writer workloads.
 ![[Pasted image 20260826181641.png]]
 ![[Pasted image 20260826181446.png]]
+
+
+#### STATIC PROVISIONING
+
+Create an EBS volume using AWS CLI:
+```
+aws ec2 create-volume --size 10 --region us-east-1 --availability-zone us-east-1
+```
+Output:
+```bash
+{
+    "AvailabilityZone": "us-east-1a",
+    "CreateTime": "2026-08-26T10:48:12.000Z",
+    "Encrypted": false,
+    "Size": 10,
+    "SnapshotId": "",
+    "State": "creating",
+    "VolumeId": "vol-0abcd1234ef567890",  # get this ID for the PV
+    "Iops": 100,
+    "Tags": [],
+    "VolumeType": "gp2",
+    "MultiAttachEnabled": false
+}
+
+```
+
+Get the volume ID from the output and replace in the following YAML
+```yaml
+cat <<EOF | kubectl apply -f -
+# Create a PersistentVolume (PV)
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ebs-pv
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: ebs.csi.aws.com
+    fsType: ext4
+    volumeHandle: vol-0abcd1234ef567890 # insert here the Volume-ID from the AWS command
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: topology.kubernetes.io/zone
+              operator: In
+              values:
+                - us-east-1a
+---
+# Create a PersistentVolumeClaim (PVC)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ebs-pvc
+spec:
+  storageClassName: ""
+  volumeName: ebs-pv
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+# Create a pod using the PVC
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ebs-pod
+spec:
+  nodeSelector: 
+    topology.kubernetes.io/zone: us-east-1a
+  containers:
+  - name: app
+    image: busybox
+    command: [ "sh", "-c", "echo Hello Kubernetes! && sleep 3600" ]
+    volumeMounts:
+    - mountPath: "/data"
+      name: ebs-storage
+  volumes:
+  - name: ebs-storage
+    persistentVolumeClaim:
+      claimName: ebs-pvc
+EOF
+```
+
+#### DYNAMIC PROVISIONING 
+Create a default storage class for dynamic provisioning.
+```
+cat <<EOF | kubectl apply -f -
+# Create a StorageClass
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: ebs-sc
+provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer
+EOF
+```
+
+Create new PVC to use the default storage class and deploy new pod.
+```
+cat <<EOF | kubectl apply -f -
+# PVC
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ebs-pvc-new
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ebs-sc
+  resources:
+    requests:
+      storage: 10Gi
+---
+# Re-deploy pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ebs-pod-new
+spec:
+  containers:
+  - name: app
+    image: busybox
+    command: [ "sh", "-c", "echo Hello Kubernetes! && sleep 3600" ]
+    volumeMounts:
+    - mountPath: "/data"
+      name: ebs-storage
+  volumes:
+  - name: ebs-storage
+    persistentVolumeClaim:
+      claimName: ebs-pvc-new
+EOF
+```
+
 ### EKS EFS (Elastic File System)
 
 File storage (NFS) — "just give me files," no formatting or disk management needed.
