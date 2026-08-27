@@ -367,6 +367,9 @@ File storage (NFS) — "just give me files," no formatting or disk management ne
 
 - Needs IAM + security group setup before it can be mounted.
 - **Dynamic provisioning is not available on Fargate or Windows nodes.**
+- Can be shared between zones
+- Created outside the cluster
+
 
 ### EKS Other Storage
 
