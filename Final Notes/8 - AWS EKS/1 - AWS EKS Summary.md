@@ -613,6 +613,16 @@ Other useful pieces:
 - **Global Load Balancer** — sits outside any single region, splitting traffic across regional load balancers by geography or weighted percentage.
 
 ### Gateway Ingress
+![[Pasted image 20260827143932.png]]
+```
+External Traffic → Load Balancer → NodePort → Ingress Controller → Service (port) → Pod
+```
+- **External Traffic** — request hits your domain (e.g. `myapp.fun`)
+- **Load Balancer** — cloud LB (AWS ELB/NLB), spreads traffic across nodes
+- **NodePort** — the 80/443 door opened on every node, owned by NGINX's Service
+- **Ingress Controller** — NGINX pod reads Ingress Rules, matches host/path, decides which app
+- **Service (port)** — stable internal address (e.g. `myapp-service:5000`), load-balances across healthy Pods
+- **Pod** — your actual app container
 
 **Problem Statement** Kubernetes Ingress only really understands HTTP host/path routing — it has no clean, standardized way to route TCP, UDP, gRPC, or TLS-SNI-based traffic, and it's not even graduating to a stable Kubernetes API. Different Ingress controllers ended up inventing their own custom annotations to fill the gaps, making configs non-portable between controllers.
 
