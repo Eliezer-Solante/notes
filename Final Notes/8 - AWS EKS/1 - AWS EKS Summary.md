@@ -756,6 +756,11 @@ Every EKS cluster needs somewhere for pods to actually run — three main paths,
 > Expect churn during upgrades — workloads often get rescheduled 3–5 times as they bounce between old and new instances.
 
 ### Karpenter
+Karpenter is a **node autoscaler** — it watches for unschedulable Pods (Pods stuck `Pending` because no node has capacity) and automatically provisions new nodes to fit them. When nodes are no longer needed, it removes them too.
+
+So functionally: yes, it scales nodes up and down based on demand — that's autoscaling.
+#### How it's different from Cluster Autoscaler (the "traditional" way)
+![[Pasted image 20260827174929.png]]
 
 **Problem Statement** Pre-defining node groups requires guessing ahead of time every combination of instance type/size your workloads might need — and even then, unused capacity in those groups is wasted spend, while workloads that don't fit any existing group's shape simply can't be scheduled efficiently.
 
@@ -763,10 +768,18 @@ Every EKS cluster needs somewhere for pods to actually run — three main paths,
 
 **Analogy** Traditional node groups are like a taxi company that only owns a fixed set of pre-purchased car models and has to hope one of them roughly fits every passenger's needs. Karpenter is like an on-demand rideshare service that looks at exactly who needs a ride right now and summons the cheapest vehicle that actually fits them — and reshuffles/consolidates rides afterward to keep the whole fleet running efficiently.
 
+==More on Consolidation==:
+#### [[Karpenter Consolidation]]
+
 > ⚠️ **The catch:** your workloads need to be mature (PodDisruptionBudgets, topology spread constraints, resource requests) or Karpenter's aggressive optimizing can cause real outages.
 
-**Quick comparison:**
+
+## **Quick comparison:**
 ![[Pasted image 20260827131611.png]]
+
+
+## [[Compute Demo]]
+
 
 ---
 

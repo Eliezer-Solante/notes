@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cb460902a3500fc0",
+            "id": "aa99be72c254ea7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "55ec9b9401451813",
+            "id": "cb460902a3500fc0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
+                "file": "Final Notes/8 - AWS EKS/Compute Demo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 - EKSDEMO commands"
+              "title": "Compute Demo"
             }
           }
         ]
@@ -209,25 +209,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cb460902a3500fc0",
+  "active": "aa99be72c254ea7e",
   "lastOpenFiles": [
-    "Pasted image 20260827173012.png",
-    "Final Notes/8 - AWS EKS/LOAD BALANCING LAB.md",
+    "Final Notes/8 - AWS EKS/Compute Demo.md",
+    "Pasted image 20260827182801.png",
+    "Pasted image 20260827182746.png",
+    "Pasted image 20260827182734.png",
+    "Pasted image 20260827182655.png",
+    "Pasted image 20260827182641.png",
+    "Pasted image 20260827182625.png",
+    "Pasted image 20260827182615.png",
+    "Pasted image 20260827182545.png",
+    "Pasted image 20260827182508.png",
+    "Pasted image 20260827182435.png",
     "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
+    "Final Notes/8 - AWS EKS/Karpenter Consolidation.md",
+    "Final Notes/8 - AWS EKS/LOAD BALANCING LAB.md",
     "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
     "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
-    "Pasted image 20260827154639.png",
-    "Pasted image 20260827145216.png",
-    "Pasted image 20260827143932.png",
-    "Pasted image 20260827135153.png",
-    "Pasted image 20260827135019.png",
-    "Pasted image 20260827131611.png",
-    "Pasted image 20260827131531.png",
-    "Pasted image 20260827130452.png",
-    "Pasted image 20260827130445.png",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
-    "Pasted image 20260827095322.png",
     "Final Notes/8 - AWS EKS/3- AWS-EKS.pdf",
     "Midpoint Notes/1 - Linux/W - Access Control Files.md",
     "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
@@ -247,8 +248,6 @@
     "Final Notes/8 - AWS EKS/u -.md",
     "Final Notes/8 - AWS EKS/r -.md",
     "Final Notes/8 - AWS EKS/q -.md",
-    "Final Notes/8 - AWS EKS/p -.md",
-    "Final Notes/8 - AWS EKS/o -.md",
     "Final Notes/8 - AWS EKS",
     "CMCs/Untitled",
     "Final Notes/7 - Kubernetes - 2/Untitled",
