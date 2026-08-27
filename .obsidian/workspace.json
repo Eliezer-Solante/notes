@@ -107,12 +107,12 @@
               "title": "Outline of 1 - AWS EKS Summary"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 283.5,
-    "collapsed": true
+    "width": 283.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -208,8 +208,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f12e651e9d3519ea",
+  "active": "a8218c30ebeb5189",
   "lastOpenFiles": [
+    "Pasted image 20260827145216.png",
     "Pasted image 20260827143932.png",
     "Pasted image 20260827135153.png",
     "Pasted image 20260827135019.png",
@@ -224,7 +225,6 @@
     "Pasted image 20260827095307.png",
     "Final Notes/8 - AWS EKS/3- AWS-EKS.pdf",
     "Final Notes/imgs/Pasted image 20260827093820.png",
-    "Final Notes/imgs/Pasted image 20260826092433.png",
     "Midpoint Notes/1 - Linux/W - Access Control Files.md",
     "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Final Notes/7 - Kubernetes - 2/e - Network Policies.md",
