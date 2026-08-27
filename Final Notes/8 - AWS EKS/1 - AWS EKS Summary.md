@@ -423,6 +423,10 @@ One more nuance: EBS volumes are AZ-locked, which is a common gotcha in EKS — 
 
 **Analogy** It's like the difference between keeping your house key under the doormat (a native Secret — technically "hidden" but not really secure) versus using a proper safe with a combination that only certain trusted people know, and that gets changed on a schedule (Secrets Manager + Secrets Store CSI Driver). The doormat is convenient; the safe is what you actually want for anything valuable.
 
+![[Pasted image 20260827130452.png]]
+
+
+
 ---
 
 # 5. Load Balancers
