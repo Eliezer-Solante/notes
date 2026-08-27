@@ -425,6 +425,147 @@ One more nuance: EBS volumes are AZ-locked, which is a common gotcha in EKS — 
 
 ![[Pasted image 20260827130452.png]]
 
+#### INTEGRATING AWS SECRET STORE TO A CLUSTER
+
+```bash
+# ============================================
+# STEP 1: Install Secrets Store CSI Driver
+# ============================================
+helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
+helm repo update
+
+helm install csi-secrets-store secrets-store-csi-driver/secrets-store-csi-driver \
+  --namespace kube-system \
+  --set syncSecret.enabled=true   # enables syncing to native K8s Secrets (needed for secretObjects/envFrom)
+
+# ============================================
+# STEP 2: Install AWS provider (ASCP)
+# ============================================
+kubectl apply -f https://raw.githubusercontent.com/aws/secrets-store-csi-driver-provider-aws/main/deployment/aws-provider-installer.yaml
+
+# Verify both are running (should see pods on every node, since they're DaemonSets)
+kubectl get pods -n kube-system -l app=secrets-store-csi-driver
+kubectl get pods -n kube-system -l app=csi-secrets-store-provider-aws
+
+
+# ============================================
+# STEP 3: Create IAM policy (read access to the secret)
+# ============================================
+aws iam create-policy \
+  --policy-name eks-secrets-access \
+  --policy-document '{
+    "Version": "2012-10-17",
+    "Statement": [{
+      "Effect": "Allow",
+      "Action": ["secretsmanager:GetSecretValue", "secretsmanager:DescribeSecret"],
+      "Resource": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:your-secret-name-*"
+    }]
+  }'
+
+# Expected Output:====================================================
+{
+    "Policy": {
+        "PolicyName": "eks-secrets-access",
+        "PolicyId": "ANPAJ2UCCR6DPCEXAMPLE",
+        "Arn": "arn:aws:iam::123456789012:policy/eks-secrets-access",
+        "Path": "/",
+        "DefaultVersionId": "v1",
+        "AttachmentCount": 0,
+        "PermissionsBoundaryUsageCount": 0,
+        "IsAttachable": true,
+        "CreateDate": "2026-08-27T10:15:00Z",
+        "UpdateDate": "2026-08-27T10:15:00Z"
+    }
+}
+#=====================================================================
+# NOTE: copy the returned "Arn" — needed for --attach-policy-arn in step 4
+
+# ============================================
+# STEP 4: Create IAM role + Kubernetes ServiceAccount (IRSA)
+# ============================================
+eksctl create iamserviceaccount \
+  --name secrets-sa \
+  --namespace default \
+  --cluster your-cluster-name \
+  --attach-policy-arn arn:aws:iam::ACCOUNT_ID:policy/eks-secrets-access \
+  --approve
+# NOTE: creates both the IAM role (trusted via OIDC) and the K8s ServiceAccount, linked together
+# Expected Output: ===================================================
+2026-08-27 10:16:01 [ℹ]  1 iamserviceaccount (default/secrets-sa) was included (based on the include/exclude rules)
+2026-08-27 10:16:01 [!]  serviceaccounts that exist in Kubernetes will be excluded, use --override-existing-serviceaccounts to override
+2026-08-27 10:16:01 [ℹ]  1 task: { create IAM role for serviceaccount "default/secrets-sa" }
+2026-08-27 10:16:02 [ℹ]  building iamserviceaccount stack "eksctl-your-cluster-name-addon-iamserviceaccount-default-secrets-sa"
+2026-08-27 10:16:02 [ℹ]  deploying stack "eksctl-your-cluster-name-addon-iamserviceaccount-default-secrets-sa"
+2026-08-27 10:16:02 [ℹ]  waiting for CloudFormation stack "eksctl-your-cluster-name-addon-iamserviceaccount-default-secrets-sa"
+2026-08-27 10:16:35 [ℹ]  waiting for CloudFormation stack "eksctl-your-cluster-name-addon-iamserviceaccount-default-secrets-sa"
+2026-08-27 10:16:35 [ℹ]  created serviceaccount "default/secrets-sa"
+#=====================================================================
+
+# ============================================
+# STEP 5: Verify ServiceAccount is IRSA-linked
+# ============================================
+kubectl get serviceaccount secrets-sa -n default -o yaml
+# Should show annotation: eks.amazonaws.com/role-arn: arn:aws:iam::...
+```
+
+```yaml
+# ============================================
+# STEP 6: SecretProviderClass
+# ============================================
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: aws-secrets
+  namespace: default
+spec:
+  provider: aws
+  parameters:
+    objects: |
+      - objectName: "your-secret-name"
+        objectType: "secretsmanager"
+  secretObjects:
+    - secretName: my-app-secret
+      type: Opaque
+      data:
+        - objectName: "your-secret-name"
+          key: password
+---
+# ============================================
+# STEP 7: Pod using the secret
+# ============================================
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+  namespace: default
+spec:
+  serviceAccountName: secrets-sa
+  containers:
+    - name: app
+      image: my-app:latest
+      volumeMounts:
+        - name: secrets-store
+          mountPath: "/mnt/secrets"
+          readOnly: true
+      envFrom:
+        - secretRef:
+            name: my-app-secret
+  volumes:
+    - name: secrets-store
+      csi:
+        driver: secrets-store.csi.k8s.io
+        readOnly: true
+        volumeAttributes:
+          secretProviderClass: "aws-secrets"
+```
+
+```bash
+# ============================================
+# STEP 8: Verify
+# ============================================
+kubectl exec my-app -- cat /mnt/secrets/your-secret-name
+kubectl get secret my-app-secret -o yaml
+```
 
 
 ---
@@ -442,11 +583,7 @@ One more nuance: EBS volumes are AZ-locked, which is a common gotcha in EKS — 
 > 💡 AWS recommends setting `externalTrafficPolicy` to only route to nodes actually running the pod — this saves the extra kube-proxy hop (which can otherwise cross AZs and add latency/cost).
 
 **Two main patterns for exposing services:**
-
-||What it is|Trade-off|
-|---|---|---|
-|**LoadBalancer Service**|One dedicated ELB/NLB/ALB per Kubernetes Service|Simple, but expensive/noisy at scale (hundreds of load balancers)|
-|**Ingress**|Layer-7 (HTTP) routing by hostname/path, behind one shared load balancer|Cheaper at scale; the AWS Load Balancer Controller creates/manages an ALB directly from Ingress resources — multiple Ingress objects can even share the same ALB|
+![[Pasted image 20260827131531.png]]
 
 Other useful pieces:
 
@@ -511,13 +648,7 @@ Every EKS cluster needs somewhere for pods to actually run — three main paths,
 > ⚠️ **The catch:** your workloads need to be mature (PodDisruptionBudgets, topology spread constraints, resource requests) or Karpenter's aggressive optimizing can cause real outages.
 
 **Quick comparison:**
-
-||Fargate|Node Groups|Karpenter|
-|---|---|---|---|
-|Node visibility|Not visible as EC2|Visible EC2 instances|Visible EC2 instances|
-|Scaling model|1 pod = 1 node|Pre-defined ASG groups|Dynamic, on-demand, cheapest-fit|
-|DaemonSets|❌ Not supported|✅ Supported|✅ Supported|
-|Best for|Isolated/security-sensitive workloads|Predictable, steady-state workloads|Dynamic, cost-sensitive, mixed workloads|
+![[Pasted image 20260827131611.png]]
 
 ---
 
