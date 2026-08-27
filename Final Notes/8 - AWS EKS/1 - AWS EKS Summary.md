@@ -656,6 +656,51 @@ Client → myapp.fun
 
 > 💡 This is squarely an **advanced, large-enterprise** tool — provisioning a service network can take 5–10 minutes, and everything is IAM-gated. Save it for dozens/hundreds of VPCs and accounts, not one or two clusters.
 
+#### VPC Lattice — Summary
+
+**What it is:** A fully managed AWS application networking service — think of it as AWS-native service-to-service connectivity + traffic management, built directly into AWS's network infrastructure (not something you run as pods).
+##### The problem it solves
+Plain `Ingress` (NGINX or ALB) only handles **north-south** traffic (external → single cluster) and is **scoped to one cluster**. It has no answer for:
+- Services in **different EKS clusters** needing to talk to each other
+- Services across **different VPCs or AWS accounts**
+- The newer **Gateway API** standard (AWS Load Balancer Controller only supports old-style `Ingress`)
+##### What it actually does
+- Connects services across **multiple VPCs, accounts, and EKS clusters** — this is its core differentiator
+- Implements the **Gateway API** on AWS (via the **AWS Gateway API Controller**)
+- Handles both **north-south** (external traffic in) and **east-west** (service-to-service) communication
+- Provides built-in **security** (defense-in-depth between services) and **observability** (traffic monitoring) — without needing to run a separate service mesh like Istio
+##### How it fits the model you already know
+```
+Ingress/Gateway YAML (the spec)
+        ↓
+Gateway API Controller (reads it — this is VPC Lattice's controller)
+        ↓
+VPC Lattice Service Network (the actual infra — spans VPCs/clusters/accounts)
+        ↓
+Target Pods
+```
+Same relationship as NGINX/ALB — **the controller is not in the traffic path**, it just provisions and syncs the real infrastructure (VPC Lattice's service network) based on your `Gateway`/`HTTPRoute` YAML.
+
+##### Role structure (Gateway API personas)
+
+| Resource     | Owned by                                           |
+| ------------ | -------------------------------------------------- |
+| GatewayClass | Infra provider (defines "use VPC Lattice")         |
+| Gateway      | Cluster operator (listener, TLS, namespace access) |
+| HTTPRoute    | App developer (actual routing rules)               |
+
+##### When to use it vs. NGINX/ALB
+
+|Situation|Recommended|
+|---|---|
+|Single cluster, simple routing|NGINX or ALB — simpler|
+|Need Gateway API on AWS specifically|VPC Lattice (only AWS-native option)|
+|Multiple EKS clusters need to talk to each other|**VPC Lattice**|
+|Multi-account/multi-VPC service mesh, no Istio|**VPC Lattice**|
+|Just need external traffic → one app|Overkill — stick with ALB/NGINX|
+
+**Bottom line:** VPC Lattice isn't a competitor to NGINX/ALB for basic ingress — it's solving a bigger, different problem (cross-cluster/cross-account service networking + Gateway API support). Most single-cluster setups don't need it; it shines once you're operating **multiple EKS clusters or AWS accounts** that need secure, observable service discovery between them.
+
 ---
 
 # 6. Compute & Scaling
