@@ -626,7 +626,7 @@ External Traffic → Load Balancer → NodePort → Ingress Controller → Servi
 - **Pod** — your actual app container
 ##### AWS Load Balancer
 ![[Pasted image 20260827145216.png]]
-### IP target mode (recommended)
+###### IP target mode (recommended)
 ```
 External Traffic → AWS ALB → Pod
 ```
