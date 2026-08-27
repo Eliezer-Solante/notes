@@ -579,14 +579,36 @@ kubectl get secret my-app-secret -o yaml
 **Solution / What it fixes** A Kubernetes **Service** exposes a stable **NodePort** on every node in the cluster. If a request lands on a node without a matching pod, **kube-proxy** quietly reroutes it to a node that does have one. A `LoadBalancer`-type Service then puts an actual AWS ELB/NLB/ALB in front of that, giving external traffic one stable entry point regardless of what's happening to the pods behind it.
 
 **Analogy** It's like a company's main reception phone number. Employees (pods) come and go, move desks, or are out sick — but callers only ever need to remember the one main number, and the receptionist (kube-proxy/load balancer) figures out who's actually available to route the call to right now.
-
+![[Pasted image 20260827135019.png]]
+![[Pasted image 20260827135153.png]]
 > 💡 AWS recommends setting `externalTrafficPolicy` to only route to nodes actually running the pod — this saves the extra kube-proxy hop (which can otherwise cross AZs and add latency/cost).
 
 **Two main patterns for exposing services:**
 ![[Pasted image 20260827131531.png]]
 
-Other useful pieces:
+---
+kube-proxy handles load balancing **inside** the cluster (node ↔ node, pod ↔ pod). A cloud Load Balancer handles traffic getting **into** the cluster from the outside world. They work together in layers:
+```
+Internet
+   │
+   ▼
+[Cloud Load Balancer]  (AWS ELB/NLB — external, provisioned via Service type: LoadBalancer)
+   │  sends traffic to any Node's IP on a NodePort
+   ▼
+[kube-proxy on that Node]  (internal — picks a healthy Pod from that Service)
+   │
+   ▼
+[Pod]
+```
+#### Step by step, for `Service type: LoadBalancer`:
+1. You create a Service with `type: LoadBalancer`.
+2. The cloud provider (AWS, via the AWS Load Balancer Controller or in-tree provider) spins up a real **ELB/NLB**, pointed at your worker nodes.
+3. That external LB sends traffic to **any node**, hitting a **NodePort** it opened.
+4. **kube-proxy on that node** intercepts the traffic and forwards it to one of the correct Pod IPs — even if that Pod is running on a _different_ node — via cluster networking.
+5. So even though the external LB just picked "a node," kube-proxy is what actually gets it to a live, healthy Pod.
+---
 
+Other useful pieces:
 - **External DNS** — an open-source controller that watches Services/Ingresses and automatically creates matching Route 53 records.
 - **Global Load Balancer** — sits outside any single region, splitting traffic across regional load balancers by geography or weighted percentage.
 
