@@ -701,6 +701,31 @@ Same relationship as NGINX/ALB — **the controller is not in the traffic path**
 
 **Bottom line:** VPC Lattice isn't a competitor to NGINX/ALB for basic ingress — it's solving a bigger, different problem (cross-cluster/cross-account service networking + Gateway API support). Most single-cluster setups don't need it; it shines once you're operating **multiple EKS clusters or AWS accounts** that need secure, observable service discovery between them.
 
+##### Summary
+All three ultimately _result in_ load balancing happening somewhere — but the actual load-balancing work happens in different places for each.
+
+###### Where the real load balancing happens
+![[Pasted image 20260827154639.png]]
+###### The common thread
+In every case, the Ingress/Gateway YAML is just the _instruction_ — it says "route requests matching X to Service Y." Something else has to take that instruction and actually **pick which of the (possibly many) backend Pods gets each individual request**. That "picking" step — spreading requests across multiple healthy targets — _is_ load balancing.
+
+```
+NGINX:       Ingress rules  →  NGINX picks a Pod (proxy load balancing)
+ALB:         Ingress rules  →  ALB target group picks a Pod (native AWS LB)
+VPC Lattice: Gateway/Route  →  Service network picks a target (native AWS LB, wider scope)
+```
+###### Two layers of load balancing, always
+This connects back to what we covered earlier with kube-proxy — there are actually **two separate load-balancing decisions** happening in any of these setups:
+
+1. **Which node does traffic land on first?** — handled by the cloud Load Balancer (or VPC Lattice's network) picking a node/target.
+2. **Which Pod, of the app's replicas, actually gets the request?** — handled by whichever component owns that decision: NGINX (software), the ALB's target group (native AWS), or VPC Lattice's service (native AWS, cross-cluster).
+###### Why this distinction matters practically
+- **NGINX** = load balancing is a **workload** you run and pay compute for (the NGINX pods themselves consume CPU/memory, and you're responsible for scaling them).
+- **ALB / VPC Lattice** = load balancing is **outsourced to AWS** — you don't run any proxy pods for it; AWS's managed infrastructure does the actual balancing, and you just pay for the managed service.
+
+So to directly answer: **Ingress and Gateway API are the "rules for" load balancing, while NGINX, ALB, and VPC Lattice are the three different "engines" that actually perform it** — one running as software inside your cluster, the other two running as AWS's own managed network infrastructure outside it.
+
+
 ---
 
 # 6. Compute & Scaling
