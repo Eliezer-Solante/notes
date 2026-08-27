@@ -725,6 +725,8 @@ This connects back to what we covered earlier with kube-proxy — there are actu
 
 So to directly answer: **Ingress and Gateway API are the "rules for" load balancing, while NGINX, ALB, and VPC Lattice are the three different "engines" that actually perform it** — one running as software inside your cluster, the other two running as AWS's own managed network infrastructure outside it.
 
+#### ==SAMPLE LAB:==
+**[[LOAD BALANCING LAB]]**
 
 ---
 
