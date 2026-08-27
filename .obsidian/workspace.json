@@ -107,8 +107,7 @@
               "title": "Outline of 1 - AWS EKS Summary"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -211,18 +210,19 @@
   },
   "active": "aa99be72c254ea7e",
   "lastOpenFiles": [
-    "Final Notes/8 - AWS EKS/Compute Demo.md",
-    "Pasted image 20260827182801.png",
-    "Pasted image 20260827182746.png",
-    "Pasted image 20260827182734.png",
-    "Pasted image 20260827182655.png",
-    "Pasted image 20260827182641.png",
-    "Pasted image 20260827182625.png",
-    "Pasted image 20260827182615.png",
-    "Pasted image 20260827182545.png",
-    "Pasted image 20260827182508.png",
-    "Pasted image 20260827182435.png",
+    "Final Notes/imgs/Pasted image 20260827095307.png",
     "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
+    "Final Notes/8 - AWS EKS/Compute Demo.md",
+    "Final Notes/imgs/Pasted image 20260827182801.png",
+    "Final Notes/imgs/Pasted image 20260827182746.png",
+    "Final Notes/imgs/Pasted image 20260827182734.png",
+    "Final Notes/imgs/Pasted image 20260827182655.png",
+    "Final Notes/imgs/Pasted image 20260827182641.png",
+    "Final Notes/imgs/Pasted image 20260827182625.png",
+    "Final Notes/imgs/Pasted image 20260827182615.png",
+    "Final Notes/imgs/Pasted image 20260827182545.png",
+    "Final Notes/imgs/Pasted image 20260827182508.png",
+    "Final Notes/imgs/Pasted image 20260827182435.png",
     "Final Notes/8 - AWS EKS/Karpenter Consolidation.md",
     "Final Notes/8 - AWS EKS/LOAD BALANCING LAB.md",
     "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
