@@ -8,7 +8,7 @@ Where a topic is a **feature or fix** (not just a definition), notes follow this
 
 ---
 
-## 1. EKS Fundamentals
+# 1. EKS Fundamentals
 
 ### What is EKS
 
@@ -88,7 +88,7 @@ AWS IAM identities and Kubernetes RBAC are two separate systems — something ha
 
 ---
 
-## 2. EKS Networking
+# 2. EKS Networking
 
 ### How networking works
 
@@ -191,7 +191,7 @@ args:
 
 ---
 
-## 3. EKS Storage
+# 3. EKS Storage
 
 **Problem Statement** Kubernetes constructs like `emptyDir` are fine for scratch space, but the data disappears the moment the pod does. Anything durable (like a database in a StatefulSet) needs storage that survives outside the pod's lifecycle entirely.
 
@@ -356,7 +356,7 @@ EOF
 ```
 
 ### EKS EFS (Elastic File System)
-
+![[Pasted image 20260827093213.png]]
 File storage (NFS) — "just give me files," no formatting or disk management needed.
 
 **Problem Statement** Some workloads need multiple pods, possibly in different AZs, to read and write the _same_ files at the same time — something a zone-bound EBS volume simply cannot do.
@@ -370,6 +370,23 @@ File storage (NFS) — "just give me files," no formatting or disk management ne
 - Can be shared between zones
 - Created outside the cluster
 
+### Difference between EKS EBS and EKS EFS
+Both EBS and EFS can back persistent storage for Kubernetes workloads on EKS, but they work very differently underneath. Here's the breakdown:
+
+#### Core difference
+
+**EBS (Elastic Block Store)** — block storage, like a virtual hard drive attached to a single EC2 instance.  
+**EFS (Elastic File System)** — network file storage (NFS), like a shared network drive that multiple instances/pods can access at once.
+
+#### Key comparisons
+![[Pasted image 20260827093820.png]]
+
+#### Practical rule of thumb
+
+- **Need a fast dedicated disk for one pod (e.g., a database)?** → EBS
+- **Need multiple pods across AZs to read/write the same files (e.g., shared media uploads, shared logs, WordPress `wp-content`)?** → EFS
+
+One more nuance: EBS volumes are AZ-locked, which is a common gotcha in EKS — if your StatefulSet pod gets rescheduled to a node in a different AZ, it can get stuck waiting for a volume it can't attach to. EFS avoids that entirely since it's accessible from any AZ in the region, at the cost of higher per-operation latency compared to EBS.
 
 ### EKS Other Storage
 
@@ -377,10 +394,16 @@ File storage (NFS) — "just give me files," no formatting or disk management ne
 - **S3** — many apps talk to S3 natively via SDK. There's also a newer **S3 Mount Point CSI driver** that presents a bucket as a filesystem — handy, but **not POSIX-compliant** (renames, `mkdir`, etc. behave differently than a real filesystem).
 - **Local volumes (NVMe)** — the fastest storage available in AWS, but fully ephemeral; data disappears when the node does.
 - **In-cluster storage** — Longhorn, Rook/Ceph, OpenEBS, etc. More portable across clouds/on-prem, but more operational burden (you own the replication, backups, and failure handling).
+![[Pasted image 20260827095322.png]]
+![[Pasted image 20260827095307.png]]
+
+
+
+
 
 ---
 
-## 4. EKS Secrets
+# 4. EKS Secrets
 
 ### EKS Secrets Intro
 
@@ -402,7 +425,7 @@ File storage (NFS) — "just give me files," no formatting or disk management ne
 
 ---
 
-## 5. Load Balancers
+# 5. Load Balancers
 
 ### LoadBalancers Intro
 
@@ -448,7 +471,7 @@ Other useful pieces:
 
 ---
 
-## 6. Compute & Scaling
+# 6. Compute & Scaling
 
 Every EKS cluster needs somewhere for pods to actually run — three main paths, each solving a different problem.
 
@@ -494,7 +517,7 @@ Every EKS cluster needs somewhere for pods to actually run — three main paths,
 
 ---
 
-## 7. Redundancy & Resiliency
+# 7. Redundancy & Resiliency
 
 ### Cluster Access
 
@@ -538,7 +561,7 @@ Every EKS cluster needs somewhere for pods to actually run — three main paths,
 
 ---
 
-## 8. Upgrades and Maintenance
+# 8. Upgrades and Maintenance
 
 ### EKS Monitoring
 
