@@ -746,7 +746,7 @@ Every EKS cluster needs somewhere for pods to actually run — three main paths,
 - **Best for:** isolated/security-sensitive workloads, or core cluster services (metrics-server, autoscaler) insulated from regular node-upgrade churn.
 
 ### EKS Node Groups
-
+![[Pasted image 20260827173012.png]]
 **Problem Statement** Someone needs to actually provision, join, and keep EC2 instances updated as Kubernetes nodes — and doing that entirely by hand (creating the ASG, bootstrapping the kubelet, managing IAM credentials, rolling AMI upgrades) is slow and error-prone.
 
 **Solution / What it fixes** Node groups group EC2 instances behind an Auto Scaling Group. **Managed node groups** let AWS handle version upgrades for you — trigger an upgrade, and EKS rolls new instances in via the launch template while draining old ones out.
