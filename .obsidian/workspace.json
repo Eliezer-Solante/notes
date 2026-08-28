@@ -107,12 +107,12 @@
               "title": "Outline of 1 - AWS EKS Summary"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 283.5,
-    "collapsed": true
+    "width": 283.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -208,7 +208,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aa99be72c254ea7e",
+  "active": "a8218c30ebeb5189",
   "lastOpenFiles": [
     "Final Notes/imgs/Pasted image 20260827095307.png",
     "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
