@@ -868,6 +868,8 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 
 > 💡 **Recommended alternative stack:** Pod Identity for AWS-level access control, Network Policies for coarse traffic rules, and separate node groups/clusters for hard security boundaries. Reach for security groups on pods only with deep in-house expertise already in place.
 
+### LAB : [[Redundancy and Resiliency LAB]]
+
 ---
 
 # 8. Upgrades and Maintenance
