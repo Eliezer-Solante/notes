@@ -49,8 +49,7 @@
               "title": "Compute Demo"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -223,8 +222,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c35d5e7f2fe7a3b1",
+  "active": "aa99be72c254ea7e",
   "lastOpenFiles": [
+    "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Pasted image 20260828150516.png",
     "Final Notes/8 - AWS EKS/Compute Demo.md",
     "Final Notes/8 - AWS EKS/Karpenter Consolidation.md",
@@ -239,9 +239,7 @@
     "Final Notes/imgs/Pasted image 20260827182625.png",
     "Final Notes/imgs/Pasted image 20260827182615.png",
     "Final Notes/imgs/Pasted image 20260827182545.png",
-    "Final Notes/imgs/Pasted image 20260827182508.png",
     "Final Notes/8 - AWS EKS/LOAD BALANCING LAB.md",
-    "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
     "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
     "Final Notes/7 - Kubernetes - 2/v - Authorization.md",
