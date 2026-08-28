@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "1 - AWS EKS Summary"
             }
-          },
-          {
-            "id": "4a6b127ebc5a387b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AWS EKS DEPLYMENT"
-            }
           }
         ]
       }
@@ -107,8 +93,7 @@
               "title": "Outline of 1 - AWS EKS Summary"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -212,9 +197,9 @@
   "active": "aa99be72c254ea7e",
   "lastOpenFiles": [
     "Final Notes/8 - AWS EKS/Updated Cost Breakdown (us-east-1, On-Demand).md",
+    "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
     "Final Notes/8 - AWS EKS/Redundancy and Resiliency LAB.md",
-    "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Final Notes/8 - AWS EKS/Pod Identity.md",
     "Final Notes/8 - AWS EKS/IRSAIAM Roles for Service Accounts.md",
     "Final Notes/8 - AWS EKS/Compute Demo.md",
