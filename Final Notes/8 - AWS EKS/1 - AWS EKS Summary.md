@@ -795,6 +795,7 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 
 > 💡 aws-auth still works and still exists — but for a new cluster today, use the EKS Access Entries API instead.
 
+==More Information==: [[The Bridge Between AWS and Kubernetes Authentication]]
 ### IRSA (IAM Roles for Service Accounts)
 
 **Problem Statement** A pod running inside a cluster often needs to call AWS APIs (e.g. read from S3) — but pods aren't EC2 instances, so they don't naturally have an IAM role the way a normal EC2-based application would. Handing every pod the _node's_ IAM role would over-grant permissions to everything running on that node.
@@ -805,6 +806,7 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 
 > **Real limitations:** ~100 OIDC providers per AWS account, IAM trust relationships reusable only ~5x per role, and the OIDC URL isn't known until the cluster already exists.
 
+==More Information==: [[IRSAIAM Roles for Service Accounts]]
 ### Pod Identity
 
 **Problem Statement** IRSA's OIDC/STS handshake works, but its real-world limits (OIDC provider caps, IAM trust-relationship reuse limits, needing the cluster to exist before you can set up trust) become genuinely painful at scale, with many clusters and many workloads.
@@ -815,6 +817,7 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 
 > 💡 IRSA and Pod Identity can run **side-by-side** during a migration — the injection webhook simply prefers Pod Identity when both are enabled.
 
+==More Information==: [[Pod Identity]]
 ### SG (Security Groups) for Pods
 
 **Problem Statement** By default, every ENI on a node — and therefore every pod scheduled to it — shares the same security group. If one workload on a node needs access to a sensitive RDS instance, every other pod on that node technically has the same network-level path available (IAM still gates actual access, but the network door is open to all of them).
