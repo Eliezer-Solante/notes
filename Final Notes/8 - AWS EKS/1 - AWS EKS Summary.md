@@ -855,7 +855,7 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 **Analogy** If IRSA is a security desk that has to individually verify a signed letter of introduction (JWT) every single time, Pod Identity is like the building itself already having a pre-established, trusted relationship with the badge system — badges just work, everywhere in the building, without a separate verification letter each time.
 
 > 💡 IRSA and Pod Identity can run **side-by-side** during a migration — the injection webhook simply prefers Pod Identity when both are enabled.
-
+ 
 
 ==More Information==: [[Pod Identity]]
 ### SG (Security Groups) for Pods
