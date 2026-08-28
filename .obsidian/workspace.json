@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/8 - AWS EKS/Karpenter Consolidation.md",
+                "file": "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Karpenter Consolidation"
+              "title": "AWS EKS DEPLYMENT"
             }
           },
           {
@@ -49,7 +49,8 @@
               "title": "Compute Demo"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -121,8 +122,7 @@
               "title": "Outline of 1 - AWS EKS Summary"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -223,13 +223,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aa99be72c254ea7e",
+  "active": "c35d5e7f2fe7a3b1",
   "lastOpenFiles": [
+    "Pasted image 20260828150516.png",
+    "Final Notes/8 - AWS EKS/Compute Demo.md",
     "Final Notes/8 - AWS EKS/Karpenter Consolidation.md",
     "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
     "Final Notes/7 - Kubernetes - 2/o - (Skipped)Stateful Sets Introduction.md",
     "Final Notes/imgs/Pasted image 20260827095307.png",
-    "Final Notes/8 - AWS EKS/Compute Demo.md",
     "Final Notes/imgs/Pasted image 20260827182801.png",
     "Final Notes/imgs/Pasted image 20260827182746.png",
     "Final Notes/imgs/Pasted image 20260827182734.png",
@@ -262,7 +263,6 @@
     "Final Notes/8 - AWS EKS/w -.md",
     "Final Notes/8 - AWS EKS/u -.md",
     "Final Notes/8 - AWS EKS/r -.md",
-    "Final Notes/8 - AWS EKS/q -.md",
     "Final Notes/8 - AWS EKS",
     "CMCs/Untitled",
     "Final Notes/7 - Kubernetes - 2/Untitled",

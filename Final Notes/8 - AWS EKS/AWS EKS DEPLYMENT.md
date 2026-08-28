@@ -13,3 +13,5 @@ NodeSecurityGroup = "sg-0cddc9524b455b181"
 NodeAutoScalingGroup = "eks-cluster-stack-NodeGroup-mvYkji6b9YB2"
 NodeInstanceRole = "arn:aws:iam::975050112440:role/eksWorkerNodeRole"
 NodeSecurityGroup = "sg-012c4a270c1b6fc72"
+
+![[Pasted image 20260828150516.png]]
