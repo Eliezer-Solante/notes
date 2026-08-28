@@ -835,10 +835,27 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 **Problem Statement** IRSA's OIDC/STS handshake works, but its real-world limits (OIDC provider caps, IAM trust-relationship reuse limits, needing the cluster to exist before you can set up trust) become genuinely painful at scale, with many clusters and many workloads.
 
 **Solution / What it fixes** Pod Identity stores the ServiceAccount ↔ IAM role mapping directly in the **EKS API** — no OIDC, no STS `AssumeRoleWithWebIdentity`. A DaemonSet on each node hands out credentials locally. Because AWS trusts the EKS service principal itself, the same IAM role can be reused everywhere, scoped with tag-based (ABAC) policies.
+#### Runtime flow (when a Pod needs credentials)
+```
+1. Pod's SDK calls the local credentials endpoint:
+   http://169.254.170.23/v1/credentials
+        ↓
+2. Pod Identity Agent (DaemonSet on the node) intercepts the call
+        ↓
+3. Agent calls the EKS Auth API:
+   eks-auth:AssumeRoleForPodIdentity
+        ↓
+4. EKS itself checks: does an association exist for
+   this Pod's namespace + ServiceAccount?
+        ↓
+5. If yes → temporary, scoped credentials returned to the Pod
+```
+>The key difference: the trust relationship is managed by EKS itself, not by an OIDC trust policy on the IAM role — meaning one IAM role can be reused across multiple clusters without modifying its trust policy.
 
 **Analogy** If IRSA is a security desk that has to individually verify a signed letter of introduction (JWT) every single time, Pod Identity is like the building itself already having a pre-established, trusted relationship with the badge system — badges just work, everywhere in the building, without a separate verification letter each time.
 
 > 💡 IRSA and Pod Identity can run **side-by-side** during a migration — the injection webhook simply prefers Pod Identity when both are enabled.
+
 
 ==More Information==: [[Pod Identity]]
 ### SG (Security Groups) for Pods

@@ -35,7 +35,8 @@
               "title": "Pod Identity"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -208,12 +209,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aa99be72c254ea7e",
+  "active": "50017828b49fb633",
   "lastOpenFiles": [
+    "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
     "Final Notes/8 - AWS EKS/Pod Identity.md",
     "Final Notes/8 - AWS EKS/IRSAIAM Roles for Service Accounts.md",
     "Final Notes/8 - AWS EKS/Compute Demo.md",
-    "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
     "Final Notes/8 - AWS EKS/The Bridge Between AWS and Kubernetes Authentication.md",
     "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Pasted image 20260828150516.png",
