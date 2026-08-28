@@ -2,7 +2,6 @@
 > Fetch the complete documentation index at: https://notes.kodekloud.com/llms.txt
 > Use this file to discover all available pages before exploring further.
 
-# IRSAIAM Roles for Service Accounts
 
 > This article explains how to configure IAM Roles for Service Accounts (IRSA) in Amazon EKS for secure AWS API access.
 

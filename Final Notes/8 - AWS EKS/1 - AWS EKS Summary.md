@@ -802,6 +802,29 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 
 **Solution / What it fixes** IRSA lets a pod exchange a JWT (fetched from the cluster's OIDC endpoint) with AWS STS for temporary, scoped IAM credentials — tied to a specific Kubernetes ServiceAccount, not the whole node.
 
+>This literally means: _"Here's a web identity token (the JWT) — if it's valid and matches a trust policy, give me temporary credentials for this IAM role."_
+```
+1. Pod starts, using ServiceAccount "secrets-sa"
+        ↓
+2. Kubernetes mounts a JWT into the Pod
+   (signed by the cluster's OIDC endpoint,
+    claims: "I am secrets-sa in namespace default on cluster X")
+        ↓
+3. AWS SDK inside the Pod automatically calls:
+   sts:AssumeRoleWithWebIdentity
+   (sends the JWT + the target IAM role ARN)
+        ↓
+4. AWS STS checks the IAM role's trust policy:
+   "Do you trust tokens issued by this cluster's OIDC provider,
+    specifically for this ServiceAccount?"
+        ↓
+5. If it matches → STS issues temporary credentials
+   (access key, secret key, session token — expires in ~1hr)
+        ↓
+6. Pod uses those temporary credentials to call
+   AWS APIs (e.g., Secrets Manager, S3, DynamoDB)
+```
+
 **Analogy** Without IRSA, every employee (pod) sharing an office (node) would have to use the office's master key card (the node's IAM role) to get anywhere — way too much access for any one person. IRSA is like each employee getting their own individually scoped badge, checked at the door by a security desk (STS) that verifies who they say they are before issuing access.
 
 > **Real limitations:** ~100 OIDC providers per AWS account, IAM trust relationships reusable only ~5x per role, and the OIDC URL isn't known until the cluster already exists.
