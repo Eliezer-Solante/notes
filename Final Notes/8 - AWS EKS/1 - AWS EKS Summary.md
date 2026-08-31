@@ -900,6 +900,7 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 
 **Helpful tools:** the **EKS cluster-insights API** and **kube-no-trouble ("kubent")** both flag resources using APIs that are about to be removed, before you upgrade.
 
+[[https://docs.aws.amazon.com/eks/latest/eksctl/cluster-upgrade.html]]
 ### EKS Addon
 
 **Problem Statement** Baseline cluster services (VPC CNI, CoreDNS, EBS CSI driver) need to be installed and kept up to date somehow — doing it entirely by hand via Helm means one more thing to track and version yourself, cluster by cluster.
@@ -909,6 +910,8 @@ So functionally: yes, it scales nodes up and down based on demand — that's aut
 **Analogy** It sounds like the fix should be complete — like buying pre-assembled furniture instead of building it yourself. In practice, it's closer to pre-assembled furniture that still needs its _own_ separate instruction manual and toolset every time you want to update it: when you upgrade a cluster, you still upgrade the control plane, then node groups, then **individually** upgrade every single add-on — no single "test it all together" workflow yet.
 
 > 💡 **Recommendation:** own your own baseline YAML — plain manifests, Helm charts you manage yourself, or a GitOps pipeline — rather than delegating your cluster's foundational services to AWS's add-on marketplace. The more external dependencies stand between you and an upgrade, the harder every one of those 3–4-times-a-year upgrades becomes.
+
+[[https://docs.aws.amazon.com/eks/latest/eksctl/addon-upgrade.html]]
 
 ---
 
