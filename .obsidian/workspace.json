@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
+                "file": "Final Notes/8 - AWS EKS/Activity Script.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 - AWS EKS Summary"
+              "title": "Activity Script"
             }
           }
         ]
@@ -97,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5
+    "width": 283.5,
+    "collapsed": true
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -195,9 +196,10 @@
   },
   "active": "aa99be72c254ea7e",
   "lastOpenFiles": [
+    "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
+    "Final Notes/8 - AWS EKS/Activity Script.md",
     "Final Notes/8 - AWS EKS/Updated Cost Breakdown (us-east-1, On-Demand).md",
     "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
-    "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
     "Final Notes/8 - AWS EKS/Redundancy and Resiliency LAB.md",
     "Final Notes/8 - AWS EKS/Pod Identity.md",
     "Final Notes/8 - AWS EKS/IRSAIAM Roles for Service Accounts.md",
@@ -232,7 +234,6 @@
     "Final Notes/8 - AWS EKS/d -.md",
     "Final Notes/8 - AWS EKS/s -.md",
     "Final Notes/8 - AWS EKS/x -.md",
-    "Final Notes/8 - AWS EKS/v -.md",
     "Final Notes/8 - AWS EKS",
     "CMCs/Untitled",
     "Final Notes/7 - Kubernetes - 2/Untitled",
