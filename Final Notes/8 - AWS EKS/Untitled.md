@@ -154,7 +154,7 @@ aws eks describe-addon \
   --addon-name vpc-cni \
   --region us-east-1 \
   --query "addon.{Name:addonName,Version:addonVersion,Status:status}" \
-  --output table
+  --output table | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
 ```
 
 - **CoreDNS**
@@ -168,7 +168,7 @@ aws eks describe-addon \
   --addon-name coredns \
   --region us-east-1 \
   --query "addon.{Name:addonName,Version:addonVersion,Status:status}" \
-  --output table
+  --output table | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
 ```
 
 - **Amazon EBS CSI Driver**
@@ -182,7 +182,7 @@ aws eks describe-addon \
   --addon-name aws-ebs-csi-driver \
   --region us-east-1 \
   --query "addon.{Name:addonName,Version:addonVersion,Status:status}" \
-  --output table
+  --output table | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
 ```
 
 - **kube-proxy**
@@ -196,5 +196,5 @@ aws eks describe-addon \
   --addon-name kube-proxy \
   --region us-east-1 \
   --query "addon.{Name:addonName,Version:addonVersion,Status:status}" \
-  --output table
+  --output table | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
 ```
