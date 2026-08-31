@@ -6,3 +6,4 @@ aws iam detach-role-policy \
   --policy-arn arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
 
 
+aws ec2 describe-instances --filters "Name=tag:eks:nodegroup-name,Values=academy-eliezer-ng-01" "Name=tag:kubernetes.io/cluster/academy-eliezer-cluster,Values=owned" --query "Reservations[*].Instances[*].InstanceId" --output text
