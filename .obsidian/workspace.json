@@ -13,6 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Final Notes/8 - AWS EKS/Activity Commands.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Activity Commands"
+            }
+          },
+          {
+            "id": "2ba93a0c4fef7c3b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Final Notes/8 - AWS EKS/Activity Script.md",
                 "mode": "source",
                 "source": false
@@ -20,8 +34,23 @@
               "icon": "lucide-file",
               "title": "Activity Script"
             }
+          },
+          {
+            "id": "dccd8defdb6340c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Final Notes/8 - AWS EKS/Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -71,26 +100,12 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
-            }
-          },
-          {
-            "id": "a8218c30ebeb5189",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "outline",
               "state": {
-                "file": "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
-                "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
-              "pinned": true,
-              "icon": "lucide-list",
-              "title": "Outline of 1 - AWS EKS Summary"
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -169,9 +184,24 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "ed4474e01f1b20ab",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Final Notes/8 - AWS EKS/Untitled.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -194,10 +224,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aa99be72c254ea7e",
+  "active": "dccd8defdb6340c6",
   "lastOpenFiles": [
-    "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
+    "Final Notes/8 - AWS EKS/Untitled.md",
     "Final Notes/8 - AWS EKS/Activity Script.md",
+    "Final Notes/8 - AWS EKS/Activity Commands.md",
+    "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
     "Final Notes/8 - AWS EKS/Updated Cost Breakdown (us-east-1, On-Demand).md",
     "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Final Notes/8 - AWS EKS/Redundancy and Resiliency LAB.md",
@@ -232,8 +264,6 @@
     "Final Notes/8 - AWS EKS/t -.md",
     "Final Notes/8 - AWS EKS/y -.md",
     "Final Notes/8 - AWS EKS/d -.md",
-    "Final Notes/8 - AWS EKS/s -.md",
-    "Final Notes/8 - AWS EKS/x -.md",
     "Final Notes/8 - AWS EKS",
     "CMCs/Untitled",
     "Final Notes/7 - Kubernetes - 2/Untitled",
