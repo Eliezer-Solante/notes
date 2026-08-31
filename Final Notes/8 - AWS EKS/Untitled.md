@@ -198,3 +198,33 @@ aws eks describe-addon \
   --query "addon.{Name:addonName,Version:addonVersion,Status:status}" \
   --output table | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
 ```
+
+
+
+
+
+
+aws eks update-addon \
+  --cluster-name academy-eliezer-cluster \
+  --addon-name vpc-cni \
+  --addon-version v1.23.0-eksbuild.1 \
+  --resolve-conflicts PRESERVE \
+  --region us-east-1 | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
+
+
+aws eks update-addon \
+  --cluster-name academy-eliezer-cluster \
+  --addon-name coredns \
+  --addon-version v1.14.3-eksbuild.14 \
+  --resolve-conflicts PRESERVE \
+  --region us-east-1 | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
+
+
+  aws eks update-addon --cluster-name academy-eliezer-cluster --addon-name kube-proxy --addon-version v1.36.0-eksbuild.17 --resolve-conflicts PRESERVE --region us-east-1 | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
+
+  aws eks update-addon --cluster-name academy-eliezer-cluster --addon-name aws-ebs-csi-driver --addon-version v1.65.0-eksbuild.1 --service-account-role-arn arn:aws:iam::687259231807:role/eliezer-ebs-csi-irsa-role --resolve-conflicts PRESERVE --region us-east-1 | tee -a aws-eks-cluster-upgrade-part2-eliezer.txt
+
+
+
+
+  aws eks list-addons --cluster-name academy-eliezer-cluster --region us-east-1 --output table
