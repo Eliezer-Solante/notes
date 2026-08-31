@@ -11,3 +11,5 @@ aws ec2 describe-instances --filters "Name=tag:eks:nodegroup-name,Values=academy
 kubectl get nodes
 aws iam list-attached-role-policies --role-name eliezer-eks-node-role
 aws eks describe-nodegroup --cluster-name academy-eliezer-cluster --nodegroup-name academy-eliezer-ng-01 --query 'nodegroup.health'
+
+Detatching the AmazonEKSworkerNodePolicy did not prevent nodes from joining or reaching `Ready` state
