@@ -52,3 +52,10 @@ You'll also need a persistent workload and a PVC-backed pod running before Scena
 aws ec2 describe-security-groups --group-ids sg-012b6ae1ce69accde --region us-east-1 --query 'SecurityGroups[0].IpPermissions'
 
 aws ec2 authorize-security-group-ingress --group-id sg-012b6ae1ce69accde --region us-east-1 --protocol -1 --source-group sg-012b6ae1ce69accde
+
+aws ec2 delete-route \
+  --route-table-id rtb-0d102d923229e3165 \
+  --destination-cidr-block 0.0.0.0/0 \
+  --region us-east-1
+
+![[Pasted image 20260901220615.png]]
