@@ -37,3 +37,15 @@ Detatching the AmazonEKSworkerNodePolicy did not prevent nodes from joining or r
 ```
 === CLEAN UP ===
 ```
+
+
+
+
+
+Prerequisites
+You need a running EKS cluster with a node group and the standard add-ons (VPC CNI, CoreDNS, kube-proxy, Amazon EBS CSI Driver) before starting.
+
+If you came straight from EKS Cluster Upgrade and chose to leave your cluster running: use it as-is, no redeploy needed.
+If you already cleaned it up: redeploy it via CLI following the same steps from EKS Deployment Basics / EKS Cluster Upgrade Part 1.
+You'll also need a persistent workload and a PVC-backed pod running before Scenario 4, so deploy the following now if it's not already there:
+
