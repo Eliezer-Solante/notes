@@ -49,3 +49,6 @@ If you came straight from EKS Cluster Upgrade and chose to leave your cluster ru
 If you already cleaned it up: redeploy it via CLI following the same steps from EKS Deployment Basics / EKS Cluster Upgrade Part 1.
 You'll also need a persistent workload and a PVC-backed pod running before Scenario 4, so deploy the following now if it's not already there:
 
+aws ec2 describe-security-groups --group-ids sg-012b6ae1ce69accde --region us-east-1 --query 'SecurityGroups[0].IpPermissions'
+
+aws ec2 authorize-security-group-ingress --group-id sg-012b6ae1ce69accde --region us-east-1 --protocol -1 --source-group sg-012b6ae1ce69accde
