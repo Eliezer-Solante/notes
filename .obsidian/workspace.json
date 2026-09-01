@@ -50,17 +50,13 @@
             }
           },
           {
-            "id": "04d21d25df22eb3a",
+            "id": "383f75d395faf130",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Final Notes/8 - AWS EKS/EKS troubleshooting.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "EKS troubleshooting"
+              "title": "New tab"
             }
           }
         ],
@@ -238,11 +234,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "04d21d25df22eb3a",
+  "active": "383f75d395faf130",
   "lastOpenFiles": [
-    "Final Notes/8 - AWS EKS/Activity Script.md",
-    "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
     "Final Notes/8 - AWS EKS/EKS troubleshooting.md",
+    "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
+    "Final Notes/8 - AWS EKS/Activity Script.md",
     "Final Notes/8 - AWS EKS/EKS cluster Upgrade.md",
     "Final Notes/8 - AWS EKS/Activity Commands.md",
     "Final Notes/8 - AWS EKS/Updated Cost Breakdown (us-east-1, On-Demand).md",
