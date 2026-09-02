@@ -27,16 +27,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Midpoint Notes/4 - Docker/f - Basic docker commands.md",
+                "file": "Midpoint Notes/4 - Docker/r - docker compose.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "f - Basic docker commands"
+              "title": "r - docker compose"
+            }
+          },
+          {
+            "id": "473a259a35f979bf",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -221,8 +230,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "f1c19099343b4f79",
+  "active": "b329ae9945165b42",
   "lastOpenFiles": [
+    "Midpoint Notes/4 - Docker/r - docker compose.md",
+    "Midpoint Notes/4 - Docker/f - Basic docker commands.md",
+    "Final Assessment.md",
     "Midpoint Notes/4 - Docker/e - docker and devops.md",
     "Midpoint Notes/4 - Docker/d - Images and registries.md",
     "Midpoint Notes/4 - Docker/c -containers vs VMs.md",
@@ -233,7 +245,6 @@
     "Midpoint Notes/4 - Docker/i - Port Mapping.md",
     "Midpoint Notes/4 - Docker/j - Volumes and bind mounts.md",
     "Midpoint Notes/4 - Docker/l - docker images - creating one.md",
-    "Final Assessment.md",
     "Final Notes/8 - AWS EKS/EKS troubleshooting.md",
     "Final Notes/8 - AWS EKS/AWK EKS Practical.md",
     "Final Notes/8 - AWS EKS/EKSCTL Commands - Activity related.md",
@@ -249,9 +260,7 @@
     "Final Notes/8 - AWS EKS/Pod Identity.md",
     "Final Notes/8 - AWS EKS/IRSAIAM Roles for Service Accounts.md",
     "Final Notes/8 - AWS EKS/Compute Demo.md",
-    "Final Notes/8 - AWS EKS/The Bridge Between AWS and Kubernetes Authentication.md",
     "Pasted image 20260828150516.png",
-    "Final Notes/8 - AWS EKS/Karpenter Consolidation.md",
     "Final Notes/imgs/Pasted image 20260827095307.png",
     "Final Notes/imgs/Pasted image 20260827182801.png",
     "Final Notes/imgs/Pasted image 20260827182746.png",
