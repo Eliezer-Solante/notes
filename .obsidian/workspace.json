@@ -62,9 +62,19 @@
               "icon": "lucide-file",
               "title": "EKS troubleshooting"
             }
+          },
+          {
+            "id": "b329ae9945165b42",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -126,8 +136,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5,
-    "collapsed": true
+    "width": 283.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -249,11 +258,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "e16cac7906ba3622",
+  "active": "b329ae9945165b42",
   "lastOpenFiles": [
+    "Final Notes/8 - AWS EKS/EKS troubleshooting.md",
     "Pasted image 20260901220615.png",
     "Final Notes/8 - AWS EKS/AWK EKS Practical.md",
-    "Final Notes/8 - AWS EKS/EKS troubleshooting.md",
     "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
     "Final Notes/8 - AWS EKS/EKSCTL Commands - Activity related.md",
     "Pasted image 20260901165518.png",
@@ -277,7 +286,6 @@
     "Final Notes/imgs/Pasted image 20260827182655.png",
     "Final Notes/imgs/Pasted image 20260827182641.png",
     "Final Notes/imgs/Pasted image 20260827182625.png",
-    "Final Notes/imgs/Pasted image 20260827182615.png",
     "Final Notes/8 - AWS EKS/LOAD BALANCING LAB.md",
     "Final Notes/8 - AWS EKS/4 - EKSDEMO commands.md",
     "Final Notes/7 - Kubernetes - 2/w - Role Based Access Controls.md",
