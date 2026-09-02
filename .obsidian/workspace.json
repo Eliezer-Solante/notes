@@ -49,7 +49,8 @@
               "title": "Creds"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -234,10 +235,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "b329ae9945165b42",
+  "active": "473a259a35f979bf",
   "lastOpenFiles": [
-    "Final Assessment Part 1.md",
     "Final Assessment Part 2.md",
+    "Final Assessment Part 1.md",
     "Pasted image 20260901220615.png",
     "Pasted image 20260828150516.png",
     "Pasted image 20260901165518.png",
