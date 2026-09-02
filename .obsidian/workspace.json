@@ -49,8 +49,7 @@
               "title": "Creds"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -235,11 +234,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "473a259a35f979bf",
+  "active": "b329ae9945165b42",
   "lastOpenFiles": [
-    "Final Assessment.md",
-    "Creds.md",
     "Midpoint Notes/4 - Docker/r - docker compose.md",
+    "Creds.md",
+    "Final Assessment.md",
     "Midpoint Notes/4 - Docker/f - Basic docker commands.md",
     "Midpoint Notes/4 - Docker/e - docker and devops.md",
     "Midpoint Notes/4 - Docker/d - Images and registries.md",
