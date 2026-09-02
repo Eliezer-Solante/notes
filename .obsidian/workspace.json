@@ -76,12 +76,12 @@
               "title": "Files"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
-    "collapsed": true
+    "width": 330.5
   },
   "right": {
     "id": "58209c5ff137c9c4",
@@ -191,7 +191,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "09d66459c55349f9",
+  "active": "cd4116a93bb7c0e7",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Creds.md",
