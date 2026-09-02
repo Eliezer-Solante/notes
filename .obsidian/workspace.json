@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Final Assessment.md",
+                "file": "Final Assessment Part 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Final Assessment"
+              "title": "Final Assessment Part 2"
             }
           },
           {
@@ -236,9 +236,13 @@
   },
   "active": "b329ae9945165b42",
   "lastOpenFiles": [
+    "Final Assessment Part 1.md",
+    "Final Assessment Part 2.md",
+    "Pasted image 20260901220615.png",
+    "Pasted image 20260828150516.png",
+    "Pasted image 20260901165518.png",
     "Midpoint Notes/4 - Docker/r - docker compose.md",
     "Creds.md",
-    "Final Assessment.md",
     "Midpoint Notes/4 - Docker/f - Basic docker commands.md",
     "Midpoint Notes/4 - Docker/e - docker and devops.md",
     "Midpoint Notes/4 - Docker/d - Images and registries.md",
@@ -254,8 +258,6 @@
     "Final Notes/8 - AWS EKS/AWK EKS Practical.md",
     "Final Notes/8 - AWS EKS/EKSCTL Commands - Activity related.md",
     "Final Notes/8 - AWS EKS/1 - AWS EKS Summary.md",
-    "Pasted image 20260901220615.png",
-    "Pasted image 20260901165518.png",
     "Final Notes/8 - AWS EKS/Activity Script.md",
     "Final Notes/8 - AWS EKS/Activity Commands.md",
     "Final Notes/8 - AWS EKS/EKS cluster Upgrade.md",
@@ -263,8 +265,6 @@
     "Final Notes/8 - AWS EKS/AWS EKS DEPLYMENT.md",
     "Final Notes/8 - AWS EKS/Redundancy and Resiliency LAB.md",
     "Final Notes/8 - AWS EKS/Pod Identity.md",
-    "Final Notes/8 - AWS EKS/IRSAIAM Roles for Service Accounts.md",
-    "Pasted image 20260828150516.png",
     "Final Notes/imgs/Pasted image 20260827095307.png",
     "Final Notes/imgs/Pasted image 20260827182801.png",
     "Final Notes/imgs/Pasted image 20260827182746.png",
