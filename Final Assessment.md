@@ -24,3 +24,30 @@ ssh esolante@esolante-a1t-inf-compre1.acad.opswerks.net
     
 - Fix + confirmation: • Restarted the app-web container with docker start app-web. • Verified container logs, service listening again on 0.0.0.0:8000. • Confirmed connectivity with curl to 127.0.0.1:8000, returned valid response (404 from app-web, proving it was alive). • Applied restart policy with docker update --restart=always app-web to ensure persistence across host reboots. • Checked docker ps, app-web now shows Up with port 8000 mapped. Uploads tested successfully from Operations side, gateway errors resolved and dispatcher workflow restored.****
 
+# 3. 
+
+### 1. Problem reported / what I found:
+
+A teammate reported difficulty debugging JSON responses from the archive service. They needed to pretty‑print JSON output but the host did not have `jq` installed, making raw responses hard to read. Attempting to run `jq` resulted in “command not found.”
+
+#### 2. Investigation (checked, ruled out):
+
+• Verified PATH — no `jq` binary present. • Attempted to run `jq --version` — not installed. • Tested fallback with `python3 -m json.tool` — produced “Expecting value” errors when the service returned empty or invalid JSON. • Confirmed issue was isolated to missing `jq` utility, not the archive service itself.
+
+#### 3. Root cause:
+
+The host system did not have `jq` installed. Without it, teammates could not easily format JSON responses during debugging.
+
+#### 4. Fix + confirmation:
+
+• Installed `jq` using the package manager (`yum install -y jq` or `apt-get install -y jq`). • Verified installation with `jq --version` — returned `jq-1.6`. • Tested by piping a sample JSON response through `jq` — output was formatted and readable. • Teammate confirmed they can now pretty‑print archive service responses while debugging.
+
+# 4.
+
+- Problem reported / what I found: Operations reported that uploads have been failing all morning with a generic error. The page itself loads normally, but the upload action fails for everyone. No changes were made on their side, and uploads worked yesterday afternoon.
+    
+- Investigation (checked, ruled out): • Checked nginx service status, confirmed active and serving. • Reviewed nginx error logs, only unrelated 404 probes, no direct upload errors. • Verified backend container app‑web is running and listening on port 8000. • Inspected app‑web logs, service reports listening and upload directories configured. • Tested upload endpoint with curl, received 404 error page from nginx. • Issue isolated to routing or endpoint configuration for /uploads.
+    
+- Root cause: The upload endpoint /uploads is not correctly mapped to the backend service. nginx is serving its default 404 page instead of forwarding the request, causing all uploads to fail.
+    
+- Fix + confirmation: • Restarted backend container with docker restart app‑web. • Restarted archive service with systemctl restart pave‑archive.service. • Verified app‑web logs show service listening with uploads directory configured. • Created a test file and retried upload with curl -F file=@/tmp/test.txt http://localhost/uploads/, confirmed backend response instead of nginx 404. • Operations confirmed uploads now succeed.
