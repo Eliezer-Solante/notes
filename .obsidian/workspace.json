@@ -108,7 +108,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -215,7 +216,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -237,10 +239,10 @@
   },
   "active": "8e78267ec81d01e9",
   "lastOpenFiles": [
+    "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
     "conflict-files-obsidian-git.md",
     "Final Assessment Part 2.md",
     "Creds.md",
-    "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
     "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
     "Final Notes/7 - Kubernetes - 2/a - BlueGreen.md",
     "Final Notes/7 - Kubernetes - 2/1 - ssh creds.md",
