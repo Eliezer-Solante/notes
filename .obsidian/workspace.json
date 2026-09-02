@@ -49,7 +49,8 @@
               "title": "Creds"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -231,20 +232,21 @@
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
-      "terminal:Open terminal": false
+      "terminal:Open terminal": false,
+      "vault-force-sync:Vault Force Sync": false
     }
   },
-  "active": "473a259a35f979bf",
+  "active": "8e78267ec81d01e9",
   "lastOpenFiles": [
-    "Creds.md",
+    "conflict-files-obsidian-git.md",
     "Final Assessment Part 2.md",
+    "Creds.md",
     "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
     "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
     "Final Notes/7 - Kubernetes - 2/a - BlueGreen.md",
     "Final Notes/7 - Kubernetes - 2/1 - ssh creds.md",
     "Final Notes/7 - Kubernetes - 2/1 - Practical Answers.md",
     "Final Notes/7 - Kubernetes - 2/1 - additional commands.md",
-    "conflict-files-obsidian-git.md",
     "Untitled.md",
     "Final Assessment Part 1.md",
     "Midpoint Notes/4 - Docker/r - docker compose.md",
