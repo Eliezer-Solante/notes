@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Midpoint Notes/4 - Docker/r - docker compose.md",
+                "file": "Final Assessment Part 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "r - docker compose"
+              "title": "Final Assessment Part 1"
             }
           },
           {
@@ -49,8 +49,7 @@
               "title": "Creds"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -235,15 +234,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "473a259a35f979bf",
+  "active": "b329ae9945165b42",
   "lastOpenFiles": [
-    "Final Assessment Part 2.md",
+    "Creds.md",
     "Final Assessment Part 1.md",
+    "Midpoint Notes/4 - Docker/r - docker compose.md",
+    "Final Assessment Part 2.md",
     "Pasted image 20260901220615.png",
     "Pasted image 20260828150516.png",
     "Pasted image 20260901165518.png",
-    "Midpoint Notes/4 - Docker/r - docker compose.md",
-    "Creds.md",
     "Midpoint Notes/4 - Docker/f - Basic docker commands.md",
     "Midpoint Notes/4 - Docker/e - docker and devops.md",
     "Midpoint Notes/4 - Docker/d - Images and registries.md",
