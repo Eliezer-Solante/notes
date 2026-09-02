@@ -49,8 +49,7 @@
               "title": "Creds"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -235,10 +234,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "af16361a46169eb2",
+  "active": "473a259a35f979bf",
   "lastOpenFiles": [
-    "Final Assessment Part 2.md",
     "Creds.md",
+    "Final Assessment Part 2.md",
     "Final Notes/6 - Kubernetes -1/ze - Rolling Updates & Rollbacks.md",
     "Final Notes/7 - Kubernetes - 2/2 - Object Templates.md",
     "Final Notes/7 - Kubernetes - 2/a - BlueGreen.md",
